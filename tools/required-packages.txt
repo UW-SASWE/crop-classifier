@@ -1,0 +1,4 @@
+geemap
+earthengine-api
+ipyleaflet == 0.17.0
+ipywidgets == 7.7.2
