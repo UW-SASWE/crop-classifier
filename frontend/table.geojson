@@ -1,0 +1,6980 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [90.44177954393078, 23.699720779970033],
+        "type": "Point"
+      },
+      "id": "00000000000000000124",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.69972222,
+        "lon": 90.44177778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.43738732939313, 23.7133344154862],
+        "type": "Point"
+      },
+      "id": "00000000000000000125",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.71333333,
+        "lon": 90.43738889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.43039099984028, 23.71438676333481],
+        "type": "Point"
+      },
+      "id": "00000000000000000126",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.71438889,
+        "lon": 90.43038889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.42919596075795, 23.715889480389826],
+        "type": "Point"
+      },
+      "id": "00000000000000000127",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.71588889,
+        "lon": 90.42919444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.42552612059096, 23.71834644507028],
+        "type": "Point"
+      },
+      "id": "00000000000000000128",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.71834722,
+        "lon": 90.42552778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.41197045338849, 23.70186560757674],
+        "type": "Point"
+      },
+      "id": "00000000000000000129",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.70186389,
+        "lon": 90.41197222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.38802953983254, 23.70808159444524],
+        "type": "Point"
+      },
+      "id": "0000000000000000012a",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.70808333,
+        "lon": 90.38802778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.35755604323329, 23.76408344457547],
+        "type": "Point"
+      },
+      "id": "0000000000000000012b",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.76408333,
+        "lon": 90.35755556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.35533541090867, 23.765916135108437],
+        "type": "Point"
+      },
+      "id": "0000000000000000012c",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.76591667,
+        "lon": 90.35533333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.38097078286495, 23.78462206402764],
+        "type": "Point"
+      },
+      "id": "0000000000000000012d",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.78462222,
+        "lon": 90.38097222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.49741574777462, 23.607916807481686],
+        "type": "Point"
+      },
+      "id": "0000000000000000012e",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.60791667,
+        "lon": 90.49741667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.6066677190925, 24.367703035978334],
+        "type": "Point"
+      },
+      "id": "0000000000000000012f",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.36770278,
+        "lon": 88.60666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.60386294452988, 24.367979500243646],
+        "type": "Point"
+      },
+      "id": "00000000000000000130",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.36797778,
+        "lon": 88.60386111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.59958220751857, 24.36759601755305],
+        "type": "Point"
+      },
+      "id": "00000000000000000131",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.36759444,
+        "lon": 88.59958333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.6035552665572, 24.367368603399324],
+        "type": "Point"
+      },
+      "id": "00000000000000000132",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.36736944,
+        "lon": 88.60355556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.60369349868985, 24.366026413982233],
+        "type": "Point"
+      },
+      "id": "00000000000000000133",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.36602778,
+        "lon": 88.60369444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.60179838074214, 24.3675335901383],
+        "type": "Point"
+      },
+      "id": "00000000000000000134",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.36753333,
+        "lon": 88.60179722
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.57449976409293, 24.372888970503485],
+        "type": "Point"
+      },
+      "id": "00000000000000000135",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.37288889,
+        "lon": 88.5745
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.25363869093697, 25.741971226044036],
+        "type": "Point"
+      },
+      "id": "00000000000000000136",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 25.74197222,
+        "lon": 89.25363889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.25003127818472, 25.74036149056374],
+        "type": "Point"
+      },
+      "id": "00000000000000000137",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 25.74036111,
+        "lon": 89.25003056
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.25230987882303, 25.751090087698326],
+        "type": "Point"
+      },
+      "id": "00000000000000000138",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 25.75108889,
+        "lon": 89.25231111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.25272903432206, 25.752459031721738],
+        "type": "Point"
+      },
+      "id": "00000000000000000139",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 25.75246111,
+        "lon": 89.25272778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.25336222667164, 25.764859791751373],
+        "type": "Point"
+      },
+      "id": "0000000000000000013a",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 25.76486111,
+        "lon": 89.25336111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.27347277242269, 25.73044444982087],
+        "type": "Point"
+      },
+      "id": "0000000000000000013b",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 25.73044444,
+        "lon": 89.27347222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.84202645673385, 22.35126632590273],
+        "type": "Point"
+      },
+      "id": "0000000000000000013c",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.35126667,
+        "lon": 91.84202778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.86794275205648, 22.337304880504394],
+        "type": "Point"
+      },
+      "id": "0000000000000000013d",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.33730556,
+        "lon": 91.86794444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.86069225374358, 22.334616042569166],
+        "type": "Point"
+      },
+      "id": "0000000000000000013e",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.33461389,
+        "lon": 91.86069444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.8406129216999, 22.335418680758785],
+        "type": "Point"
+      },
+      "id": "0000000000000000013f",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.33541667,
+        "lon": 91.84061111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.82986202906005, 22.333808945278488],
+        "type": "Point"
+      },
+      "id": "00000000000000000140",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.33381111,
+        "lon": 91.82986111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.81599868388489, 22.335035198068194],
+        "type": "Point"
+      },
+      "id": "00000000000000000141",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.33503333,
+        "lon": 91.816
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.81166889676199, 22.33341208528473],
+        "type": "Point"
+      },
+      "id": "00000000000000000142",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.33341389,
+        "lon": 91.81166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.83616719794964, 22.32033354189498],
+        "type": "Point"
+      },
+      "id": "00000000000000000143",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.32033333,
+        "lon": 91.83616667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.88119520038732, 24.8994463775007],
+        "type": "Point"
+      },
+      "id": "00000000000000000144",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.89944444,
+        "lon": 91.88119444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.87558119216104, 24.90349970035828],
+        "type": "Point"
+      },
+      "id": "00000000000000000145",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.9035,
+        "lon": 91.87558333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.87338731444274, 24.90069046669461],
+        "type": "Point"
+      },
+      "id": "00000000000000000146",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.90068889,
+        "lon": 91.87338889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.84847431685714, 24.888722239467164],
+        "type": "Point"
+      },
+      "id": "00000000000000000147",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.88872222,
+        "lon": 91.84847222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.85262573993789, 24.89972284176601],
+        "type": "Point"
+      },
+      "id": "00000000000000000148",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.89972222,
+        "lon": 91.85262778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02694245248082, 23.89889098762325],
+        "type": "Point"
+      },
+      "id": "00000000000000000149",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.89888889,
+        "lon": 89.02694444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02711189832085, 23.897472993488254],
+        "type": "Point"
+      },
+      "id": "0000000000000000014a",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.89747222,
+        "lon": 89.02711111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.22108279414577, 22.37947014006578],
+        "type": "Point"
+      },
+      "id": "0000000000000000014b",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.37947222,
+        "lon": 89.22108333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.59019380204684, 22.503027371155714],
+        "type": "Point"
+      },
+      "id": "0000000000000000014c",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.50302778,
+        "lon": 89.59019444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.5611650541889, 22.801492841067056],
+        "type": "Point"
+      },
+      "id": "0000000000000000014d",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.80149167,
+        "lon": 89.56116667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.55136840917449, 22.809416663639034],
+        "type": "Point"
+      },
+      "id": "0000000000000000014e",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.80941667,
+        "lon": 89.55136944
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.54233427044021, 22.838057469705312],
+        "type": "Point"
+      },
+      "id": "0000000000000000014f",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.83805556,
+        "lon": 89.54233333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.53264018475001, 22.84125018605958],
+        "type": "Point"
+      },
+      "id": "00000000000000000150",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.84125,
+        "lon": 89.53263889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.52525145430445, 22.83597506951335],
+        "type": "Point"
+      },
+      "id": "00000000000000000151",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.835975,
+        "lon": 89.52525
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.52172430537118, 22.833950637635088],
+        "type": "Point"
+      },
+      "id": "00000000000000000152",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.83395278,
+        "lon": 89.52172222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.5319445649857, 22.835167972222678],
+        "type": "Point"
+      },
+      "id": "00000000000000000153",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.83516944,
+        "lon": 89.53194444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.53189105577303, 22.83313908124336],
+        "type": "Point"
+      },
+      "id": "00000000000000000154",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.83313889,
+        "lon": 89.53188889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.56549930041285, 22.823222040500493],
+        "type": "Point"
+      },
+      "id": "00000000000000000155",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.82322222,
+        "lon": 89.5655
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.06272274292627, 24.64463996600364],
+        "type": "Point"
+      },
+      "id": "00000000000000000156",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.64463889,
+        "lon": 91.06272222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.79150038269725, 24.571889732316674],
+        "type": "Point"
+      },
+      "id": "00000000000000000157",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.57188889,
+        "lon": 91.7915
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.07122425088097, 24.42211298703248],
+        "type": "Point"
+      },
+      "id": "00000000000000000158",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.42211111,
+        "lon": 92.07122222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.04613734835428, 24.376612319883122],
+        "type": "Point"
+      },
+      "id": "00000000000000000159",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.37661111,
+        "lon": 92.04613889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.25963910679327, 24.39466722004852],
+        "type": "Point"
+      },
+      "id": "0000000000000000015a",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.39466667,
+        "lon": 92.25963889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.23756209747766, 24.353420535304146],
+        "type": "Point"
+      },
+      "id": "000000000000000001bd",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.35342,
+        "lon": 92.23756
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.63800028803344, 24.170329846049658],
+        "type": "Point"
+      },
+      "id": "000000000000000001be",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.17033,
+        "lon": 91.638
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.62019063842597, 24.152328455096896],
+        "type": "Point"
+      },
+      "id": "000000000000000001bf",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.15233,
+        "lon": 91.62019
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.6199186332617, 24.129529071410627],
+        "type": "Point"
+      },
+      "id": "000000000000000001c0",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.12953,
+        "lon": 91.61992
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.6198918786554, 24.103858026645938],
+        "type": "Point"
+      },
+      "id": "000000000000000001c1",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 24.10386,
+        "lon": 91.61989
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.50833162715347, 23.970611168966865],
+        "type": "Point"
+      },
+      "id": "000000000000000001c2",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.97061,
+        "lon": 90.50833
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.52850014121819, 23.995171897569247],
+        "type": "Point"
+      },
+      "id": "000000000000000001c3",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 23.99517,
+        "lon": 90.5285
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.38760792298669, 22.1647510470392],
+        "type": "Point"
+      },
+      "id": "000000000000000001c4",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.16475,
+        "lon": 89.38761
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.40643870673539, 22.15742028490733],
+        "type": "Point"
+      },
+      "id": "000000000000000001c5",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.15742,
+        "lon": 89.40644
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.39681150756101, 22.0016995579189],
+        "type": "Point"
+      },
+      "id": "000000000000000001c6",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.0017,
+        "lon": 89.39681
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.39349839547829, 21.99849792336252],
+        "type": "Point"
+      },
+      "id": "000000000000000001c7",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 21.9985,
+        "lon": 89.3935
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.40542203169521, 21.990560723487388],
+        "type": "Point"
+      },
+      "id": "000000000000000001c8",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 21.99056,
+        "lon": 89.40542
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.35242115657394, 21.968439123161247],
+        "type": "Point"
+      },
+      "id": "000000000000000001c9",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 21.96844,
+        "lon": 89.35242
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.20696820514996, 22.602518833860195],
+        "type": "Point"
+      },
+      "id": "000000000000000001ca",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.60252,
+        "lon": 92.20697
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.29425064917011, 22.46068820665324],
+        "type": "Point"
+      },
+      "id": "000000000000000001cb",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.46069,
+        "lon": 92.29425
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.29521827409872, 22.45087818433566],
+        "type": "Point"
+      },
+      "id": "000000000000000001cc",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.45088,
+        "lon": 92.29522
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.20261166342075, 22.600021737270264],
+        "type": "Point"
+      },
+      "id": "000000000000000001cd",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.60002,
+        "lon": 92.20261
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.4955790617332, 22.436671488379382],
+        "type": "Point"
+      },
+      "id": "000000000000000001ce",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 22.43667,
+        "lon": 92.49558
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.70925026601222, 21.067089813520855],
+        "type": "Point"
+      },
+      "id": "000000000000000001cf",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 21.06709,
+        "lon": 92.70925
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [92.70278011038367, 21.059139236342563],
+        "type": "Point"
+      },
+      "id": "000000000000000001d0",
+      "properties": {
+        "class": 0,
+        "growth": "",
+        "growth_int": null,
+        "lat": 21.05914,
+        "lon": 92.70278
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96127773036778, 24.099751194575717],
+        "type": "Point"
+      },
+      "id": "00000000000000000002",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.09975,
+        "lon": 88.96127778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96488960222108, 24.100500323552694],
+        "type": "Point"
+      },
+      "id": "00000000000000000006",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.1005,
+        "lon": 88.96488889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96152744002677, 24.095862858457107],
+        "type": "Point"
+      },
+      "id": "00000000000000000007",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.09586111,
+        "lon": 88.96152778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.00277612252538, 24.080973920039657],
+        "type": "Point"
+      },
+      "id": "00000000000000000008",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.08097222,
+        "lon": 88.00277778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99722254395961, 24.08597257232057],
+        "type": "Point"
+      },
+      "id": "00000000000000000009",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.08597222,
+        "lon": 88.99722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97005770034202, 24.03694475623793],
+        "type": "Point"
+      },
+      "id": "0000000000000000000b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.03694444,
+        "lon": 88.97005556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98714051647777, 24.01247320965662],
+        "type": "Point"
+      },
+      "id": "00000000000000000016",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.01247222,
+        "lon": 88.98713889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98708254816407, 23.01252871662349],
+        "type": "Point"
+      },
+      "id": "00000000000000000017",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.01252778,
+        "lon": 88.98708333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [91.0058335316864, 24.479720113541948],
+        "type": "Point"
+      },
+      "id": "00000000000000000028",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.47972222,
+        "lon": 91.00583333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.59805765855089, 24.81000126946963],
+        "type": "Point"
+      },
+      "id": "00000000000000000029",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.81,
+        "lon": 90.59805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.59944443897851, 24.475555313158026],
+        "type": "Point"
+      },
+      "id": "0000000000000000002a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.47555556,
+        "lon": 90.59944444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.58805589488803, 24.475831777423345],
+        "type": "Point"
+      },
+      "id": "0000000000000000002b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.47583333,
+        "lon": 90.58805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6491678748255, 24.42055676076482],
+        "type": "Point"
+      },
+      "id": "0000000000000000002c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.42055556,
+        "lon": 90.64916667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.64861048719382, 24.450276669286044],
+        "type": "Point"
+      },
+      "id": "00000000000000000030",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.45027778,
+        "lon": 90.64861111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.71166663519058, 24.458887193420246],
+        "type": "Point"
+      },
+      "id": "00000000000000000033",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.45888889,
+        "lon": 90.71166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.68999986317189, 24.463056452905217],
+        "type": "Point"
+      },
+      "id": "00000000000000000034",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.46305556,
+        "lon": 90.69
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6836099713623, 24.455832709198635],
+        "type": "Point"
+      },
+      "id": "00000000000000000036",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.45583333,
+        "lon": 90.68361111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.67722007955271, 24.453331153507655],
+        "type": "Point"
+      },
+      "id": "00000000000000000037",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.45333333,
+        "lon": 90.67722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6711111111095, 24.41666842464622],
+        "type": "Point"
+      },
+      "id": "00000000000000000038",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.41666667,
+        "lon": 90.67111111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.67222142727181, 24.43333208528295],
+        "type": "Point"
+      },
+      "id": "00000000000000000039",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.43333333,
+        "lon": 90.67222222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6644447550346, 24.400276769173754],
+        "type": "Point"
+      },
+      "id": "0000000000000000003a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.40027778,
+        "lon": 90.66444444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.66666538735922, 24.40499895718935],
+        "type": "Point"
+      },
+      "id": "0000000000000000003b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.405,
+        "lon": 90.66666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6558342309004, 24.40833436477733],
+        "type": "Point"
+      },
+      "id": "0000000000000000003c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.40833333,
+        "lon": 90.65583333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.63999996305961, 24.40610927335166],
+        "type": "Point"
+      },
+      "id": "0000000000000000003d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.40611111,
+        "lon": 90.64
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.70888861523429, 24.384166037067654],
+        "type": "Point"
+      },
+      "id": "0000000000000000003e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.38416667,
+        "lon": 90.70888889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.68222319093468, 24.40444602865872],
+        "type": "Point"
+      },
+      "id": "0000000000000000003f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.40444444,
+        "lon": 90.68222222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.76972413090645, 24.441389680886527],
+        "type": "Point"
+      },
+      "id": "00000000000000000040",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.44138889,
+        "lon": 90.76972222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.68944247554022, 24.397779672583827],
+        "type": "Point"
+      },
+      "id": "00000000000000000042",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.39777778,
+        "lon": 90.68944444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.67805393144971, 24.38861176081794],
+        "type": "Point"
+      },
+      "id": "00000000000000000043",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.38861111,
+        "lon": 90.67805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.70527674338099, 24.410002068571323],
+        "type": "Point"
+      },
+      "id": "00000000000000000046",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.41,
+        "lon": 90.70527778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.70500027911568, 24.41027853283663],
+        "type": "Point"
+      },
+      "id": "00000000000000000047",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.41027778,
+        "lon": 90.705
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.7241654954434, 24.423334780721124],
+        "type": "Point"
+      },
+      "id": "00000000000000000048",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.42333333,
+        "lon": 90.72416667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.85030408245068, 23.660222062838614],
+        "type": "Point"
+      },
+      "id": "0000000000000000004c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.660223,
+        "lon": 88.850303
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.80751900784286, 23.67282348241565],
+        "type": "Point"
+      },
+      "id": "0000000000000000004e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.672823,
+        "lon": 88.807521
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.86982602686265, 23.379610833545264],
+        "type": "Point"
+      },
+      "id": "00000000000000000051",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.379609,
+        "lon": 88.869827
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.87189059065041, 23.678705036705143],
+        "type": "Point"
+      },
+      "id": "00000000000000000052",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.678707,
+        "lon": 88.871889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.87711665708504, 23.666643168355574],
+        "type": "Point"
+      },
+      "id": "00000000000000000053",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.666641,
+        "lon": 88.877117
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.43875580982395, 24.033118847534073],
+        "type": "Point"
+      },
+      "id": "00000000000000000054",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.033117,
+        "lon": 88.438756
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.838233295899, 23.594013330397043],
+        "type": "Point"
+      },
+      "id": "0000000000000000005a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.594014,
+        "lon": 88.838234
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.88297591586927, 23.598450135945225],
+        "type": "Point"
+      },
+      "id": "0000000000000000005b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.59845,
+        "lon": 88.882978
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.8844385010148, 23.598775650322125],
+        "type": "Point"
+      },
+      "id": "0000000000000000005c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.598774,
+        "lon": 88.88444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95246208758513, 23.57777774346145],
+        "type": "Point"
+      },
+      "id": "0000000000000000005d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.577778,
+        "lon": 88.952464
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93889750218054, 23.588787263962406],
+        "type": "Point"
+      },
+      "id": "0000000000000000005e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.588787,
+        "lon": 88.938898
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9556726403436, 25.59541395172042],
+        "type": "Point"
+      },
+      "id": "00000000000000000060",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 25.595414,
+        "lon": 88.955674
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.92633175541192, 23.552039812180958],
+        "type": "Point"
+      },
+      "id": "00000000000000000066",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.552042,
+        "lon": 88.92633
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12013766449785, 23.90130336129316],
+        "type": "Point"
+      },
+      "id": "0000000000000000006b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.90130556,
+        "lon": 89.12013889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.10049978345847, 23.806083717397883],
+        "type": "Point"
+      },
+      "id": "0000000000000000006d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.80608333,
+        "lon": 89.1005
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.10819619187671, 23.80739023400654],
+        "type": "Point"
+      },
+      "id": "0000000000000000006f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.80738889,
+        "lon": 89.10819444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.1163875605119, 23.858192772308445],
+        "type": "Point"
+      },
+      "id": "00000000000000000070",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85819444,
+        "lon": 89.11638889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09722234418419, 23.854166204057183],
+        "type": "Point"
+      },
+      "id": "00000000000000000072",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85416667,
+        "lon": 89.09722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.06258404720101, 23.862139076740746],
+        "type": "Point"
+      },
+      "id": "00000000000000000073",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86213889,
+        "lon": 89.06258333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03544595818974, 23.842750905360358],
+        "type": "Point"
+      },
+      "id": "00000000000000000074",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.84275,
+        "lon": 89.03544444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14722224429647, 23.732526386420233],
+        "type": "Point"
+      },
+      "id": "00000000000000000075",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.73252778,
+        "lon": 89.14722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11716790319625, 23.906279718068806],
+        "type": "Point"
+      },
+      "id": "00000000000000000076",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.90627778,
+        "lon": 89.11716667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02524799408052, 23.835277451994788],
+        "type": "Point"
+      },
+      "id": "00000000000000000077",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83527778,
+        "lon": 89.02525
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.1475834314818, 23.737640975328535],
+        "type": "Point"
+      },
+      "id": "00000000000000000078",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.73763889,
+        "lon": 89.14758333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03541474448237, 23.843027369625677],
+        "type": "Point"
+      },
+      "id": "00000000000000000079",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.84302778,
+        "lon": 89.03541667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.1142516511073, 23.77769262099059],
+        "type": "Point"
+      },
+      "id": "0000000000000000007a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.77769444,
+        "lon": 89.11425
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03761308130171, 23.86166641202908],
+        "type": "Point"
+      },
+      "id": "0000000000000000007d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86166667,
+        "lon": 89.03761111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11427840571362, 23.888389804642383],
+        "type": "Point"
+      },
+      "id": "0000000000000000007e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.88838889,
+        "lon": 89.11427778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.06641887410699, 23.827416056837567],
+        "type": "Point"
+      },
+      "id": "00000000000000000083",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.82741667,
+        "lon": 89.06641667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14513984410452, 23.80833110432882],
+        "type": "Point"
+      },
+      "id": "00000000000000000085",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.80833333,
+        "lon": 89.14513889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.07399934589783, 23.8717216849046],
+        "type": "Point"
+      },
+      "id": "00000000000000000086",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87172222,
+        "lon": 89.074
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11000212780337, 23.800331477038927],
+        "type": "Point"
+      },
+      "id": "00000000000000000089",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.80033333,
+        "lon": 89.11
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12333483995316, 23.76619259937375],
+        "type": "Point"
+      },
+      "id": "0000000000000000008a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.76619444,
+        "lon": 89.12333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09236192403593, 23.75622204941825],
+        "type": "Point"
+      },
+      "id": "0000000000000000008b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.75622222,
+        "lon": 89.09236111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11894262541551, 23.753167565196637],
+        "type": "Point"
+      },
+      "id": "0000000000000000008d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.75316667,
+        "lon": 89.11894444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12905586660473, 23.74416464016973],
+        "type": "Point"
+      },
+      "id": "0000000000000000008e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.74416667,
+        "lon": 89.12905556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.13322066698865, 23.926862928531513],
+        "type": "Point"
+      },
+      "id": "00000000000000000090",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92686111,
+        "lon": 89.13322222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.13416599641198, 23.929917412753127],
+        "type": "Point"
+      },
+      "id": "00000000000000000091",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92991667,
+        "lon": 89.13416667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11222276012798, 23.785415784015157],
+        "type": "Point"
+      },
+      "id": "00000000000000000095",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78541667,
+        "lon": 89.11222222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11227626934061, 23.785335520196192],
+        "type": "Point"
+      },
+      "id": "00000000000000000096",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78533333,
+        "lon": 89.11227778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14305744391255, 23.84774955764128],
+        "type": "Point"
+      },
+      "id": "00000000000000000097",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.84775,
+        "lon": 89.14305556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12505605295979, 23.861724380342775],
+        "type": "Point"
+      },
+      "id": "00000000000000000098",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86172222,
+        "lon": 89.12505556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00486098406417, 23.756387036157218],
+        "type": "Point"
+      },
+      "id": "00000000000000000099",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.75638889,
+        "lon": 89.00486111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00511069372315, 23.756859700868887],
+        "type": "Point"
+      },
+      "id": "0000000000000000009a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.75686111,
+        "lon": 89.00511111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03122318949214, 23.73794419420017],
+        "type": "Point"
+      },
+      "id": "0000000000000000009b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.73794444,
+        "lon": 89.03122222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00880728849646, 23.73822065846549],
+        "type": "Point"
+      },
+      "id": "0000000000000000009c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.73822222,
+        "lon": 89.00880556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.1203338649442, 23.884305268077423],
+        "type": "Point"
+      },
+      "id": "0000000000000000009f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.88430556,
+        "lon": 89.12033333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.13841551971592, 23.740414536183778],
+        "type": "Point"
+      },
+      "id": "000000000000000000a0",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.74041667,
+        "lon": 89.13841667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12139067189386, 23.756110571891906],
+        "type": "Point"
+      },
+      "id": "000000000000000000a2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.75611111,
+        "lon": 89.12138889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [87.1381965601717, 23.752636932171274],
+        "type": "Point"
+      },
+      "id": "000000000000000000a4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.75263889,
+        "lon": 87.13819444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12250098805617, 23.765554947923107],
+        "type": "Point"
+      },
+      "id": "000000000000000000a5",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.76555556,
+        "lon": 89.1225
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01708338005166, 23.788028817232476],
+        "type": "Point"
+      },
+      "id": "000000000000000000a7",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78802778,
+        "lon": 89.01708333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.04763714046987, 23.862000844608094],
+        "type": "Point"
+      },
+      "id": "000000000000000000a9",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.862,
+        "lon": 89.04763889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.08866532926262, 23.84872164167093],
+        "type": "Point"
+      },
+      "id": "000000000000000000aa",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.84872222,
+        "lon": 89.08866667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.08450052887872, 23.936695246354365],
+        "type": "Point"
+      },
+      "id": "000000000000000000ad",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93669444,
+        "lon": 89.0845
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.07272404299655, 23.788974146655807],
+        "type": "Point"
+      },
+      "id": "000000000000000000ae",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78897222,
+        "lon": 89.07272222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14186240483023, 23.847000428664295],
+        "type": "Point"
+      },
+      "id": "000000000000000000b0",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.847,
+        "lon": 89.14186111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09697263452519, 23.893250224790638],
+        "type": "Point"
+      },
+      "id": "000000000000000000b2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.89325,
+        "lon": 89.09697222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.1436950953632, 23.87199814916992],
+        "type": "Point"
+      },
+      "id": "000000000000000000b4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.872,
+        "lon": 89.14369444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.05511059383544, 23.76988919414706],
+        "type": "Point"
+      },
+      "id": "000000000000000000b8",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.76988889,
+        "lon": 89.05511111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.05480737496381, 23.774722859688993],
+        "type": "Point"
+      },
+      "id": "000000000000000000bb",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.77472222,
+        "lon": 89.05480556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14308419851888, 23.872140840403624],
+        "type": "Point"
+      },
+      "id": "000000000000000000bc",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87213889,
+        "lon": 89.14308333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98805463219372, 23.923612243863552],
+        "type": "Point"
+      },
+      "id": "000000000000000000c4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92361111,
+        "lon": 88.98805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96652609230769, 23.93636081377535],
+        "type": "Point"
+      },
+      "id": "000000000000000000c6",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93636111,
+        "lon": 88.96652778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02255469704423, 23.938113240489358],
+        "type": "Point"
+      },
+      "id": "000000000000000000c7",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93811111,
+        "lon": 89.02255556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03211055060177, 23.96738723890523],
+        "type": "Point"
+      },
+      "id": "000000000000000000c9",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.96738889,
+        "lon": 89.03211111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01814018700132, 23.978806996703103],
+        "type": "Point"
+      },
+      "id": "000000000000000000ca",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.97880556,
+        "lon": 89.01813889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00672042920345, 23.952498300487772],
+        "type": "Point"
+      },
+      "id": "000000000000000000cb",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.9525,
+        "lon": 89.00672222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.99533434645979, 23.98477773301367],
+        "type": "Point"
+      },
+      "id": "000000000000000000cc",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.98477778,
+        "lon": 89.99533333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01594630928302, 24.016722732960552],
+        "type": "Point"
+      },
+      "id": "000000000000000000cd",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.01672222,
+        "lon": 89.01594444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03208379599545, 23.871636961984585],
+        "type": "Point"
+      },
+      "id": "000000000000000000d1",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87163889,
+        "lon": 89.03208333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9955280855593, 23.93533522053306],
+        "type": "Point"
+      },
+      "id": "000000000000000000d2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93533333,
+        "lon": 88.99552778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.05036165121352, 23.96333391604765],
+        "type": "Point"
+      },
+      "id": "000000000000000000d4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.96333333,
+        "lon": 89.05036111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.0777762044901, 23.93100097430911],
+        "type": "Point"
+      },
+      "id": "000000000000000000d6",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.931,
+        "lon": 89.07777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.04525152140627, 23.92077625559356],
+        "type": "Point"
+      },
+      "id": "000000000000000000d7",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92077778,
+        "lon": 89.04525
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00252887421321, 23.91730707497398],
+        "type": "Point"
+      },
+      "id": "000000000000000000d9",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.91730556,
+        "lon": 89.00252778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02824896908949, 23.922916624099212],
+        "type": "Point"
+      },
+      "id": "000000000000000000da",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92291667,
+        "lon": 89.02825
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00233267376686, 23.90880356926506],
+        "type": "Point"
+      },
+      "id": "000000000000000000db",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.90880556,
+        "lon": 89.00233333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99085940675634, 23.908776814658736],
+        "type": "Point"
+      },
+      "id": "000000000000000000dc",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.90877778,
+        "lon": 88.99086111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00877607478908, 23.91530493860098],
+        "type": "Point"
+      },
+      "id": "000000000000000000dd",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.91530556,
+        "lon": 89.00877778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01319504393305, 23.926804960217815],
+        "type": "Point"
+      },
+      "id": "000000000000000000de",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92680556,
+        "lon": 89.01319444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.94133217135573, 23.86674978723001],
+        "type": "Point"
+      },
+      "id": "000000000000000000e1",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86675,
+        "lon": 88.94133333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99938966707158, 23.934612846162405],
+        "type": "Point"
+      },
+      "id": "000000000000000000e2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93461111,
+        "lon": 88.99938889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95924883938848, 23.912749873697358],
+        "type": "Point"
+      },
+      "id": "000000000000000000e3",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.91275,
+        "lon": 88.95925
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91069368801749, 23.882610809677118],
+        "type": "Point"
+      },
+      "id": "000000000000000000e7",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.88261111,
+        "lon": 88.91069444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.901057570641, 23.890721914493337],
+        "type": "Point"
+      },
+      "id": "000000000000000000e8",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.89072222,
+        "lon": 88.90105556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00452655148516, 23.89683534203761],
+        "type": "Point"
+      },
+      "id": "000000000000000000eb",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.89683333,
+        "lon": 89.00452778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97738846247388, 23.887529198139067],
+        "type": "Point"
+      },
+      "id": "000000000000000000ed",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.88752778,
+        "lon": 88.97738889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.95805626165297, 23.88349817078675],
+        "type": "Point"
+      },
+      "id": "000000000000000000ee",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.8835,
+        "lon": 89.95805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9924736013377, 23.867195697335358],
+        "type": "Point"
+      },
+      "id": "000000000000000000ef",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86719444,
+        "lon": 88.99247222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02808398235051, 23.86299968324406],
+        "type": "Point"
+      },
+      "id": "000000000000000000f1",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.863,
+        "lon": 89.02808333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02569390418586, 23.87377733049024],
+        "type": "Point"
+      },
+      "id": "000000000000000000f2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87377778,
+        "lon": 89.02569444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03097347983314, 23.86663830970367],
+        "type": "Point"
+      },
+      "id": "000000000000000000f3",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86663889,
+        "lon": 89.03097222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03480384763805, 23.847473093375964],
+        "type": "Point"
+      },
+      "id": "000000000000000000f4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.84747222,
+        "lon": 89.03480556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03183408633646, 23.87311292443328],
+        "type": "Point"
+      },
+      "id": "000000000000000000f5",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87311111,
+        "lon": 89.03183333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9606935881298, 23.856279817956516],
+        "type": "Point"
+      },
+      "id": "000000000000000000f8",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85627778,
+        "lon": 88.96069444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97733495326123, 23.830639986899204],
+        "type": "Point"
+      },
+      "id": "000000000000000000f9",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83063889,
+        "lon": 88.97733333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.76749857588818, 24.03636061399993],
+        "type": "Point"
+      },
+      "id": "000000000000000000fb",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.03636111,
+        "lon": 88.7675
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.90563706742289, 23.839972885404066],
+        "type": "Point"
+      },
+      "id": "000000000000000000fd",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83997222,
+        "lon": 88.90563889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89961282189968, 23.861804644161737],
+        "type": "Point"
+      },
+      "id": "000000000000000000fe",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86180556,
+        "lon": 88.89961111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.88941485779044, 23.834528323017807],
+        "type": "Point"
+      },
+      "id": "000000000000000000ff",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83452778,
+        "lon": 88.88941667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.88644509648886, 23.842389718175035],
+        "type": "Point"
+      },
+      "id": "00000000000000000100",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.84238889,
+        "lon": 88.88644444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.92363845837565, 23.818609332257004],
+        "type": "Point"
+      },
+      "id": "00000000000000000101",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.81861111,
+        "lon": 88.92363889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97702727528855, 23.80505366505453],
+        "type": "Point"
+      },
+      "id": "00000000000000000103",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.80505556,
+        "lon": 88.97702778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96008269128545, 23.858527204887455],
+        "type": "Point"
+      },
+      "id": "00000000000000000104",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85852778,
+        "lon": 88.96008333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98916494835603, 23.817164583515694],
+        "type": "Point"
+      },
+      "id": "00000000000000000105",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.81716667,
+        "lon": 88.98916667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98611046413443, 23.808861737354178],
+        "type": "Point"
+      },
+      "id": "00000000000000000106",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.80886111,
+        "lon": 88.98611111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99114033012272, 23.81841759091171],
+        "type": "Point"
+      },
+      "id": "00000000000000000107",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.81841667,
+        "lon": 88.99113889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99380687255267, 23.815001919504766],
+        "type": "Point"
+      },
+      "id": "00000000000000000108",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.815,
+        "lon": 88.99380556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99388713637163, 23.99588981283885],
+        "type": "Point"
+      },
+      "id": "0000000000000000010a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.99588889,
+        "lon": 88.99388889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98850054229906, 23.98322150674602],
+        "type": "Point"
+      },
+      "id": "0000000000000000010b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.98322222,
+        "lon": 88.9885
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99627721453629, 23.995167438468197],
+        "type": "Point"
+      },
+      "id": "0000000000000000010c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.99516667,
+        "lon": 88.99627778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00425008721984, 23.953916294622765],
+        "type": "Point"
+      },
+      "id": "0000000000000000010d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.95391667,
+        "lon": 89.00425
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96366780853243, 23.950723578268498],
+        "type": "Point"
+      },
+      "id": "0000000000000000010e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.95072222,
+        "lon": 88.96366667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.0012758668172, 23.937720839596654],
+        "type": "Point"
+      },
+      "id": "00000000000000000110",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93772222,
+        "lon": 89.00127778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.04999846627396, 23.866665064309988],
+        "type": "Point"
+      },
+      "id": "0000000000000000016c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86666667,
+        "lon": 90.05
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.01666668589945, 23.833333283935485],
+        "type": "Point"
+      },
+      "id": "0000000000000000016d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83333333,
+        "lon": 90.01666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.92194399997534, 23.93888912407266],
+        "type": "Point"
+      },
+      "id": "00000000000000000172",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93888889,
+        "lon": 88.92194444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95472285181921, 23.92166807580425],
+        "type": "Point"
+      },
+      "id": "00000000000000000173",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92166667,
+        "lon": 88.95472222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91111284351652, 23.946112867779238],
+        "type": "Point"
+      },
+      "id": "00000000000000000174",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.94611111,
+        "lon": 88.91111111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93888858397843, 23.923612243863552],
+        "type": "Point"
+      },
+      "id": "00000000000000000175",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.92361111,
+        "lon": 88.93888889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93388993169752, 23.941390679763643],
+        "type": "Point"
+      },
+      "id": "00000000000000000176",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.94138889,
+        "lon": 88.93388889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.75583356753236, 24.127776644696628],
+        "type": "Point"
+      },
+      "id": "00000000000000000177",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.12777778,
+        "lon": 88.75583333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.78972273553856, 24.089999140571834],
+        "type": "Point"
+      },
+      "id": "00000000000000000178",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.09,
+        "lon": 88.78972222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.79722294351045, 24.093053624793445],
+        "type": "Point"
+      },
+      "id": "00000000000000000179",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.09305556,
+        "lon": 88.79722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.77361200343246, 24.114720396812135],
+        "type": "Point"
+      },
+      "id": "0000000000000000017a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.11472222,
+        "lon": 88.77361111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.78027835950736, 24.110555596428217],
+        "type": "Point"
+      },
+      "id": "0000000000000000017b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.11055556,
+        "lon": 88.78027778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.87722367551032, 24.021667876028825],
+        "type": "Point"
+      },
+      "id": "0000000000000000017c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.02166667,
+        "lon": 88.87722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89083285192544, 24.00000110401013],
+        "type": "Point"
+      },
+      "id": "0000000000000000017d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.0,
+        "lon": 88.89083333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.86305711146353, 24.009721944306644],
+        "type": "Point"
+      },
+      "id": "0000000000000000017e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.00972222,
+        "lon": 88.86305556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11416692818727, 24.04944361649074],
+        "type": "Point"
+      },
+      "id": "00000000000000000183",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.04944444,
+        "lon": 89.11416667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.77499878386008, 23.15861332623543],
+        "type": "Point"
+      },
+      "id": "00000000000000000188",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.15861111,
+        "lon": 88.775
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.78194606330136, 23.15888979050074],
+        "type": "Point"
+      },
+      "id": "00000000000000000189",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.15888889,
+        "lon": 88.78194444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14500161197186, 24.019442784603157],
+        "type": "Point"
+      },
+      "id": "0000000000000000018a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.01944444,
+        "lon": 89.145
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.0738878683715, 23.871668175691962],
+        "type": "Point"
+      },
+      "id": "0000000000000000018b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87166667,
+        "lon": 89.07388889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.109721204437, 24.064444032434533],
+        "type": "Point"
+      },
+      "id": "0000000000000000018e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06444444,
+        "lon": 89.10972222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.75694388369467, 24.061666012478234],
+        "type": "Point"
+      },
+      "id": "0000000000000000018f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06166667,
+        "lon": 88.75694444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.71166617159798, 24.09361101242512],
+        "type": "Point"
+      },
+      "id": "00000000000000000190",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.09361111,
+        "lon": 88.71166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.73694481546998, 24.127776644696624],
+        "type": "Point"
+      },
+      "id": "00000000000000000191",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.12777778,
+        "lon": 88.73694444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.75416586373838, 24.05833506399131],
+        "type": "Point"
+      },
+      "id": "00000000000000000192",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.05833333,
+        "lon": 88.75416667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.85583336775694, 24.062776328640542],
+        "type": "Point"
+      },
+      "id": "00000000000000000194",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06277778,
+        "lon": 88.85583333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.86333357572884, 24.06749851665614],
+        "type": "Point"
+      },
+      "id": "00000000000000000195",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.0675,
+        "lon": 88.86333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.88333264395355, 24.07861059648133],
+        "type": "Point"
+      },
+      "id": "00000000000000000196",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.07861111,
+        "lon": 88.88333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.88805483196914, 24.068613291919508],
+        "type": "Point"
+      },
+      "id": "00000000000000000197",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06861111,
+        "lon": 88.88805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91249962394414, 24.084443100659232],
+        "type": "Point"
+      },
+      "id": "00000000000000000198",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.08444444,
+        "lon": 88.9125
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.88166494015955, 24.063333716272222],
+        "type": "Point"
+      },
+      "id": "00000000000000000199",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06333333,
+        "lon": 88.88166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.76527794356358, 24.006667460085033],
+        "type": "Point"
+      },
+      "id": "0000000000000000019b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.00666667,
+        "lon": 88.76527778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.76083221981328, 24.05249810071235],
+        "type": "Point"
+      },
+      "id": "0000000000000000019d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.0525,
+        "lon": 88.76083333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.78722117984758, 24.030831328693658],
+        "type": "Point"
+      },
+      "id": "0000000000000000019f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.03083333,
+        "lon": 88.78722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89722274373503, 23.98500068806634],
+        "type": "Point"
+      },
+      "id": "000000000000000001a8",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.985,
+        "lon": 88.89722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91611149579742, 23.97888726052206],
+        "type": "Point"
+      },
+      "id": "000000000000000001a9",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.97888889,
+        "lon": 88.91611111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.92611325946031, 24.01888985607253],
+        "type": "Point"
+      },
+      "id": "000000000000000001ac",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.01888889,
+        "lon": 88.92611111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9347237835945, 24.00583360818804],
+        "type": "Point"
+      },
+      "id": "000000000000000001ad",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.00583333,
+        "lon": 88.93472222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9418315906737, 23.98366741685136],
+        "type": "Point"
+      },
+      "id": "000000000000000001ae",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.98366667,
+        "lon": 88.94183333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.85849991018691, 23.983667416851358],
+        "type": "Point"
+      },
+      "id": "000000000000000001af",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.98366667,
+        "lon": 88.8585
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.86111294340422, 23.875556511810565],
+        "type": "Point"
+      },
+      "id": "000000000000000001b0",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.87555556,
+        "lon": 88.86111111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.86277618809716, 23.862776728191385],
+        "type": "Point"
+      },
+      "id": "000000000000000001b1",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86277778,
+        "lon": 88.86277778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.84416835940114, 23.880555164091476],
+        "type": "Point"
+      },
+      "id": "000000000000000001b2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.88055556,
+        "lon": 88.84416667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.87555597171634, 23.968332568328556],
+        "type": "Point"
+      },
+      "id": "000000000000000001b3",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.96833333,
+        "lon": 88.87555556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.83472398336994, 23.957501411869735],
+        "type": "Point"
+      },
+      "id": "000000000000000001b4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.9575,
+        "lon": 88.83472222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.81972356742614, 23.959445579929046],
+        "type": "Point"
+      },
+      "id": "000000000000000001b5",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.95944444,
+        "lon": 88.81972222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.83166504004727, 23.961942676518973],
+        "type": "Point"
+      },
+      "id": "000000000000000001b6",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.96194444,
+        "lon": 88.83166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.81083211992556, 23.981388816213048],
+        "type": "Point"
+      },
+      "id": "000000000000000001b7",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.98138889,
+        "lon": 88.81083333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.82861055582566, 24.396111968789835],
+        "type": "Point"
+      },
+      "id": "000000000000000001ba",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.39611111,
+        "lon": 88.82861111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.83694461569455, 24.043053724681155],
+        "type": "Point"
+      },
+      "id": "000000000000000001bb",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.04305556,
+        "lon": 88.83694444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.84611252746043, 24.04416849994451],
+        "type": "Point"
+      },
+      "id": "000000000000000001bc",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.04416667,
+        "lon": 88.84611111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.94152837180208, 24.06169276708456],
+        "type": "Point"
+      },
+      "id": "00000000000000000021",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06169444,
+        "lon": 88.94152778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.94152837180208, 23.90747029805008],
+        "type": "Point"
+      },
+      "id": "000000000000000000e0",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.90747222,
+        "lon": 88.94152778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.83333520518808, 23.316666163074817],
+        "type": "Point"
+      },
+      "id": "00000000000000000122",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.31666667,
+        "lon": 89.83333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.83333520518808, 24.116664564871435],
+        "type": "Point"
+      },
+      "id": "00000000000000000123",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.11666667,
+        "lon": 89.83333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.83333520518808, 23.433334083037177],
+        "type": "Point"
+      },
+      "id": "00000000000000000160",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.43333333,
+        "lon": 89.83333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.83333520518808, 23.95000120389785],
+        "type": "Point"
+      },
+      "id": "00000000000000000161",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.95,
+        "lon": 89.83333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.83333520518808, 23.800001503560978],
+        "type": "Point"
+      },
+      "id": "00000000000000000163",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.8,
+        "lon": 89.83333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.83333520518808, 23.716665363973128],
+        "type": "Point"
+      },
+      "id": "00000000000000000166",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.71666667,
+        "lon": 89.83333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.66777570352151, 24.417497817442165],
+        "type": "Point"
+      },
+      "id": "0000000000000000004a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.4175,
+        "lon": 90.66777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.66777570352151, 24.41777874080853],
+        "type": "Point"
+      },
+      "id": "0000000000000000004b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.41777778,
+        "lon": 90.66777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11797054138589, 23.837359852186747],
+        "type": "Point"
+      },
+      "id": "00000000000000000088",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83736111,
+        "lon": 89.11797222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11797054138589, 23.837359852186747],
+        "type": "Point"
+      },
+      "id": "0000000000000000018d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83736111,
+        "lon": 89.11797222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.05958307219205, 23.962861251335976],
+        "type": "Point"
+      },
+      "id": "000000000000000000cf",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.96286111,
+        "lon": 89.05958333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.79999896571252, 23.416665963299394],
+        "type": "Point"
+      },
+      "id": "00000000000000000118",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.41666667,
+        "lon": 89.8
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.79999896571252, 23.283334382700307],
+        "type": "Point"
+      },
+      "id": "00000000000000000119",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.28333333,
+        "lon": 89.8
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.79999896571252, 23.21666636285024],
+        "type": "Point"
+      },
+      "id": "0000000000000000011a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.21666667,
+        "lon": 89.8
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.79999896571252, 23.21666636285024],
+        "type": "Point"
+      },
+      "id": "0000000000000000011b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.21666667,
+        "lon": 89.8
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.79999896571252, 23.600001903111824],
+        "type": "Point"
+      },
+      "id": "0000000000000000011c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.6,
+        "lon": 89.8
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.29999796683542, 23.316666163074817],
+        "type": "Point"
+      },
+      "id": "00000000000000000120",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.31666667,
+        "lon": 90.3
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.29999796683542, 23.700001703336397],
+        "type": "Point"
+      },
+      "id": "00000000000000000121",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.7,
+        "lon": 90.3
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6616667350783, 24.414443333220554],
+        "type": "Point"
+      },
+      "id": "0000000000000000002d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.41444444,
+        "lon": 90.66166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.6616667350783, 24.46916542134844],
+        "type": "Point"
+      },
+      "id": "00000000000000000035",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.46916667,
+        "lon": 90.66166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12027589663052, 23.901860748924847],
+        "type": "Point"
+      },
+      "id": "0000000000000000006c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.90186111,
+        "lon": 89.12027778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12027589663052, 23.78908116508109],
+        "type": "Point"
+      },
+      "id": "0000000000000000008c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78908333,
+        "lon": 89.12027778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.88333510530038, 24.000001104010135],
+        "type": "Point"
+      },
+      "id": "0000000000000000016a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.0,
+        "lon": 89.88333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.88333510530038, 23.86666506430999],
+        "type": "Point"
+      },
+      "id": "0000000000000000016b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86666667,
+        "lon": 89.88333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.88333510530038, 23.299998043337038],
+        "type": "Point"
+      },
+      "id": "0000000000000000016f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.3,
+        "lon": 89.88333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.88333510530038, 23.333334282812597],
+        "type": "Point"
+      },
+      "id": "00000000000000000171",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.33333333,
+        "lon": 89.88333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.76666718533801, 23.733333483710908],
+        "type": "Point"
+      },
+      "id": "00000000000000000111",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.73333333,
+        "lon": 89.76666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.76666718533801, 23.133334682363444],
+        "type": "Point"
+      },
+      "id": "00000000000000000112",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.13333333,
+        "lon": 89.76666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.76666718533801, 23.833333283935485],
+        "type": "Point"
+      },
+      "id": "00000000000000000114",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83333333,
+        "lon": 89.76666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95808501401352, 23.97191768557553],
+        "type": "Point"
+      },
+      "id": "000000000000000000c1",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.97191667,
+        "lon": 88.95808333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95808501401352, 23.95660959165905],
+        "type": "Point"
+      },
+      "id": "000000000000000000c2",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.95661111,
+        "lon": 88.95808333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.15883374343964, 23.796889051025676],
+        "type": "Point"
+      },
+      "id": "00000000000000000080",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.79688889,
+        "lon": 89.15883333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.15883374343964, 23.796666095973],
+        "type": "Point"
+      },
+      "id": "00000000000000000185",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.79666667,
+        "lon": 89.15883333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09213896898328, 23.86772187125966],
+        "type": "Point"
+      },
+      "id": "00000000000000000082",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86772222,
+        "lon": 89.09213889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09213896898328, 23.867498916206987],
+        "type": "Point"
+      },
+      "id": "00000000000000000187",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.8675,
+        "lon": 89.09213889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97116801650432, 24.094418109715797],
+        "type": "Point"
+      },
+      "id": "00000000000000000003",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.09441667,
+        "lon": 88.97116667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.0825563608194, 23.833056819670176],
+        "type": "Point"
+      },
+      "id": "00000000000000000081",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83305556,
+        "lon": 89.08255556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.0825563608194, 23.833056819670176],
+        "type": "Point"
+      },
+      "id": "00000000000000000186",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83305556,
+        "lon": 89.08255556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03750160377538, 23.832610909564828],
+        "type": "Point"
+      },
+      "id": "0000000000000000007b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.83261111,
+        "lon": 89.0375
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03750160377538, 24.034724123913314],
+        "type": "Point"
+      },
+      "id": "00000000000000000182",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.03472222,
+        "lon": 89.0375
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.84999886582482, 23.800001503560978],
+        "type": "Point"
+      },
+      "id": "00000000000000000162",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.8,
+        "lon": 89.85
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.84999886582482, 23.616665563748555],
+        "type": "Point"
+      },
+      "id": "00000000000000000167",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.61666667,
+        "lon": 89.85
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89644686015173, 23.627585902228443],
+        "type": "Point"
+      },
+      "id": "00000000000000000055",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.627586,
+        "lon": 88.896445
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89644686015173, 23.626471126965075],
+        "type": "Point"
+      },
+      "id": "00000000000000000056",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.626473,
+        "lon": 88.896445
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09955445403514, 23.856195095036497],
+        "type": "Point"
+      },
+      "id": "00000000000000000087",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85619444,
+        "lon": 89.09955556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09955445403514, 24.02250172792582],
+        "type": "Point"
+      },
+      "id": "0000000000000000018c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.0225,
+        "lon": 89.09955556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.59388839906592, 24.475831777423345],
+        "type": "Point"
+      },
+      "id": "00000000000000000026",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.47583333,
+        "lon": 90.59388889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.59388839906592, 24.475555313158022],
+        "type": "Point"
+      },
+      "id": "00000000000000000027",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.47555556,
+        "lon": 90.59388889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.783333383823194],
+        "type": "Point"
+      },
+      "id": "00000000000000000115",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78333333,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.783333383823194],
+        "type": "Point"
+      },
+      "id": "00000000000000000116",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78333333,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 24.116664564871435],
+        "type": "Point"
+      },
+      "id": "0000000000000000015b",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.11666667,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.91666496442228],
+        "type": "Point"
+      },
+      "id": "0000000000000000015c",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.91666667,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.91666496442228],
+        "type": "Point"
+      },
+      "id": "0000000000000000015d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.91666667,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.800001503560978],
+        "type": "Point"
+      },
+      "id": "0000000000000000015e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.8,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.783333383823194],
+        "type": "Point"
+      },
+      "id": "0000000000000000015f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78333333,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.11666656262566],
+        "type": "Point"
+      },
+      "id": "00000000000000000168",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.11666667,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.8166670854503, 23.149998343000174],
+        "type": "Point"
+      },
+      "id": "00000000000000000169",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.15,
+        "lon": 89.81666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01722161218431, 23.788305281497788],
+        "type": "Point"
+      },
+      "id": "000000000000000000a8",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78830556,
+        "lon": 89.01722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01722161218431, 23.85086201017658],
+        "type": "Point"
+      },
+      "id": "000000000000000000fc",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85086111,
+        "lon": 89.01722222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14013673272255, 23.787221719941805],
+        "type": "Point"
+      },
+      "id": "0000000000000000007f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78722222,
+        "lon": 89.14013889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.14013673272255, 24.063610180537538],
+        "type": "Point"
+      },
+      "id": "00000000000000000184",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.06361111,
+        "lon": 89.14013889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97474867465024, 24.04483290600148],
+        "type": "Point"
+      },
+      "id": "0000000000000000000a",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.04483333,
+        "lon": 88.97475
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.06347140831065, 23.7799712216289],
+        "type": "Point"
+      },
+      "id": "000000000000000000ab",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.77997222,
+        "lon": 89.06347222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.06347140831065, 23.869220129213613],
+        "type": "Point"
+      },
+      "id": "000000000000000000f6",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.86922222,
+        "lon": 89.06347222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89361087188173, 23.89597027643324],
+        "type": "Point"
+      },
+      "id": "000000000000000000e4",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.89597222,
+        "lon": 88.89361111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89361087188173, 23.89597027643324],
+        "type": "Point"
+      },
+      "id": "000000000000000000e6",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.89597222,
+        "lon": 88.89361111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89361087188173, 24.00361297586342],
+        "type": "Point"
+      },
+      "id": "000000000000000001a6",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 24.00361111,
+        "lon": 88.89361111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.86666698556259, 23.183334582475734],
+        "type": "Point"
+      },
+      "id": "00000000000000000164",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.18333333,
+        "lon": 89.86666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.86666698556259, 23.56666566363626],
+        "type": "Point"
+      },
+      "id": "00000000000000000165",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.56666667,
+        "lon": 89.86666667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.7833353050758, 23.366666063187104],
+        "type": "Point"
+      },
+      "id": "00000000000000000113",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.36666667,
+        "lon": 89.78333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.7833353050758, 23.783333383823198],
+        "type": "Point"
+      },
+      "id": "00000000000000000117",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.78333333,
+        "lon": 89.78333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.7833353050758, 23.600001903111824],
+        "type": "Point"
+      },
+      "id": "0000000000000000011d",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.6,
+        "lon": 89.78333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.7833353050758, 23.516665763523978],
+        "type": "Point"
+      },
+      "id": "0000000000000000011e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.51666667,
+        "lon": 89.78333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.7833353050758, 23.316666163074817],
+        "type": "Point"
+      },
+      "id": "0000000000000000011f",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.31666667,
+        "lon": 89.78333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.03333480563724, 23.466665863411684],
+        "type": "Point"
+      },
+      "id": "0000000000000000016e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.46666667,
+        "lon": 90.03333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.03333480563724, 23.316666163074817],
+        "type": "Point"
+      },
+      "id": "00000000000000000170",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.31666667,
+        "lon": 90.03333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.10488753889506, 23.91374871233333],
+        "type": "Point"
+      },
+      "id": "0000000000000000006e",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.91375,
+        "lon": 89.10488889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.10488753889506, 23.93041683207111],
+        "type": "Point"
+      },
+      "id": "000000000000000000b1",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.93041667,
+        "lon": 89.10488889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9068053518989, 23.855165042693155],
+        "type": "Point"
+      },
+      "id": "000000000000000000e9",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85516667,
+        "lon": 88.90680556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9068053518989, 23.855165042693155],
+        "type": "Point"
+      },
+      "id": "000000000000000000ea",
+      "properties": {
+        "class": 1,
+        "growth": "G",
+        "growth_int": 2.0,
+        "lat": 23.85516667,
+        "lon": 88.90680556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95675174279853, 24.091916554024813],
+        "type": "Point"
+      },
+      "id": "00000000000000000005",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.09191667,
+        "lon": 88.95675
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9826368244138, 24.013859990084242],
+        "type": "Point"
+      },
+      "id": "0000000000000000000c",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.01386111,
+        "lon": 88.98263889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01161206305908, 24.01480531950757],
+        "type": "Point"
+      },
+      "id": "0000000000000000000d",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.01480556,
+        "lon": 89.01161111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99911320280627, 24.039250111482563],
+        "type": "Point"
+      },
+      "id": "00000000000000000010",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.03925,
+        "lon": 88.99911111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99477895658232, 24.030108954322998],
+        "type": "Point"
+      },
+      "id": "00000000000000000011",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.03011111,
+        "lon": 88.99477778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01188852732439, 24.019166320337845],
+        "type": "Point"
+      },
+      "id": "00000000000000000012",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.01916667,
+        "lon": 89.01188889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.98913819374971, 24.02399998587978],
+        "type": "Point"
+      },
+      "id": "00000000000000000013",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.024,
+        "lon": 88.98913889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99558159477193, 23.98500068806634],
+        "type": "Point"
+      },
+      "id": "00000000000000000014",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.985,
+        "lon": 88.99558333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99561280847931, 23.985027442672664],
+        "type": "Point"
+      },
+      "id": "00000000000000000015",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.98502778,
+        "lon": 88.99561111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95161039928391, 24.026416818650745],
+        "type": "Point"
+      },
+      "id": "00000000000000000018",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.02641667,
+        "lon": 88.95161111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.95052929907476, 24.014805319507573],
+        "type": "Point"
+      },
+      "id": "00000000000000000019",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.01480556,
+        "lon": 89.95052778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95449989676656, 24.03630710478729],
+        "type": "Point"
+      },
+      "id": "0000000000000000001a",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.03630556,
+        "lon": 88.9545
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.92627824619929, 24.0218328627678],
+        "type": "Point"
+      },
+      "id": "0000000000000000001b",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.02183333,
+        "lon": 88.92627778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95111097996592, 24.027192702234046],
+        "type": "Point"
+      },
+      "id": "0000000000000000001c",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.02719444,
+        "lon": 88.95111111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95830350996513, 24.024668851037795],
+        "type": "Point"
+      },
+      "id": "0000000000000000001d",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.02466667,
+        "lon": 88.95830556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93375169956487, 24.110332641375543],
+        "type": "Point"
+      },
+      "id": "0000000000000000001e",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.11033333,
+        "lon": 88.93375
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9343893510155, 24.08544639839626],
+        "type": "Point"
+      },
+      "id": "0000000000000000001f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.08544444,
+        "lon": 88.93438889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.94483256568267, 24.065054929278855],
+        "type": "Point"
+      },
+      "id": "00000000000000000020",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.06505556,
+        "lon": 88.94483333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9701647187673, 24.059637121498916],
+        "type": "Point"
+      },
+      "id": "00000000000000000022",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.05963889,
+        "lon": 88.97016667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95516876192457, 24.053055488344036],
+        "type": "Point"
+      },
+      "id": "00000000000000000023",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.05305556,
+        "lon": 88.95516667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.992415633024, 24.02069579199917],
+        "type": "Point"
+      },
+      "id": "00000000000000000024",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.02069444,
+        "lon": 88.99241667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01450156054172, 24.052168127234395],
+        "type": "Point"
+      },
+      "id": "00000000000000000025",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.05216667,
+        "lon": 89.0145
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.63111297466008, 24.463056452905217],
+        "type": "Point"
+      },
+      "id": "0000000000000000002e",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.46305556,
+        "lon": 90.63111111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.62833495470379, 24.454445928771015],
+        "type": "Point"
+      },
+      "id": "0000000000000000002f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.45444444,
+        "lon": 90.62833333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.64777663529681, 24.45138698544835],
+        "type": "Point"
+      },
+      "id": "00000000000000000031",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.45138889,
+        "lon": 90.64777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.70583413101268, 24.447222185064433],
+        "type": "Point"
+      },
+      "id": "00000000000000000032",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.44722222,
+        "lon": 90.70583333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.76694611095016, 24.441942609417154],
+        "type": "Point"
+      },
+      "id": "00000000000000000041",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.44194444,
+        "lon": 90.76694444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.7041664272187, 24.410278532836635],
+        "type": "Point"
+      },
+      "id": "00000000000000000044",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.41027778,
+        "lon": 90.70416667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.69638975498148, 24.40111062107075],
+        "type": "Point"
+      },
+      "id": "00000000000000000045",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.40111111,
+        "lon": 90.69638889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [90.7119430994559, 24.41500072085223],
+        "type": "Point"
+      },
+      "id": "00000000000000000049",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.415,
+        "lon": 90.71194444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.85077228806128, 23.66075269586397],
+        "type": "Point"
+      },
+      "id": "0000000000000000004d",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.660753,
+        "lon": 88.850773
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.8077642584008, 23.667699975305236],
+        "type": "Point"
+      },
+      "id": "0000000000000000004f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.667701,
+        "lon": 88.807765
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.80751008964076, 23.662638895609575],
+        "type": "Point"
+      },
+      "id": "00000000000000000050",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.66264,
+        "lon": 88.807512
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89140361686029, 23.61788289833614],
+        "type": "Point"
+      },
+      "id": "00000000000000000057",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.617881,
+        "lon": 88.891402
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89215274583727, 23.620125826166024],
+        "type": "Point"
+      },
+      "id": "00000000000000000058",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.620128,
+        "lon": 88.892151
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.84019084126147, 23.598525940663134],
+        "type": "Point"
+      },
+      "id": "00000000000000000059",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.598527,
+        "lon": 88.840191
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93943259430695, 23.581327187899994],
+        "type": "Point"
+      },
+      "id": "0000000000000000005f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.581327,
+        "lon": 88.939433
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.85000532268009, 23.55605746223011],
+        "type": "Point"
+      },
+      "id": "00000000000000000061",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.556059,
+        "lon": 88.850006
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.8597261629766, 23.556311630990162],
+        "type": "Point"
+      },
+      "id": "00000000000000000062",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.55631,
+        "lon": 88.859726
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89018182317164, 23.55803730309784],
+        "type": "Point"
+      },
+      "id": "00000000000000000063",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.558038,
+        "lon": 88.89018
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89562192645684, 23.556877936823945],
+        "type": "Point"
+      },
+      "id": "00000000000000000064",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.556879,
+        "lon": 88.895621
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93134824409705, 23.579556924781773],
+        "type": "Point"
+      },
+      "id": "00000000000000000065",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.579555,
+        "lon": 88.931348
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.34888954853962, 23.359999707112205],
+        "type": "Point"
+      },
+      "id": "00000000000000000067",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.36,
+        "lon": 89.34888889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.36611059680803, 23.369167618878087],
+        "type": "Point"
+      },
+      "id": "00000000000000000068",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.36916667,
+        "lon": 89.36611111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.36694444870501, 23.349997943449328],
+        "type": "Point"
+      },
+      "id": "00000000000000000069",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.35,
+        "lon": 89.36694444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.34805569664263, 23.34111095504981],
+        "type": "Point"
+      },
+      "id": "0000000000000000006a",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.34111111,
+        "lon": 89.34805556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.09297282088025, 23.893250224790638],
+        "type": "Point"
+      },
+      "id": "00000000000000000071",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.89325,
+        "lon": 89.09297222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11119270778462, 23.791417734033093],
+        "type": "Point"
+      },
+      "id": "0000000000000000007c",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.79141667,
+        "lon": 89.11119444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.07300050726187, 23.873362634092274],
+        "type": "Point"
+      },
+      "id": "00000000000000000084",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.87336111,
+        "lon": 89.073
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12294243906047, 23.74594382149005],
+        "type": "Point"
+      },
+      "id": "0000000000000000008f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.74594444,
+        "lon": 89.12294444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11785906385953, 23.906471459414103],
+        "type": "Point"
+      },
+      "id": "00000000000000000092",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.90647222,
+        "lon": 89.11786111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.1230539165868, 23.929056806249807],
+        "type": "Point"
+      },
+      "id": "00000000000000000093",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.92905556,
+        "lon": 89.12305556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.12130594897384, 23.932084535865105],
+        "type": "Point"
+      },
+      "id": "00000000000000000094",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.93208333,
+        "lon": 89.12130556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.00163705400252, 23.79966707098197],
+        "type": "Point"
+      },
+      "id": "0000000000000000009d",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.79966667,
+        "lon": 89.00163889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9994164216779, 23.8108326600198],
+        "type": "Point"
+      },
+      "id": "0000000000000000009e",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.81083333,
+        "lon": 88.99941667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11938853552087, 23.881304293068457],
+        "type": "Point"
+      },
+      "id": "000000000000000000a1",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.88130556,
+        "lon": 89.11938889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01733308971065, 23.99919400671946],
+        "type": "Point"
+      },
+      "id": "000000000000000000a3",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.99919444,
+        "lon": 89.01733333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99969288594322, 23.8108326600198],
+        "type": "Point"
+      },
+      "id": "000000000000000000a6",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.81083333,
+        "lon": 88.99969444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.08494643898405, 23.92241720478123],
+        "type": "Point"
+      },
+      "id": "000000000000000000ac",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.92241667,
+        "lon": 89.08494444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02197055480623, 23.724584727444046],
+        "type": "Point"
+      },
+      "id": "000000000000000000b3",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.72458333,
+        "lon": 89.02197222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.04138993989399, 23.728526572775294],
+        "type": "Point"
+      },
+      "id": "000000000000000000b5",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.72852778,
+        "lon": 89.04138889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02366501320654, 23.77883415086027],
+        "type": "Point"
+      },
+      "id": "000000000000000000b6",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.77883333,
+        "lon": 89.02366667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02344651725492, 23.7697509620144],
+        "type": "Point"
+      },
+      "id": "000000000000000000b7",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.76975,
+        "lon": 89.02344444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01419388256902, 23.720553700091735],
+        "type": "Point"
+      },
+      "id": "000000000000000000b9",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.72055556,
+        "lon": 89.01419444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01360974033102, 23.711252015294242],
+        "type": "Point"
+      },
+      "id": "000000000000000000ba",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.71125,
+        "lon": 89.01361111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11458162458526, 23.900692464448838],
+        "type": "Point"
+      },
+      "id": "000000000000000000bd",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.90069444,
+        "lon": 89.11458333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03689070693106, 23.744860259934065],
+        "type": "Point"
+      },
+      "id": "000000000000000000be",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.74486111,
+        "lon": 89.03688889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.11430516031993, 23.900554232316182],
+        "type": "Point"
+      },
+      "id": "000000000000000000bf",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.90055556,
+        "lon": 89.11430556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.0363600739057, 23.732749341472903],
+        "type": "Point"
+      },
+      "id": "000000000000000000c0",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.73275,
+        "lon": 89.03636111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.9623880465301, 23.94830674549753],
+        "type": "Point"
+      },
+      "id": "000000000000000000c3",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.94830556,
+        "lon": 88.96238889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.03011287332983, 23.97069589188689],
+        "type": "Point"
+      },
+      "id": "000000000000000000c8",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.97069444,
+        "lon": 89.03011111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02713865292718, 23.94383426714093],
+        "type": "Point"
+      },
+      "id": "000000000000000000ce",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.94383333,
+        "lon": 89.02713889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.96016741420547, 23.912834596617373],
+        "type": "Point"
+      },
+      "id": "000000000000000000d3",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.91283333,
+        "lon": 88.96016667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.04835951484053, 23.928053508512786],
+        "type": "Point"
+      },
+      "id": "000000000000000000d8",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.92805556,
+        "lon": 89.04836111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.93211075037719, 23.90352845271883],
+        "type": "Point"
+      },
+      "id": "000000000000000000df",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.90352778,
+        "lon": 88.93211111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91338698505379, 23.903167265533497],
+        "type": "Point"
+      },
+      "id": "000000000000000000e5",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.90316667,
+        "lon": 88.91338889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.02725013045351, 23.898168613252587],
+        "type": "Point"
+      },
+      "id": "000000000000000000ec",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.89816667,
+        "lon": 89.02725
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97558252654723, 23.862192585953384],
+        "type": "Point"
+      },
+      "id": "000000000000000000f0",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.86219444,
+        "lon": 88.97558333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.95291691589257, 23.83058201858551],
+        "type": "Point"
+      },
+      "id": "000000000000000000f7",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.83058333,
+        "lon": 88.95291667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97055711966, 23.844084176575347],
+        "type": "Point"
+      },
+      "id": "000000000000000000fa",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.84408333,
+        "lon": 88.97055556
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91483173379508, 23.835165974468453],
+        "type": "Point"
+      },
+      "id": "00000000000000000102",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.83516667,
+        "lon": 88.91483333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97144448076963, 23.98683337859931],
+        "type": "Point"
+      },
+      "id": "00000000000000000109",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.98683333,
+        "lon": 88.97144444
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.99608547319099, 23.94124798852993],
+        "type": "Point"
+      },
+      "id": "0000000000000000010f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.94125,
+        "lon": 88.99608333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.84333450750414, 24.011666112365948],
+        "type": "Point"
+      },
+      "id": "0000000000000000017f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.01166667,
+        "lon": 88.84333333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.83249889194427, 24.002779123966423],
+        "type": "Point"
+      },
+      "id": "00000000000000000180",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.00277778,
+        "lon": 88.8325
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.82833409156035, 24.01555444848455],
+        "type": "Point"
+      },
+      "id": "00000000000000000181",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.01555556,
+        "lon": 88.82833333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.74860982382579, 24.057501212094312],
+        "type": "Point"
+      },
+      "id": "00000000000000000193",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.0575,
+        "lon": 88.74861111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.75472325137007, 24.052498100712352],
+        "type": "Point"
+      },
+      "id": "0000000000000000019a",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.0525,
+        "lon": 88.75472222
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.75639095516405, 24.05000100412242],
+        "type": "Point"
+      },
+      "id": "0000000000000000019c",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.05,
+        "lon": 88.75638889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.78777856747925, 24.04388757657815],
+        "type": "Point"
+      },
+      "id": "0000000000000000019e",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.04388889,
+        "lon": 88.78777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.82610900013468, 24.062499864375226],
+        "type": "Point"
+      },
+      "id": "000000000000000001a1",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.0625,
+        "lon": 88.82611111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.85166856737303, 24.068613291919505],
+        "type": "Point"
+      },
+      "id": "000000000000000001a2",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.06861111,
+        "lon": 88.85166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.83888878375384, 24.0705574599788],
+        "type": "Point"
+      },
+      "id": "000000000000000001a3",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.07055556,
+        "lon": 88.83888889
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.82499868397237, 24.056943824462635],
+        "type": "Point"
+      },
+      "id": "000000000000000001a4",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.05694444,
+        "lon": 88.825
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.80166866726074, 24.062223400109914],
+        "type": "Point"
+      },
+      "id": "000000000000000001a5",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.06222222,
+        "lon": 88.80166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.89583150420636, 23.99472152836285],
+        "type": "Point"
+      },
+      "id": "000000000000000001a7",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.99472222,
+        "lon": 88.89583333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.92777650415324, 24.678890321195162],
+        "type": "Point"
+      },
+      "id": "000000000000000001aa",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.67888889,
+        "lon": 88.92777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.91166577204714, 23.879444847929168],
+        "type": "Point"
+      },
+      "id": "000000000000000001ab",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.87944444,
+        "lon": 88.91166667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.83083118815027, 24.422220005457763],
+        "type": "Point"
+      },
+      "id": "000000000000000001b9",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.42222222,
+        "lon": 88.83083333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.82777670392866, 24.056667360197327],
+        "type": "Point"
+      },
+      "id": "000000000000000001a0",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.05666667,
+        "lon": 88.82777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.82777670392866, 23.95000120389785],
+        "type": "Point"
+      },
+      "id": "000000000000000001b8",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.95,
+        "lon": 88.82777778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.05958307219205, 23.962861251335976],
+        "type": "Point"
+      },
+      "id": "000000000000000000d0",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.96286111,
+        "lon": 89.05958333
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.04727595328455, 23.928222954352808],
+        "type": "Point"
+      },
+      "id": "000000000000000000c5",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.92822222,
+        "lon": 89.04727778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.04727595328455, 23.928222954352808],
+        "type": "Point"
+      },
+      "id": "000000000000000000d5",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 23.92822222,
+        "lon": 89.04727778
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97116801650432, 24.094418109715797],
+        "type": "Point"
+      },
+      "id": "00000000000000000004",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.09441667,
+        "lon": 88.97116667
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01211148237707, 24.03505409739127],
+        "type": "Point"
+      },
+      "id": "0000000000000000000e",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.03505556,
+        "lon": 89.01211111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.01211148237707, 24.035027342784947],
+        "type": "Point"
+      },
+      "id": "0000000000000000000f",
+      "properties": {
+        "class": 1,
+        "growth": "F",
+        "growth_int": 3.0,
+        "lat": 24.03502778,
+        "lon": 89.01211111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97510986183556, 24.107362880073953],
+        "type": "Point"
+      },
+      "id": "00000000000000000001",
+      "properties": {
+        "class": 1,
+        "growth": "H",
+        "growth_int": 4.0,
+        "lat": 24.10736111,
+        "lon": 88.97511111
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [88.97474867465024, 24.10169536263502],
+        "type": "Point"
+      },
+      "id": "00000000000000000000",
+      "properties": {
+        "class": 1,
+        "growth": "H",
+        "growth_int": 4.0,
+        "lat": 24.10169444,
+        "lon": 88.97475
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [89.15055765188445, 23.848248976959262],
+        "type": "Point"
+      },
+      "id": "000000000000000000af",
+      "properties": {
+        "class": 1,
+        "growth": "P",
+        "growth_int": 1.0,
+        "lat": 23.84825,
+        "lon": 89.15055556
+      },
+      "type": "Feature"
+    }
+  ]
+}
