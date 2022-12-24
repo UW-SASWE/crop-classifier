@@ -1,0 +1,37 @@
+{
+  "name": "crop-classifier",
+  "version": "1.0.0",
+  "description": "A tool for classifying crops using satellite imagery. This tool is focused on Bangladesh.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UW-SASWE/crop-classifier.git"
+  },
+  "keywords": [
+    "Classification",
+    "Google",
+    "Earth",
+    "Engine",
+    "Bangladesh"
+  ],
+  "author": "G. K. Darkwah (SASWE Research Group)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UW-SASWE/crop-classifier/issues"
+  },
+  "homepage": "https://github.com/UW-SASWE/crop-classifier#readme",
+  "dependencies": {
+    "@google/earthengine": "^0.1.335",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
