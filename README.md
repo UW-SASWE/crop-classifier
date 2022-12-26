@@ -1,4 +1,4 @@
-# crop-classifier (v1.0.0)
+# Bangladesh Crop Classifier (v1.0.0)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
