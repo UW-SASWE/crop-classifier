@@ -19,7 +19,7 @@ var privateKey = JSON.parse(process.env.ee_private_key);
 const app = express();
 app.listen(port, () => console.log("listening at " + port));
 app.use(express.static("frontend"));
-app.use(express.json({ limit: "1mb" }));
+// app.use(express.json({ limit: "1mb" }));
 
 // Initialize client library and run analysis.
 var runAnalysis = function () {
