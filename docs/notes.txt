@@ -83,4 +83,9 @@ After meeting with Faisal on December 17, 2022
     - A simple spreadsheet
 * Restricted access
     - Require password
+        + use passport.js
     - MySQL**
+        + for the password database
+
+
+In

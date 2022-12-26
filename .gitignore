@@ -2,6 +2,9 @@
 .vscode
 .archive
 node_modules/
+docs/notes.txt
+docs/notes.docx
+docs/presentation/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
