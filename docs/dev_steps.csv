@@ -1,0 +1,4 @@
+No., Step, Resource,
+1," Install NVM,  node.js (use version 10 or above) and npm","Unix, MacOS and Windows WSL: https://github.com/nvm-sh/nvm or Windows OS: https://github.com/coreybutler/nvm-windows", 
+2, Create the skeleton folder using the express-generator,npx express-generator --view=ejs,
+,Install the required dependencies in the root folder,npm install,
