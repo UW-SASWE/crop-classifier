@@ -3,7 +3,7 @@ const mysql = require("mysql2");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var crypto = require("crypto");
-var db = require("../db");
+var db = require("../database");
 
 passport.use(
   new LocalStrategy(function verify(username, password, cb) {
@@ -71,7 +71,7 @@ router.get("/login", function (req, res, next) {
 router.post(
   "/login/password",
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/cropclassifier",
     failureRedirect: "/login",
   })
 );

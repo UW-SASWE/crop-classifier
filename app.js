@@ -8,8 +8,9 @@ var passport = require("passport");
 var session = require("express-session");
 
 var indexRouter = require("./routes/index");
-var authRouter = require("./routes/auth");
 var usersRouter = require("./routes/users");
+var authRouter = require("./routes/auth"); // router for authentication
+var ccRouter = require("./routes/cc_router"); // router for the main crop classifier page
 
 var sessionStore = require("./sessionStore");
 
@@ -36,8 +37,9 @@ app.use(
 app.use(passport.authenticate("session"));
 
 app.use("/", indexRouter);
-app.use("/", authRouter);
 app.use("/users", usersRouter);
+app.use("/", authRouter);
+app.use("/", ccRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
