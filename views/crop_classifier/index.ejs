@@ -2,30 +2,99 @@
 <html lang="en">
   <!-- TODO: customize header -->
   <head>
+    <%- include('../partials/head'); %>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
       crossorigin=""
     />
-    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="/stylesheets/crop-classifier.css" />
   </head>
 
-  <body>
-    Crop classifier This page is the main page for the crop classifier
-    <form action="/logout" method="post">
-      <button class="logout" type="submit">Sign out</button>
-    </form>
+  <body class="p-0">
+    <main>
+      <h1 class="visually-hidden">Crop Classifier - Bangladesh</h1>
+      <div class="row h-100 m-0">
+        <div class="" style="width: 450px">
+          <!-- <hr> -->
+          <div class="accordion accordion-flush" id="sidebarAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Tools and Processes
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the first item's accordion body.
 
-    <script
-      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-      crossorigin=""
-    ></script>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio, placeat quasi commodi quidem nesciunt in suscipit assumenda deserunt! Dolor veniam iste repellat quibusdam! Quos aut quam repudiandae dolorum necessitatibus?
+
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perspiciatis officiis eligendi ratione! Inventore, asperiores amet quo delectus deleniti ipsa culpa. Labore necessitatibus, aspernatur eos maxime et dolor nesciunt error!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Output
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#sidebarAccordion"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptates itaque optio, perferendis obcaecati repudiandae, iusto voluptas dignissimos animi sequi possimus praesentium modi nobis accusantium, quasi aspernatur quos nulla eius.
+
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut amet pariatur distinctio enim quia omnis, obcaecati ducimus minima consectetur perspiciatis dolores id nobis, laborum modi laboriosam voluptatum alias soluta ipsum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="map" class="col h-100"></div>
+      </div>
+    </main>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
     ></script>
     <script src="/javascripts/crop-classifier.js"></script>
   </body>
