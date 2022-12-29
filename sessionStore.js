@@ -16,7 +16,7 @@ const connection = mysql.createPool(options);
 var sessionStore = new MySQLStore(
   {
     createDatabaseTable: false,
-    expiration: process.env.SESS_LIFETIME,
+    expiration: Number(process.env.SESS_LIFETIME),
     schema: {
       tableName: "sessions",
       columnNames: {
