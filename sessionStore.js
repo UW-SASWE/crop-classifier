@@ -22,8 +22,8 @@ const connection = mysql.createPool(options);
 var sessionStore = new MySQLStore(
   {
     createDatabaseTable: false,
-    // expiration: 86400000,
-    expiration: 300000,
+    expiration: 86400000,
+    // expiration: 300000,
     schema: {
       tableName: "sessions",
       columnNames: {
