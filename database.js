@@ -23,22 +23,22 @@ db.getConnection(function (err, connection) {
   console.log("Connected to the MySQL server: " + connection.threadId);
 });
 
-db.getConnection(function (err, connection) {
-  if (err) {
-    return console.error("error: " + err.message);
-  }
-  var salt = crypto.randomBytes(16);
-  connection.query(
-    mysql.format(
-      "INSERT IGNORE users (id, username, hashed_password, salt) VALUES (0, ?, ?, ?)",
-      ["george", crypto.pbkdf2Sync("admin1", salt, 310000, 32, "sha256"), salt]
-    ),
-    (err, result) => {
-      if (err) {
-        return console.error("error: " + err.message);
-      }
-    }
-  );
-});
+// db.getConnection(function (err, connection) {
+//   if (err) {
+//     return console.error("error: " + err.message);
+//   }
+//   var salt = crypto.randomBytes(16);
+//   connection.query(
+//     mysql.format(
+//       "INSERT IGNORE users (id, username, hashed_password, salt) VALUES (0, ?, ?, ?)",
+//       ["george", crypto.pbkdf2Sync("admin1", salt, 310000, 32, "sha256"), salt]
+//     ),
+//     (err, result) => {
+//       if (err) {
+//         return console.error("error: " + err.message);
+//       }
+//     }
+//   );
+// });
 
 module.exports = db;
