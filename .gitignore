@@ -7,6 +7,7 @@ docs/notes.docx
 docs/presentation/
 sandbox/
 cc_assets/
+db_signup.js
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
