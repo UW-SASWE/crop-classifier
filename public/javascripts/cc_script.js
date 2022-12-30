@@ -25,11 +25,12 @@ async function load_polygon(polygon_name) {
   //   minZoom: 6,
   // }).addTo(map);
 
-  L.geoJSON(startupVars[polygon_name]).addTo(map);
+  L.geoJSON(startupVars).addTo(map);
 }
 
+// STARTUP: Load the initial polygons of Bangladesh
 load_polygon("bg_boundary");
-load_polygon("bg_divisions");
+// load_polygon("bg_divisions");
 // load_polygon("bg_zilas");
 // load_polygon("bg_upazilas");
 // load_polygon("bg_unions");
