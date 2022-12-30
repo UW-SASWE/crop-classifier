@@ -12,17 +12,24 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   minZoom: 6,
 }).addTo(map);
 
-// invoke the startup to load the region of interest
-(async function () {
-  var response = await fetch("/cropclassifier/startup");
+// function to load (Bangladesh) polygons
+async function load_polygon(polygon_name) {
+  var response = await fetch("/cropclassifier/" + polygon_name);
   var startupVars = await response.json();
-  console.log(startupVars.center);
 
-  map.setView(startupVars.center);
-  L.tileLayer(startupVars.urlFormat, {
-    attribution:
-      'Map Data &copy; <a href="https://earthengine.google.com">Google Earth Engine</a>',
-    maxZoom: 17,
-    minZoom: 6,
-  }).addTo(map);
-})();
+  // map.setView(startupVars.center);
+  // L.tileLayer(startupVars.urlFormat, {
+  //   attribution:
+  //     'Map Data &copy; <a href="https://earthengine.google.com">Google Earth Engine</a>',
+  //   maxZoom: 17,
+  //   minZoom: 6,
+  // }).addTo(map);
+
+  L.geoJSON(startupVars[polygon_name]).addTo(map);
+}
+
+load_polygon("bg_boundary");
+load_polygon("bg_divisions");
+// load_polygon("bg_zilas");
+// load_polygon("bg_upazilas");
+// load_polygon("bg_unions");
