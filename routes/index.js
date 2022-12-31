@@ -6,7 +6,18 @@ router.get(
   "/",
   function (req, res, next) {
     if (!req.user) {
-      return res.render("index", { title: "Crop Classifier - Bangladesh" });
+      console.log(req.session.messages)
+      var errMessage;
+      var showErr;
+      if (req.session.messages) {
+        var errMessage = req.session.messages.pop();
+        var showErr = "show";
+      } else {
+        var errMessage = "";
+        var showErr = "";
+      }
+
+      return res.render("index", { title: "Crop Classifier - Bangladesh", errMessage: errMessage, collapseShow: showErr});
     }
     next();
   },
