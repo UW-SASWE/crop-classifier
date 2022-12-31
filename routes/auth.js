@@ -18,13 +18,11 @@ passport.use(
         if (err) {
           return cb(err);
         }
-        if (!row) {
+        if (!row[0]) {
           return cb(null, false, {
             message: "Incorrect username or password.",
           });
         }
-
-        // console.log(row[0].salt)
 
         crypto.pbkdf2(
           password,
@@ -73,15 +71,18 @@ router.post(
   "/login/password",
   passport.authenticate("local", {
     successRedirect: "/cropclassifier",
-    failureRedirect: "/login",
+    failureRedirect: "/",
+    failureMessage: true,
   })
 );
 
-router.post('/logout', function(req, res, next) {
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      res.redirect('/');
-    });
+router.post("/logout", function (req, res, next) {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.redirect("/");
   });
+});
 
 module.exports = router;
