@@ -1,115 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <!-- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>Crop Classifier - Bangladesh</title> -->
-
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.2/examples/cover/"
-    />
-    <link href="/stylesheets/cover.css" rel="stylesheet" />
     <meta
       name="author"
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
-    <meta name="generator" content="Hugo 0.104.2" />
     <%- include('./partials/head'); %>
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, 0.1);
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
-    <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet" />
   </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <!-- <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Cover</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a
-              class="nav-link fw-bold py-1 px-0 active"
-              aria-current="page"
-              href="#"
-              >Home</a
-            >
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-          </nav>
-        </div>
-      </header> -->
 
+  <body class="d-flex h-100 text-center text-bg-dark">
+    <div class="cover-container d-flex w-75 h-100 p-3 mx-auto flex-column">
       <main class="px-3">
         <h1>Crop Classifier - Bangladesh</h1>
+
         <p class="lead">Insert a summary of the crop classification app.</p>
         <p class="lead">
-          <a href="/login" class="btn btn-lg btn-secondary fw-bold border-white"
-            >Sign In</a
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          saepe, et officia iusto odio maxime tenetur non harum architecto
+          temporibus reiciendis vitae suscipit. Ipsa, repudiandae. Delectus
+          totam ratione mollitia dolorum.
+        </p>
+
+        <p class="lead">
+          <a
+            data-bs-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
           >
+            Sign in here
+          </a>
         </p>
+        <p class="text-danger"><%= errMessage %></p>
+
+        <div class="collapse <%= collapseShow %>" id="collapseExample">
+          <div class="d-flex flex-column align-items-center collapse">
+            <form class="w-25" action="/login/password" method="post">
+              <div class="mb-3">
+                <label for="username" class="form-label fs-5">Username</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="username"
+                  name="username"
+                  autocomplete="username"
+                  required
+                  autofocus
+                />
+              </div>
+              <div class="mb-4">
+                <label for="current-password" class="form-label fs-5"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control form-control-lg"
+                  id="current-password"
+                  name="password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-secondary btn-lg fw-bold border-white"
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
-      <!-- 
-      <footer class="mt-auto text-white-50">
-        <p>
-          Cover template for
-          <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>,
-          by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.
-        </p>
-      </footer> -->
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javascripts/cc_script.js"></script>
   </body>
 </html>
