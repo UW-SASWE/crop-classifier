@@ -12,7 +12,7 @@ var usersRouter = require("./routes/users");
 var authRouter = require("./routes/auth"); // router for authentication
 var ccRouter = require("./routes/cc_router"); // router for the main crop classifier page
 
-var sessionStore = require("./sessionStore");
+var sessionStore = require("./server_scripts/sessionStore");
 
 var app = express();
 

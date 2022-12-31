@@ -2,8 +2,9 @@ var express = require("express");
 const mysql = require("mysql2");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
+// Explore using a GoogleStrategy (https://github.com/jaredhanson/passport-google-oauth2)
 var crypto = require("crypto");
-var db = require("../database");
+var db = require("../server_scripts/database");
 
 passport.use(
   new LocalStrategy(function verify(username, password, cb) {
