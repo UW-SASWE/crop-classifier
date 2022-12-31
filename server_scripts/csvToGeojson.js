@@ -37,24 +37,24 @@ const csvToGeojson = (
       });
   });
 
-// example usage of the csvToGeojson function
-(async function () {
-  try {
-    var geoJSON = await csvToGeojson("./cc_assets/training_points.csv");
-    // console.log(geoJSON);
-    fs.writeFile(
-      "./cc_assets/training_points.geojson",
-      JSON.stringify(geoJSON),
-      (err) => {
-        if (err) {
-          console.log("The file was not saved: ", err);
-        }
-        console.log("The file has been saved!");
-      }
-    );
-  } catch {
-    ("Diddn't work");
-  }
-})();
+// // example usage of the csvToGeojson function
+// (async function () {
+//   try {
+//     var geoJSON = await csvToGeojson("./cc_assets/training_points.csv");
+//     // console.log(geoJSON);
+//     fs.writeFile(
+//       "./cc_assets/training_points.geojson",
+//       JSON.stringify(geoJSON),
+//       (err) => {
+//         if (err) {
+//           console.log("The file was not saved: ", err);
+//         }
+//         console.log("The file has been saved!");
+//       }
+//     );
+//   } catch {
+//     ("Diddn't work");
+//   }
+// })();
 
 module.exports = csvToGeojson;

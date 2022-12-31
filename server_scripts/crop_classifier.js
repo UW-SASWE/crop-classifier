@@ -64,10 +64,12 @@ const cc = {
       try {
         var bgBoundaryData = await readFile(path);
         var bgBoundaryDataJson = JSON.parse(bgBoundaryData);
-        console.log(bgBoundaryDataJson)
+        console.log(bgBoundaryDataJson);
         res.send(bgBoundaryDataJson);
       } catch {
-        console.log("Could not load Bangladesh boundary.\nError parsing JSON string");
+        console.log(
+          "Could not load Bangladesh boundary.\nError parsing JSON string"
+        );
       }
     })();
   },
