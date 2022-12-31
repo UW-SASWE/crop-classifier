@@ -67,7 +67,7 @@ const cc = {
         console.log(bgBoundaryDataJson)
         res.send(bgBoundaryDataJson);
       } catch {
-        console.log("Error parsing JSON string");
+        console.log("Could not load Bangladesh boundary.\nError parsing JSON string");
       }
     })();
   },
@@ -79,7 +79,7 @@ const cc = {
         var bgDivisionsDataJson = JSON.parse(bgDivisionsData);
         res.send(bgDivisionsDataJson);
       } catch {
-        console.log("Error parsing JSON string");
+        console.log("Could not load Divisions.\nError parsing JSON string");
       }
     })();
   },
@@ -91,30 +91,30 @@ const cc = {
         var bgZilasDataJson = JSON.parse(bgZilasData);
         res.send(bgZilasDataJson);
       } catch {
-        console.log("Error parsing JSON string");
+        console.log("Could not load Zilas.\nError parsing JSON string");
       }
     })();
   },
   loadUpazilas: async function (req, res, next) {
-    // var path = "./cc_assets/bg_upazilas.geojson";
-    // (async function () {
-    //   try {
-    //     var bgUpazilasData = await readFile(path);
-    //     var bgUpazilasDataJson = JSON.parse(bgUpazilasData);
-    //     res.send(bgUpazilasDataJson);
-    //   } catch {
-    //     console.log("Error parsing JSON string");
-    //   }
-    // })();
+    var path = "./cc_assets/bg_upazilas.geojson";
     (async function () {
       try {
-        var geoJSON = await csvToGeojson("./cc_assets/training_points.csv");
-        // console.log(geoJSON);
-        res.send(geoJSON);
+        var bgUpazilasData = await readFile(path);
+        var bgUpazilasDataJson = JSON.parse(bgUpazilasData);
+        res.send(bgUpazilasDataJson);
       } catch {
-        ("Diddn't work");
+        console.log("Could not load Upazilas.\nError parsing JSON string.");
       }
     })();
+    // (async function () {
+    //   try {
+    //     var geoJSON = await csvToGeojson("./cc_assets/training_points.csv");
+    //     // console.log(geoJSON);
+    //     res.send(geoJSON);
+    //   } catch {
+    //     ("Diddn't work");
+    //   }
+    // })();
   },
   loadUnions: async function (req, res, next) {
     var path = "./cc_assets/bg_unions.geojson";
@@ -124,7 +124,7 @@ const cc = {
         var bgBoundaryDataJson = JSON.parse(bgBoundaryData);
         res.send(bgBoundaryDataJson);
       } catch {
-        console.log("Error parsing JSON string");
+        console.log("Could not load Unions.\nError parsing JSON string");
       }
     })();
   },
