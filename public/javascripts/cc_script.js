@@ -26,11 +26,22 @@ async function load_polygon(polygon_name) {
   // }).addTo(map);
 
   L.geoJSON(startupVars).addTo(map);
+  // await fetch("/cropclassifier/train")
+  await fetch("/cropclassifier/classify")
 }
 
 // STARTUP: Load the initial polygons of Bangladesh
-load_polygon("bg_boundary");
+// load_polygon("bg_boundary");
 // load_polygon("bg_divisions");
 // load_polygon("bg_zilas");
-// load_polygon("bg_upazilas");
+load_polygon("bg_upazilas");
 // load_polygon("bg_unions");
+
+async function classify(){
+
+  await fetch("/cropclassifier/train")
+}
+
+// classify()
+
+

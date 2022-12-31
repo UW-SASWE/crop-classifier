@@ -17,70 +17,20 @@
       <h1 class="visually-hidden">Crop Classifier - Bangladesh</h1>
       <div class="row h-100 m-0">
         <div class="" style="width: 450px">
-          <!-- <hr> -->
-          <!-- <div class="accordion accordion-flush" id="sidebarAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
+          <hr />
+          <div>
+            <form action="#">
+              <div class="mb-3">
+                <label for="formFile" class="form-label"
+                  >Tablular [Latitude, Longitude, and Crop Class] (.csv)</label
                 >
-                  Tools and Processes
-                </button>
-              </h2>
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#sidebarAccordion"
-              >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
-
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio, placeat quasi commodi quidem nesciunt in suscipit assumenda deserunt! Dolor veniam iste repellat quibusdam! Quos aut quam repudiandae dolorum necessitatibus?
-
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perspiciatis officiis eligendi ratione! Inventore, asperiores amet quo delectus deleniti ipsa culpa. Labore necessitatibus, aspernatur eos maxime et dolor nesciunt error!
-                </div>
+                <input class="form-control" type="file" id="formFile" />
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
-                >
-                  Output
-                </button>
-              </h2>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingTwo"
-                data-bs-parent="#sidebarAccordion"
-              >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the second item's accordion body. Let's imagine this being
-                  filled with some actual content.
-
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptates itaque optio, perferendis obcaecati repudiandae, iusto voluptas dignissimos animi sequi possimus praesentium modi nobis accusantium, quasi aspernatur quos nulla eius.
-
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut amet pariatur distinctio enim quia omnis, obcaecati ducimus minima consectetur perspiciatis dolores id nobis, laborum modi laboriosam voluptatum alias soluta ipsum.
-                </div>
-              </div>
-            </div>
-          </div> -->
+              <button type="button" class="btn btn-secondary">Train</button>
+            </form>
+            <hr />
+            <button type="button" class="btn btn-secondary">Classify</button>
+          </div>
         </div>
         <div id="map" class="col h-100"></div>
       </div>
