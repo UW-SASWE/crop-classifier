@@ -15,6 +15,15 @@ const readFile = (path, opts = {}) =>
     });
   });
 
+// shuffle array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 var privateKey = JSON.parse(process.env.EE_PRIVATE_KEY); //TODO: try encrypting the key lateron
 
 // Initialize client library and run analysis.
@@ -131,6 +140,22 @@ const cc = {
     })();
   },
   train: async function (req, res, next) {
+    var geoJSON = await csvToGeojson(req.body.csvData);
+    geoJSON.features = shuffleArray(geoJSON.features);
+
+    var split = Math.floor(
+      (req.body.splitRatio * geoJSON.features.length) / 100
+    );
+
+    var trainingPtsGeoJSON = geoJSON,
+      validationPtsGeoJSON = geoJSON;
+    validationPtsGeoJSON.features = geoJSON.features.slice(split);
+    trainingPtsGeoJSON.features = geoJSON.features.slice(0, split);
+    console.log(validationPtsGeoJSON);
+
+    res.send({response: "train function accessed correctly."});
+  },
+  train2: async function (req, res, next) {
     // Import the maize target region asset.
     var roi = ee.FeatureCollection(
       "projects/earthengine-community/tutorials/classify-maizeland-ng/aoi"
