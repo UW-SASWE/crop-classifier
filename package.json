@@ -10,7 +10,7 @@
     "@google-cloud/local-auth": "^2.1.0",
     "@google/earthengine": "^0.1.335",
     "cookie-parser": "~1.4.4",
-    "csv-parser": "^3.0.0",
+    "csv-parse": "^5.3.3",
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
     "ejs": "~2.6.1",
