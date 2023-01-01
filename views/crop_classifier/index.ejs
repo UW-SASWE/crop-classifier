@@ -19,15 +19,68 @@
         <div class="" style="width: 450px">
           <hr />
           <div>
-            <form action="#">
-              <div class="mb-3">
-                <label for="formFile" class="form-label"
-                  >Tablular [Latitude, Longitude, and Crop Class] (.csv)</label
-                >
-                <input class="form-control" type="file" id="formFile" />
+            <!-- <form action=""> -->
+            <div class="mb-3">
+              <label for="trainFile" class="form-label"
+                >Tablular [Latitude, Longitude, and Crop Class] (.csv)</label
+              >
+              <input class="form-control" type="file" id="trainFile" />
+            </div>
+            <label for="trainSplit" class="form-label">Data split ratio:</label>
+            <input
+              type="range"
+              class="form-range"
+              min="10"
+              max="90"
+              step="10"
+              value="70"
+              id="trainSplit"
+              onchange="updateTrainSplit(this.value);"
+            />
+            <div class="row justify-content-between">
+              <div class="col d-inline-flex justify-content-start">
+                <div class="d-flex flex-column align-items-center">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="trainPercent"
+                    min="10"
+                    max="90"
+                    step="10"
+                    aria-controls="trainSplit validationPercent"
+                    onchange="updateTrainSplit(this.value);"
+                    style="width: 4.5em"
+                  />
+                  <label for="trainPercent" class="form-label mt-1"
+                    >Training</label
+                  >
+                </div>
               </div>
-              <button type="button" class="btn btn-secondary">Train</button>
-            </form>
+
+              <div class="col d-inline-flex justify-content-end">
+                <div class="d-flex flex-column align-items-center">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="validationPercent"
+                    min="10"
+                    max="90"
+                    step="10"
+                    aria-controls="trainSplit trainPercent"
+                    onchange="updateTrainSplit(this.value);"
+                    style="width: 4.5em"
+                  />
+                  <label for="validationPercent" class="form-label mt-1"
+                    >Validation</label
+                  >
+                </div>
+                <div></div>
+              </div>
+            </div>
+            <button class="btn btn-secondary" onclick="postTrain()">
+              Train
+            </button>
+            <!-- </form> -->
             <hr />
             <form action="">
               <button type="button" class="btn btn-secondary">Classify</button>
