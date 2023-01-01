@@ -6,7 +6,6 @@ router.get(
   "/",
   function (req, res, next) {
     if (!req.user) {
-      console.log(req.session.messages)
       var errMessage;
       var showErr;
       if (req.session.messages) {
@@ -17,7 +16,11 @@ router.get(
         var showErr = "";
       }
 
-      return res.render("index", { title: "Crop Classifier - Bangladesh", errMessage: errMessage, collapseShow: showErr});
+      return res.render("index", {
+        title: "Crop Classifier - Bangladesh",
+        errMessage: errMessage,
+        collapseShow: showErr,
+      });
     }
     next();
   },
