@@ -8,6 +8,7 @@ docs/presentation/
 sandbox/
 cc_assets/
 db_signup.js
+sandbox*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
