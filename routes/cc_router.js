@@ -25,7 +25,7 @@ router.get("/cropclassifier/bg_upazilas", cc.loadUpazilas);
 router.get("/cropclassifier/bg_unions", cc.loadUnions);
 
 // Training and classification
-router.get("/cropclassifier/train", cc.train); // Train
+router.post("/cropclassifier/train", cc.train); // Train
 router.get("/cropclassifier/classify", cc.classify); // Classify
 
 module.exports = router;
