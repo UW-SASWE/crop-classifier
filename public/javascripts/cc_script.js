@@ -32,6 +32,7 @@ async function postTrain() {
     },
     body: JSON.stringify({ csvData, splitRatio }),
   };
+  loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
   var responseJson = await response.json();
   document.getElementById("cartTrainingAccuracy").innerHTML =
@@ -53,7 +54,34 @@ async function postTrain() {
 }
 
 // function to load the training points
-async function loadTrainPoints() {}
+async function loadTrainPoints(options) {
+  var response = await fetch("/cropclassifier/displaytrainingpoints", options);
+  var pointsGeojson = await response.json();
+  L.geoJSON(pointsGeojson.tpGeojson, {
+    pointToLayer: function (feature, latlng) {
+      return L.circleMarker(latlng, {
+        radius: 8,
+        fillColor: "#e28743",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8,
+      });
+    },
+  }).addTo(map);
+  L.geoJSON(pointsGeojson.vpGeojson, {
+    pointToLayer: function (feature, latlng) {
+      return L.circleMarker(latlng, {
+        radius: 8,
+        fillColor: "#21130d",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.9,
+      });
+    },
+  }).addTo(map);
+}
 
 const trainButton = document.getElementById("trainButton");
 trainButton.addEventListener("click", postTrain);
@@ -77,13 +105,20 @@ trainFileInput.addEventListener("input", () => {
   document.getElementById("trainButton").disabled = false;
 });
 
-window.onload = () => {
-  // initialize the map
-  var map = L.map("map", {
-    center: [23.84574043942299, 90.28182335177792],
-    zoom: 7.5,
-  });
+// function to load (Bangladesh) polygons
+async function load_polygon(polygon_name) {
+  var response = await fetch("/cropclassifier/" + polygon_name);
+  var startupVars = await response.json();
+  L.geoJSON(startupVars).addTo(map);
+}
 
+// initialize the map
+var map = L.map("map", {
+  center: [23.84574043942299, 90.28182335177792],
+  zoom: 7.5,
+});
+
+window.onload = () => {
   // add basemap to the map
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
@@ -91,13 +126,6 @@ window.onload = () => {
     maxZoom: 17,
     minZoom: 6,
   }).addTo(map);
-
-  // function to load (Bangladesh) polygons
-  async function load_polygon(polygon_name) {
-    var response = await fetch("/cropclassifier/" + polygon_name);
-    var startupVars = await response.json();
-    L.geoJSON(startupVars).addTo(map);
-  }
 
   // STARTUP: Load the initial polygons of Bangladesh
   // load_polygon("bg_boundary");

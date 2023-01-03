@@ -26,6 +26,7 @@ router.get("/cropclassifier/bg_upazilas", cc.loadUpazilas);
 router.get("/cropclassifier/bg_unions", cc.loadUnions);
 
 // Training and classification
+router.post("/cropclassifier/displaytrainingpoints",cc.displayTrainingPoints)
 router.post(
   "/cropclassifier/train",
   cc.loadRoi,

@@ -98,29 +98,30 @@ const cc = {
       next();
     });
   },
-  loadTrainingPoints: async function (req, res, next) {
-    // var roiPath = "./cc_assets/bg_boundary.geojson";
-    // var tPPath = "./cc_assets/training_pts.geojson";
-    // var tpGeojson = await loadGeojson(tPPath);
-    // req.tp = ee.FeatureCollection(tpGeojson);
-    // var vPPath = "./cc_assets/training_pts.geojson";
-    // var vpGeojson = await loadGeojson(vPPath);
-    // req.vp = ee.FeatureCollection(vpGeojson);
-    // req.tp.getMap({}, async ({}) => {
-    //   req.vp.getMap({}, async ({}) => {
-    //     next();
-    //   });
-    // });
-
+  displayTrainingPoints: async function (req, res, next) {
     var geoJSON = await csvToGeojson(req.body.csvData);
     geoJSON.features = shuffleArray(geoJSON.features);
     var split = Math.floor(
       (req.body.splitRatio * geoJSON.features.length) / 100
     );
-    var tpGeojson = geoJSON,
-      vpGeojson = geoJSON;
-    vpGeojson.features = geoJSON.features.slice(split);
-    tpGeojson.features = geoJSON.features.slice(0, split);
+    var tpGeojson = JSON.parse(JSON.stringify(geoJSON)),
+      vpGeojson = JSON.parse(JSON.stringify(geoJSON));
+    vpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(split)));
+    tpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(0, split)));
+    console.log(vpGeojson, tpGeojson)
+
+    res.send({tpGeojson, vpGeojson})
+  },
+  loadTrainingPoints: async function (req, res, next) {
+    var geoJSON = await csvToGeojson(req.body.csvData);
+    geoJSON.features = shuffleArray(geoJSON.features);
+    var split = Math.floor(
+      (req.body.splitRatio * geoJSON.features.length) / 100
+    );
+    var tpGeojson = JSON.parse(JSON.stringify(geoJSON)),
+      vpGeojson = JSON.parse(JSON.stringify(geoJSON));
+    vpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(split)));
+    tpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(0, split)));
 
     req.tp = ee.FeatureCollection(tpGeojson);
     req.vp = ee.FeatureCollection(vpGeojson);
@@ -369,7 +370,12 @@ const cc = {
     }
 
     // console.log(s2c);
-    res.send({trainAccuracyCart, trainAccuracyRf,validationAccuracyCart,validationAccuracyRf});
+    res.send({
+      trainAccuracyCart,
+      trainAccuracyRf,
+      validationAccuracyCart,
+      validationAccuracyRf,
+    });
   },
   classify: async function (req, res, next) {
     console.log("Running the classification from trained model");
