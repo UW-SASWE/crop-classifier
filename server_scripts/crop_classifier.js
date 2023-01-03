@@ -278,47 +278,47 @@ const cc = {
       inputProperties: bands,
     });
 
-    // // save RF trained models
-    // try {
-    //   var rfExplanation = await trainedRf.explain().getInfo((info) => {
-    //     // console.log("pass");
-    //     return info;
-    //   });
-    //   // console.log(explanation.numberOfTrees);
-    //   fs.writeFile(
-    //     "./cc_assets/rfExplanation.json",
-    //     JSON.stringify(rfExplanation),
-    //     (err) => {
-    //       if (err) {
-    //         console.log("The Random Forest Explanation was not saved: ", err);
-    //       }
-    //       console.log("The Random Forest Explanation has been saved!");
-    //     }
-    //   );
-    // } catch {
-    //   console.log("Unable to get the Random Forest Explanation explanation.");
-    // }
+    // save RF trained models
+    try {
+      var rfExplanation = await trainedRf.explain().getInfo((info) => {
+        // console.log("pass");
+        return info;
+      });
+      // console.log(explanation.numberOfTrees);
+      fs.writeFile(
+        "./cc_assets/rfExplanation.json",
+        JSON.stringify(rfExplanation),
+        (err) => {
+          if (err) {
+            console.log("The Random Forest Explanation was not saved: ", err);
+          }
+          console.log("The Random Forest Explanation has been saved!");
+        }
+      );
+    } catch {
+      console.log("Unable to get the Random Forest Explanation explanation.");
+    }
 
-    // // save Cart trained models
-    // try {
-    //   var cartExplanation = await trainedCart.explain().getInfo((info) => {
-    //     // console.log("pass");
-    //     return info;
-    //   });
-    //   // console.log(explanation.numberOfTrees);
-    //   fs.writeFile(
-    //     "./cc_assets/cartExplanation.json",
-    //     JSON.stringify(cartExplanation),
-    //     (err) => {
-    //       if (err) {
-    //         console.log("The CART Explanation was not saved: ", err);
-    //       }
-    //       console.log("The CART Explanation has been saved!");
-    //     }
-    //   );
-    // } catch {
-    //   console.log("Unable to get CART explanation.");
-    // }
+    // save Cart trained models
+    try {
+      var cartExplanation = await trainedCart.explain().getInfo((info) => {
+        // console.log("pass");
+        return info;
+      });
+      // console.log(explanation.numberOfTrees);
+      fs.writeFile(
+        "./cc_assets/cartExplanation.json",
+        JSON.stringify(cartExplanation),
+        (err) => {
+          if (err) {
+            console.log("The CART Explanation was not saved: ", err);
+          }
+          console.log("The CART Explanation has been saved!");
+        }
+      );
+    } catch {
+      console.log("Unable to get CART explanation.");
+    }
 
     // Training accuracy calculation
     try {
