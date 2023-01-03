@@ -7,6 +7,7 @@ var router = express.Router();
 router.get("/cropclassifier", function (req, res, next) {
   res.render("crop_classifier/index", {
     title: "Crop Classifier - Bangladesh",
+    currentYear: new Date().getFullYear().toString(),
   });
 });
 
@@ -25,7 +26,12 @@ router.get("/cropclassifier/bg_upazilas", cc.loadUpazilas);
 router.get("/cropclassifier/bg_unions", cc.loadUnions);
 
 // Training and classification
-router.post("/cropclassifier/train", cc.train); // Train
+router.post(
+  "/cropclassifier/train",
+  cc.loadRoi,
+  cc.loadTrainingPoints,
+  cc.train
+); // Train
 router.get("/cropclassifier/classify", cc.classify); // Classify
 
 module.exports = router;
