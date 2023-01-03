@@ -9,6 +9,7 @@
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
       crossorigin=""
     />
+
     <link rel="stylesheet" href="/stylesheets/cc_style.css" />
   </head>
 
@@ -35,7 +36,6 @@
               step="10"
               value="70"
               id="trainSplit"
-              onchange="updateTrainSplit(this.value);"
             />
             <div class="row justify-content-between">
               <div class="col d-inline-flex justify-content-start">
@@ -48,7 +48,6 @@
                     max="90"
                     step="10"
                     aria-controls="trainSplit validationPercent"
-                    onchange="updateTrainSplit(this.value);"
                     style="width: 4.5em"
                   />
                   <label for="trainPercent" class="form-label mt-1"
@@ -67,19 +66,91 @@
                     max="90"
                     step="10"
                     aria-controls="trainSplit trainPercent"
-                    onchange="updateTrainSplit(this.value);"
                     style="width: 4.5em"
                   />
                   <label for="validationPercent" class="form-label mt-1"
                     >Validation</label
                   >
                 </div>
-                <div></div>
               </div>
             </div>
-            <button class="btn btn-secondary" onclick="postTrain()">
-              Train
-            </button>
+
+            <div class="row justify-content-between align-items-center my-2">
+              <div class="col">
+                <div class="d-flex flex-column align-items-center">
+                  <input
+                    type="number"
+                    class="form-control date"
+                    id="trainYear"
+                    min="1993"
+                    max="<%= currentYear %>"
+                    step="1"
+                    value="<%= currentYear %>"
+                    style="width: 5em"
+                    disabled
+                  />
+                  <label for="trainYear" class="form-label mt-1"
+                    >Train Year</label
+                  >
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-flex flex-column align-items-start">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="seasonRadios"
+                      id="season1"
+                      value="option1"
+                      checked
+                      disabled
+                    />
+                    <label class="form-check-label" for="season1">
+                      Season 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="seasonRadios"
+                      id="season2"
+                      value="option2"
+                      disabled
+                    />
+                    <label class="form-check-label" for="season2">
+                      Season 2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="seasonRadios"
+                      id="season3"
+                      value="option3"
+                      disabled
+                    />
+                    <label class="form-check-label" for="season3">
+                      Season 3
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button
+                class="btn btn-lg btn-secondary"
+                id="trainButton"
+                disabled
+              >
+                Train
+              </button>
+            </div>
+
             <!-- </form> -->
             <hr />
             <form action="">
@@ -89,6 +160,12 @@
             <form action="/logout" method="post">
               <button type="submit" class="btn btn-secondary">Logout</button>
             </form>
+            <div class="input-group date" data-provide="datepicker">
+              <input type="text" class="form-control" />
+              <div class="input-group-addon">
+                <span class="glyphicon glyphicon-th"></span>
+              </div>
+            </div>
           </div>
         </div>
         <div id="map" class="col h-100"></div>
@@ -105,7 +182,9 @@
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
       crossorigin=""
     ></script>
+
     <script src="/javascripts/cc_script.js"></script>
+
     <!-- TODO: Footer -->
   </body>
 </html>
