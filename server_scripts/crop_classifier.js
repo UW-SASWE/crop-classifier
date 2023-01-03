@@ -277,31 +277,99 @@ const cc = {
       inputProperties: bands,
     });
 
-    // save one of the trained models
-    (async function () {
-      try {
-        var explanation = await trainedRf.explain().getInfo((info) => {
-          console.log("pass");
+    // // save RF trained models
+    // try {
+    //   var rfExplanation = await trainedRf.explain().getInfo((info) => {
+    //     // console.log("pass");
+    //     return info;
+    //   });
+    //   // console.log(explanation.numberOfTrees);
+    //   fs.writeFile(
+    //     "./cc_assets/rfExplanation.json",
+    //     JSON.stringify(rfExplanation),
+    //     (err) => {
+    //       if (err) {
+    //         console.log("The Random Forest Explanation was not saved: ", err);
+    //       }
+    //       console.log("The Random Forest Explanation has been saved!");
+    //     }
+    //   );
+    // } catch {
+    //   console.log("Unable to get the Random Forest Explanation explanation.");
+    // }
+
+    // // save Cart trained models
+    // try {
+    //   var cartExplanation = await trainedCart.explain().getInfo((info) => {
+    //     // console.log("pass");
+    //     return info;
+    //   });
+    //   // console.log(explanation.numberOfTrees);
+    //   fs.writeFile(
+    //     "./cc_assets/cartExplanation.json",
+    //     JSON.stringify(cartExplanation),
+    //     (err) => {
+    //       if (err) {
+    //         console.log("The CART Explanation was not saved: ", err);
+    //       }
+    //       console.log("The CART Explanation has been saved!");
+    //     }
+    //   );
+    // } catch {
+    //   console.log("Unable to get CART explanation.");
+    // }
+
+    // Training accuracy calculation
+    try {
+      var trainAccuracyCart = await trainedCart
+        .confusionMatrix()
+        .accuracy()
+        .getInfo((info) => {
           return info;
         });
-        console.log(explanation.numberOfTrees);
-        fs.writeFile(
-          "./cc_assets/mlExplanation.json",
-          JSON.stringify(explanation),
-          (err) => {
-            if (err) {
-              console.log("The file was not saved: ", err);
-            }
-            console.log("The file has been saved!");
-          }
-        );
-      } catch {
-        console.log("Unable to get explanation.");
-      }
-    })();
+      var trainAccuracyRf = await trainedRf
+        .confusionMatrix()
+        .accuracy()
+        .getInfo((info) => {
+          return info;
+        });
+    } catch {
+      console.log("Error while getting the confusion matrix.");
+    }
+
+    // Extract band pixel values for validation points.
+    var validation = imageCl
+      .sampleRegions({
+        collection: validationPts,
+        properties: ["class"],
+        scale: 30,
+        tileScale: 8,
+      })
+      .filter(ee.Filter.neq("B1", null)); // Remove null pixels.
+
+    // Classify the validation data.
+    var validatedCart = validation.classify(trainedCart);
+    var validatedRf = validation.classify(trainedRf);
+    // Training accuracy calculation
+    try {
+      var validationAccuracyCart = await validatedCart
+        .errorMatrix("class", "classification")
+        .accuracy()
+        .getInfo((info) => {
+          return info;
+        });
+      var validationAccuracyRf = await validatedRf
+        .errorMatrix("class", "classification")
+        .accuracy()
+        .getInfo((info) => {
+          return info;
+        });
+    } catch {
+      console.log("Error while getting the confusion matrix.");
+    }
 
     // console.log(s2c);
-    res.send({ response: "Okay" });
+    res.send({trainAccuracyCart, trainAccuracyRf,validationAccuracyCart,validationAccuracyRf});
   },
   classify: async function (req, res, next) {
     console.log("Running the classification from trained model");

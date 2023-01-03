@@ -150,6 +150,33 @@
                 Train
               </button>
             </div>
+            <div class="mt-2 flex-column d-flex justify-content-center align-items-center">
+              <div class="spinner-border d-none" role="status" id="loadSpinner">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <table class="table caption-top d-none" id="accuracyResultsTable">
+                <caption class="h3 text-center">Accuracy Results</caption>
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Smile Cart</th>
+                    <th scope="col">Random Forest</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Training</th>
+                    <td id="cartTrainingAccuracy"></td>
+                    <td id="rfTrainingAccuracy"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Validation</th>
+                    <td id="cartValidationAccuracy"></td>
+                    <td id="rfValidationAccuracy"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <!-- </form> -->
             <hr />
@@ -160,12 +187,6 @@
             <form action="/logout" method="post">
               <button type="submit" class="btn btn-secondary">Logout</button>
             </form>
-            <div class="input-group date" data-provide="datepicker">
-              <input type="text" class="form-control" />
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-th"></span>
-              </div>
-            </div>
           </div>
         </div>
         <div id="map" class="col h-100"></div>

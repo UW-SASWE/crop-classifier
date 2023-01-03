@@ -18,10 +18,12 @@ async function readCSV(file) {
   });
 }
 
-async function postTrain2() {
+async function postTrain() {
+  const loadSpinner = document.getElementById("loadSpinner");
+  loadSpinner.classList.remove("d-none");
   const file = document.getElementById("trainFile").files[0];
-  console.log(document.getElementById("trainFile").value)
   var csvData = await readCSV(file);
+
   var splitRatio = document.getElementById("trainSplit").value;
   const options = {
     method: "POST",
@@ -31,31 +33,27 @@ async function postTrain2() {
     body: JSON.stringify({ csvData, splitRatio }),
   };
   var response = await fetch("/cropclassifier/train", options);
-  // console.log(roiResponse.json())
-  // var trainingPointsResponse = await fetch("/cropclassifier/loadTrainingPoints",);
-  console.log(await response.json());
+  var responseJson = await response.json();
+  document.getElementById("cartTrainingAccuracy").innerHTML =
+    Math.round((responseJson.trainAccuracyCart + Number.EPSILON) * 100) / 100;
+  document.getElementById("rfTrainingAccuracy").innerHTML =
+    Math.round((responseJson.trainAccuracyRf + Number.EPSILON) * 100) / 100;
+  document.getElementById("cartValidationAccuracy").innerHTML =
+    Math.round((responseJson.validationAccuracyCart + Number.EPSILON) * 100) /
+    100;
+  document.getElementById("rfValidationAccuracy").innerHTML =
+    Math.round((responseJson.validationAccuracyRf + Number.EPSILON) * 100) /
+    100;
+
+  // console.log(await response.json());
+  loadSpinner.classList.add("d-none");
+  var accuracyResultsTable = document.getElementById("accuracyResultsTable");
+  accuracyResultsTable.classList.remove("d-none");
   // readFile = await readCSV(file);
 }
 
-async function postTrain() {
-  const file = document.getElementById("trainFile").files[0];
-  console.log(document.getElementById("trainFile").value)
-  var csvData = await readCSV(file);
-
-  var splitRatio = document.getElementById("trainSplit").value;
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({csvData, splitRatio }),
-  };
-  var response = await fetch("/cropclassifier/train", options);
-  // console.log(roiResponse.json())
-  // var trainingPointsResponse = await fetch("/cropclassifier/loadTrainingPoints",);
-  console.log(await response.json());
-  // readFile = await readCSV(file);
-}
+// function to load the training points
+async function loadTrainPoints() {}
 
 const trainButton = document.getElementById("trainButton");
 trainButton.addEventListener("click", postTrain);
