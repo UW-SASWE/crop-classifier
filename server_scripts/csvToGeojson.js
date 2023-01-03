@@ -29,10 +29,10 @@ const csvToGeojson = (
               ],
               type: "Point",
             },
-            id: i,
+            id: i.toString(),
             properties: {
-              class: pointData.class,
-              classCode: pointData.classCode,
+              crop_type: pointData.crop_type,
+              class: Number(pointData.class),
             },
             type: "Feature",
           });
@@ -41,31 +41,23 @@ const csvToGeojson = (
       });
   });
 
-// // example usage of the csvToGeojson function
+// example usage of the csvToGeojson function
 // var a = `
-// Latitude,Longitude,classCode,class
+// Latitude,Longitude,class,crop_type
 // 88.97475,24.10169444,1,rice
 // 88.97511111,24.10736111,1,rice
 // 88.96127778,24.09975,1,rice
 // 88.97116667,24.09441667,1,rice
 // 88.97116667,24.09441667,1,rice
 // 88.95675,24.09191667,1,rice
-// 88.96488889,24.1005,1,rice
-// 88.96152778,24.09586111,1,rice
-// 88.00277778,24.08097222,1,rice
-// 88.99722222,24.08597222,1,rice
-// 88.97475,24.04483333,1,rice
-// 88.97005556,24.03694444,1,rice
-// 88.98263889,24.01386111,1,rice
-// 89.01161111,24.01480556,1,rice
-// 89.01211111,24.03505556,1,rice
-// 89.01211111,24.03502778,1,rice
-// 88.99911111,24.03925,1,rice
-// 88.99477778,24.03011111,1,rice
-// 89.01188889,24.01916667,1,rice
-// 88.98913889,24.024,1,rice
+// 90.58805556,24.47583333,1,rice
+// 90.64916667,24.42055556,1,rice
+// 90.66166667,24.41444444,1,rice
+// 90.63111111,24.46305556,1,rice
+// 90.62833333,24.45444444,1,rice
+// 90.64861111,24.45027778,1,rice
 // `;
-//
+
 // (async function () {
 //   try {
 //     var geoJSON = await csvToGeojson(a);
