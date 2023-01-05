@@ -138,16 +138,6 @@ selectedYear.addEventListener("blur", () => {
   disableSeasons();
 });
 
-async function loadScopes(path) {
-  try {
-    var scopesData = await readFile(path);
-    var scopesDataJson = JSON.parse(scopesData);
-    return scopesDataJson;
-  } catch {
-    console.log("Could not load scopes data.\nError parsing JSON string");
-  }
-}
-
 function disableSeasons() {
   const currentDate = new Date();
   const selectedYear = document.getElementById("year"),
@@ -203,3 +193,130 @@ window.onload = () => {
   disableSeasons();
   disableSeasons();
 };
+
+// scope selection
+const scopeSelector = document.getElementById("scope");
+const countrySelector = document.getElementById("countries");
+const divisionSelector = document.getElementById("divisions");
+const zilaSelector = document.getElementById("zilas");
+const upazilaSelector = document.getElementById("upazilas");
+const unionSelector = document.getElementById("unions");
+
+scopeSelector.addEventListener("change", () => {
+  switch (scopeSelector.value) {
+    case "heirachyScope":
+      countrySelector.classList.remove("d-none");
+      countrySelector.value = "Bangladesh";
+      loadChildSelector(countrySelector);
+      break;
+    case "drawScope":
+      countrySelector.classList.add("d-none");
+      break;
+  }
+});
+
+async function loadChildSelector(parentSelector) {
+  function resetSelector(selectorElements) {
+    for (j = 0, nSelectors = selectorElements.length; j < nSelectors; j++) {
+      var options = selectorElements[j].options;
+      for (i = options.length - 1; i >= 0; i--) {
+        if (options[i].value) {
+          selectorElements[j].remove(i);
+        }
+      }
+    }
+  }
+
+  async function loadSelectorOptions(parentValues, childKey) {
+    var options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        parentValues,
+        childKey,
+      }),
+    };
+    var response = await fetch("/cropclassifier/scope", options);
+    var responseJson = await response.json();
+    var childValues = responseJson.childValues;
+    console.log(childValues);
+    for (i = 0, len = childValues.length; i < len; i++) {
+      document
+        .getElementById(childKey)
+        .options.add(new Option(childValues[i], childValues[i]));
+    }
+  }
+
+  switch (parentSelector.id) {
+    case "countries":
+      resetSelector([
+        divisionSelector,
+        zilaSelector,
+        upazilaSelector,
+        unionSelector,
+      ]);
+      divisionSelector.classList.remove("d-none");
+      zilaSelector.classList.add("d-none");
+      upazilaSelector.classList.add("d-none");
+      unionSelector.classList.add("d-none");
+
+      loadSelectorOptions([countrySelector.value], "divisions");
+
+      break;
+    case "divisions":
+      resetSelector([zilaSelector, upazilaSelector, unionSelector]);
+      zilaSelector.classList.remove("d-none");
+      upazilaSelector.classList.add("d-none");
+      unionSelector.classList.add("d-none");
+      console.log(divisionSelector.value)
+
+      loadSelectorOptions(
+        [countrySelector.value, divisionSelector.value],
+        "zilas"
+      );
+
+      break;
+    case "zilas":
+      resetSelector([upazilaSelector, unionSelector]);
+      upazilaSelector.classList.remove("d-none");
+      unionSelector.classList.add("d-none");
+
+      loadSelectorOptions(
+        [countrySelector.value, divisionSelector.value, zilaSelector.value],
+        "upazilas"
+      );
+
+      break;
+    case "upazilas":
+      resetSelector([unionSelector]);
+      unionSelector.classList.remove("d-none");
+
+      loadSelectorOptions(
+        [
+          countrySelector.value,
+          divisionSelector.value,
+          zilaSelector.value,
+          upazilaSelector.value,
+        ],
+        "unions"
+      );
+
+      break;
+  }
+}
+
+countrySelector.addEventListener("change", () => {
+  loadChildSelector(countrySelector);
+});
+divisionSelector.addEventListener("change", () => {
+  loadChildSelector(divisionSelector);
+});
+zilaSelector.addEventListener("change", () => {
+  loadChildSelector(zilaSelector);
+});
+upazilaSelector.addEventListener("change", () => {
+  loadChildSelector(upazilaSelector);
+});
+// unionSelector.addEventListener("change",()=>{loadChildSelector(unionSelector)})

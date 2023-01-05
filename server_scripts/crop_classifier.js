@@ -57,7 +57,6 @@ async function loadGeojson(path) {
   }
 }
 
-
 async function loadScopes(path) {
   try {
     var scopesData = await readFile(path);
@@ -404,6 +403,12 @@ const cc = {
     });
   },
   scope: async function (req, res, next) {
+    var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+    for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+      scopes = scopes[req.body.parentValues[i]];
+    }
+    var childValues = scopes[req.body.childKey];
+    res.send({childValues})
   },
   classify: async function (req, res, next) {
     console.log("Running the classification from trained model");
