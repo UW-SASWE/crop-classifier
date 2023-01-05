@@ -15,9 +15,75 @@
 
   <body class="p-0">
     <main>
-      <h1 class="visually-hidden">Crop Classifier - Bangladesh</h1>
       <div class="row h-100 m-0">
         <div class="" style="width: 450px">
+          <p class="h1 text-center">Crop Classifier</p>
+          <p class="h3 text-muted text-center">Bangladesh</p>
+          <hr />
+          <div class="row justify-content-between align-items-center my-2">
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <input
+                  type="number"
+                  class="form-control date"
+                  id="year"
+                  min="1993"
+                  max="<%= currentYear %>"
+                  step="1"
+                  value="<%= currentYear %>"
+                  style="width: 5em"
+                />
+                <label for="trainYear" class="form-label mt-1"
+                  >Train Year</label
+                >
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex flex-column align-items-start">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="seasonRadios"
+                    id="boroSeason"
+                    value="boro"
+                    checked
+                    disabled
+                  />
+                  <label class="form-check-label" for="boroSeason">
+                    Boro (Jan-Apr)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="seasonRadios"
+                    id="ausSeason"
+                    value="aus"
+                    disabled
+                  />
+                  <label class="form-check-label" for="ausSeason">
+                    Aus (May-Jul)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="seasonRadios"
+                    id="amanSeason"
+                    value="aman"
+                    disabled
+                  />
+                  <label class="form-check-label" for="amanSeason">
+                    Aman (Aug-Dec)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
           <hr />
           <div>
             <!-- <form action=""> -->
@@ -75,87 +141,26 @@
               </div>
             </div>
 
-            <div class="row justify-content-between align-items-center my-2">
-              <div class="col">
-                <div class="d-flex flex-column align-items-center">
-                  <input
-                    type="number"
-                    class="form-control date"
-                    id="trainYear"
-                    min="1993"
-                    max="<%= currentYear %>"
-                    step="1"
-                    value="<%= currentYear %>"
-                    style="width: 5em"
-                    disabled
-                  />
-                  <label for="trainYear" class="form-label mt-1"
-                    >Train Year</label
-                  >
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="d-flex flex-column align-items-start">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="seasonRadios"
-                      id="season1"
-                      value="option1"
-                      checked
-                      disabled
-                    />
-                    <label class="form-check-label" for="season1">
-                      Season 1
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="seasonRadios"
-                      id="season2"
-                      value="option2"
-                      disabled
-                    />
-                    <label class="form-check-label" for="season2">
-                      Season 2
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="seasonRadios"
-                      id="season3"
-                      value="option3"
-                      disabled
-                    />
-                    <label class="form-check-label" for="season3">
-                      Season 3
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="d-grid">
               <button
                 class="btn btn-lg btn-secondary"
+                type="button"
                 id="trainButton"
                 disabled
               >
                 Train
               </button>
             </div>
-            <div class="mt-2 flex-column d-flex justify-content-center align-items-center">
+            <div
+              class="mt-2 flex-column d-flex justify-content-center align-items-center"
+            >
               <div class="spinner-border d-none" role="status" id="loadSpinner">
                 <span class="visually-hidden">Loading...</span>
               </div>
               <table class="table caption-top d-none" id="accuracyResultsTable">
-                <caption class="h3 text-center">Accuracy Results</caption>
+                <caption class="h3 text-center">
+                  Accuracy Results
+                </caption>
                 <thead>
                   <tr>
                     <th scope="col"></th>
@@ -180,8 +185,47 @@
 
             <!-- </form> -->
             <hr />
-            <form action="">
-              <button type="button" class="btn btn-secondary">Classify</button>
+            <form action="/cropclassifier/classify">
+              <%- include('../partials/aoiScope'); %>
+
+
+
+              <div class="d-flex flex-row justify-content-around mb-2">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="classifierRadios"
+                    id="cartClassifier"
+                    value="cart"
+                    checked
+                  />
+                  <label class="form-check-label" for="cartClassifier">
+                    CART
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="classifierRadios"
+                    id="rfClassifier"
+                    value="rf"
+                  />
+                  <label class="form-check-label" for="rfClassifier">
+                    Random Forest
+                  </label>
+                </div>
+              </div>
+              <div class="d-grid">
+                <button
+                  class="btn btn-lg btn-secondary"
+                  id="classifyButton"
+                  type="submit"
+                >
+                  Classify
+                </button>
+              </div>
             </form>
             <hr />
             <form action="/logout" method="post">

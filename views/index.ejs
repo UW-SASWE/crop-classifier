@@ -25,17 +25,17 @@
         <p class="lead">
           <a
             data-bs-toggle="collapse"
-            href="#collapseExample"
+            href="#signInCollapse"
             role="button"
             aria-expanded="false"
-            aria-controls="collapseExample"
+            aria-controls="signInCollapse"
           >
             Sign in here
           </a>
         </p>
         <p class="text-danger"><%= errMessage %></p>
 
-        <div class="collapse <%= collapseShow %>" id="collapseExample">
+        <div class="collapse <%= collapseShow %>" id="signInCollapse">
           <div class="d-flex flex-column align-items-center collapse">
             <form class="w-25" action="/login/password" method="post">
               <div class="mb-3">
