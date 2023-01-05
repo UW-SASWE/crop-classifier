@@ -58,6 +58,16 @@ async function loadGeojson(path) {
 }
 
 
+async function loadScopes(path) {
+  try {
+    var scopesData = await readFile(path);
+    var scopesDataJson = JSON.parse(scopesData);
+    return scopesDataJson;
+  } catch {
+    console.log("Could not load scopes data.\nError parsing JSON string");
+  }
+}
+
 const seasons = {
   boro: { startDateSuffix: "-01-01", endDateSuffix: "-04-30" },
   aus: { startDateSuffix: "-05-01", endDateSuffix: "-07-31" },
