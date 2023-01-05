@@ -33,6 +33,7 @@ router.post(
   cc.loadTrainingPoints,
   cc.train
 ); // Train
+router.post("/cropclassifier/scope", cc.scope);
 router.get("/cropclassifier/classify", cc.classify); // Classify
 
 module.exports = router;
