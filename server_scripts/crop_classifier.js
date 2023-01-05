@@ -56,7 +56,14 @@ async function loadGeojson(path) {
     console.log("Could not load geoJSON data.\nError parsing JSON string");
   }
 }
-var assets = {};
+
+
+const seasons = {
+  boro: { startDateSuffix: "-01-01", endDateSuffix: "-04-30" },
+  aus: { startDateSuffix: "-05-01", endDateSuffix: "-07-31" },
+  aman: { startDateSuffix: "-08-01", endDateSuffix: "-12-31" },
+};
+
 const cc = {
   // This startup uses google earth engine
   startup: async function (req, res, next) {
@@ -106,11 +113,14 @@ const cc = {
     );
     var tpGeojson = JSON.parse(JSON.stringify(geoJSON)),
       vpGeojson = JSON.parse(JSON.stringify(geoJSON));
-    vpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(split)));
-    tpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(0, split)));
-    console.log(vpGeojson, tpGeojson)
+    vpGeojson.features = JSON.parse(
+      JSON.stringify(geoJSON.features.slice(split))
+    );
+    tpGeojson.features = JSON.parse(
+      JSON.stringify(geoJSON.features.slice(0, split))
+    );
 
-    res.send({tpGeojson, vpGeojson})
+    res.send({ tpGeojson, vpGeojson });
   },
   loadTrainingPoints: async function (req, res, next) {
     var geoJSON = await csvToGeojson(req.body.csvData);
@@ -120,8 +130,12 @@ const cc = {
     );
     var tpGeojson = JSON.parse(JSON.stringify(geoJSON)),
       vpGeojson = JSON.parse(JSON.stringify(geoJSON));
-    vpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(split)));
-    tpGeojson.features = JSON.parse(JSON.stringify(geoJSON.features.slice(0, split)));
+    vpGeojson.features = JSON.parse(
+      JSON.stringify(geoJSON.features.slice(split))
+    );
+    tpGeojson.features = JSON.parse(
+      JSON.stringify(geoJSON.features.slice(0, split))
+    );
 
     req.tp = ee.FeatureCollection(tpGeojson);
     req.vp = ee.FeatureCollection(vpGeojson);
@@ -161,6 +175,8 @@ const cc = {
     // Define dates over which to create a composite.
     var start = ee.Date("2017-06-15");
     var end = ee.Date("2017-10-15");
+    // var start = ee.Date(req.body.year+seasons[req.body.season].startDateSuffix);
+    // var end = ee.Date(req.body.year+seasons[req.body.season].startDateSuffix);
 
     // Define a collection filtering function.
     function filterBoundsDate(imgCol, roi, start, end) {
@@ -376,6 +392,8 @@ const cc = {
       validationAccuracyCart,
       validationAccuracyRf,
     });
+  },
+  scope: async function (req, res, next) {
   },
   classify: async function (req, res, next) {
     console.log("Running the classification from trained model");

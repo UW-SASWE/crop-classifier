@@ -18,7 +18,21 @@ async function readCSV(file) {
   });
 }
 
+function getSeason() {
+  var seasonsRadios = document.getElementsByName("seasonRadios");
+
+  for (i = 0; i < seasonsRadios.length; i++) {
+    if (seasonsRadios[i].checked) {
+      return seasonsRadios[i].value;
+    } else {
+      return;
+    }
+  }
+}
+
 async function postTrain() {
+  var season = getSeason();
+  var year = document.getElementById("year").value;
   const loadSpinner = document.getElementById("loadSpinner");
   loadSpinner.classList.remove("d-none");
   const file = document.getElementById("trainFile").files[0];
@@ -30,7 +44,7 @@ async function postTrain() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ csvData, splitRatio }),
+    body: JSON.stringify({ csvData, splitRatio, season, year }),
   };
   loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
@@ -118,6 +132,54 @@ var map = L.map("map", {
   zoom: 7.5,
 });
 
+const selectedYear = document.getElementById("year");
+selectedYear.addEventListener("blur", () => {
+  disableSeasons();
+  disableSeasons();
+});
+
+async function loadScopes(path) {
+  try {
+    var scopesData = await readFile(path);
+    var scopesDataJson = JSON.parse(scopesData);
+    return scopesDataJson;
+  } catch {
+    console.log("Could not load scopes data.\nError parsing JSON string");
+  }
+}
+
+function disableSeasons() {
+  const currentDate = new Date();
+  const selectedYear = document.getElementById("year"),
+    amanRadio = document.getElementById("amanSeason"),
+    ausRadio = document.getElementById("ausSeason"),
+    boroRadio = document.getElementById("boroSeason");
+  amanRadio.disabled = false;
+  ausRadio.disabled = false;
+  boroRadio.disabled = false;
+  boroRadio.checked = true;
+
+  if (Number(selectedYear.value) === currentDate.getFullYear()) {
+    // check if the present month is August or earlier
+    if (currentDate.getMonth() <= 7) {
+      amanRadio.checked = false;
+      amanRadio.disabled = true;
+    }
+    // check if the present month is May or earlier
+    if (currentDate.getMonth() <= 5) {
+      ausRadio.checked = false;
+      ausRadio.disabled = true;
+    }
+
+    // check if the present month is January
+    if (currentDate.getMonth() === 0) {
+      boroRadio.checked = false;
+      boroRadio.disabled = true;
+      selectedYear.value = (currentDate.getFullYear() - 1).toString();
+    }
+  }
+}
+
 window.onload = () => {
   // add basemap to the map
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -137,4 +199,7 @@ window.onload = () => {
   // update train-validate split
   updateTrainSplit(document.getElementById("trainSplit").value);
   // postTrain();
+
+  disableSeasons();
+  disableSeasons();
 };
