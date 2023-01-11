@@ -9,6 +9,7 @@ sandbox/
 cc_assets/
 db_signup.js
 sandbox*
+nodemon.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
