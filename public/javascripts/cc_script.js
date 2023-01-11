@@ -32,7 +32,8 @@ function getSeason() {
 
 async function postTrain() {
   var season = getSeason();
-  var year = document.getElementById("year").value;
+  var trainYear = document.getElementById("trainYear").value;
+  var trainYear = document.getElementById("trainYear").value;
   const loadSpinner = document.getElementById("loadSpinner");
   loadSpinner.classList.remove("d-none");
   const file = document.getElementById("trainFile").files[0];
@@ -44,7 +45,7 @@ async function postTrain() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ csvData, splitRatio, season, year }),
+    body: JSON.stringify({ csvData, splitRatio, season, trainYear }),
   };
   loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
@@ -64,6 +65,9 @@ async function postTrain() {
   loadSpinner.classList.add("d-none");
   var accuracyResultsTable = document.getElementById("accuracyResultsTable");
   accuracyResultsTable.classList.remove("d-none");
+
+  document.getElementById("collapseOne").classList.toggle("show");
+  document.getElementById("collapseThree").classList.toggle("show");
   // readFile = await readCSV(file);
 }
 
@@ -119,31 +123,112 @@ trainFileInput.addEventListener("input", () => {
   document.getElementById("trainButton").disabled = false;
 });
 
-// function to load (Bangladesh) polygons
-async function load_polygon(polygon_name) {
-  var response = await fetch("/cropclassifier/" + polygon_name);
-  var startupVars = await response.json();
-  L.geoJSON(startupVars).addTo(map);
-}
-
 // initialize the map
 var map = L.map("map", {
   center: [23.84574043942299, 90.28182335177792],
   zoom: 7.5,
 });
 
-const selectedYear = document.getElementById("year");
-selectedYear.addEventListener("blur", () => {
-  disableSeasons();
-  disableSeasons();
+var overlays = {
+  Country: L.layerGroup(),
+  Division: L.layerGroup(),
+  Zila: L.layerGroup(),
+  Upazila: L.layerGroup(),
+  Union: L.layerGroup(),
+};
+
+var layerControl = L.control.layers(null, overlays);
+
+// function to load (Bangladesh) polygons
+async function load_polygon(
+  polygonType,
+  parentValues = [],
+  targetParentLayerGroup = null,
+  targetChildrenLayerGroup = null
+) {
+  var response;
+  if (parentValues.length) {
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ parentValues, polygonType }),
+    };
+
+    response = await fetch("/cropclassifier/loadPolygon", options);
+  } else {
+    response = await fetch("/cropclassifier/loadPolygon");
+  }
+
+  var responseJSON = await response.json();
+
+  var loadedParentLayer = L.geoJSON(responseJSON.parentGeoJSON);
+
+  if (targetParentLayerGroup) {
+    targetParentLayerGroup.clearLayers();
+    targetParentLayerGroup.addLayer(loadedParentLayer);
+    targetParentLayerGroup.addTo(map);
+  } else {
+    loadedParentLayer.addTo(map);
+  }
+
+  if (responseJSON.parentGeoJSON) {
+    var loadedChildrenLayer = L.geoJSON(responseJSON.childrenGeoJSON);
+
+    if (targetChildrenLayerGroup) {
+      targetChildrenLayerGroup.clearLayers();
+      targetChildrenLayerGroup.addLayer(loadedChildrenLayer);
+      targetChildrenLayerGroup.addTo(map);
+    } else {
+      loadedChildrenLayer.addTo(map);
+    }
+  }
+}
+
+function resetChildLayers(childLayerKey) {
+  switch (childLayerKey) {
+    case "Country":
+      overlays["Division"].clearLayers();
+      overlays["Zila"].clearLayers();
+      overlays["Upazila"].clearLayers();
+      overlays["Union"].clearLayers();
+      break;
+    case "Division":
+      overlays["Zila"].clearLayers();
+      overlays["Upazila"].clearLayers();
+      overlays["Union"].clearLayers();
+      break;
+    case "Zila":
+      overlays["Upazila"].clearLayers();
+      overlays["Union"].clearLayers();
+      break;
+    case "Upazila":
+      overlays["Union"].clearLayers();
+      break;
+    case "Union":
+      break;
+  }
+}
+
+const selectedTrainYear = document.getElementById("trainYear");
+selectedTrainYear.addEventListener("blur", () => {
+  disableSeasons("train");
+  disableSeasons("train");
+});
+const selectedClassificationYear =
+  document.getElementById("classificationYear");
+selectedClassificationYear.addEventListener("blur", () => {
+  disableSeasons("classification");
+  disableSeasons("classification");
 });
 
-function disableSeasons() {
+function disableSeasons(mode) {
   const currentDate = new Date();
-  const selectedYear = document.getElementById("year"),
-    amanRadio = document.getElementById("amanSeason"),
-    ausRadio = document.getElementById("ausSeason"),
-    boroRadio = document.getElementById("boroSeason");
+  const selectedYear = document.getElementById(mode + "Year"),
+    amanRadio = document.getElementById(mode + "AmanSeason"),
+    ausRadio = document.getElementById(mode + "AusSeason"),
+    boroRadio = document.getElementById(mode + "BoroSeason");
   amanRadio.disabled = false;
   ausRadio.disabled = false;
   boroRadio.disabled = false;
@@ -170,28 +255,46 @@ function disableSeasons() {
   }
 }
 
+// when window loads
 window.onload = () => {
   // add basemap to the map
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 17,
-    minZoom: 6,
-  }).addTo(map);
+    minZoom: 4,
+  });
+  var USGS_USImageryTopo = L.tileLayer(
+    "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}",
+    {
+      maxZoom: 20,
+      minZoom: 4,
+      attribution:
+        'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>',
+    }
+  );
+
+  map.addLayer(osm);
+  layerControl.addTo(map);
+
+  layerControl.addBaseLayer(osm, "OpenStreetMap");
+  layerControl.addBaseLayer(USGS_USImageryTopo, "Satellite (USGS)");
 
   // STARTUP: Load the initial polygons of Bangladesh
-  // load_polygon("bg_boundary");
-  load_polygon("bg_divisions");
-  // load_polygon("bg_zilas");
-  // load_polygon("bg_upazilas");
-  // load_polygon("bg_unions");
+  // load_polygon("bg_boundary", overlays.Country, "Bangladesh");
+  // load_polygon("bg_divisions", "Divisions");
+  // load_polygon("bg_zilas", "Zilas");
+  // load_polygon("bg_upazilas", "Upazilas");
+  // load_polygon("bg_unions", "Unions");
 
   // update train-validate split
   updateTrainSplit(document.getElementById("trainSplit").value);
   // postTrain();
 
-  disableSeasons();
-  disableSeasons();
+  disableSeasons("train");
+  disableSeasons("train");
+  disableSeasons("classification");
+  disableSeasons("classification");
 };
 
 // scope selection
@@ -224,6 +327,7 @@ async function loadChildSelector(parentSelector) {
           selectorElements[j].remove(i);
         }
       }
+      selectorElements[j].value = "";
     }
   }
 
@@ -262,6 +366,13 @@ async function loadChildSelector(parentSelector) {
       upazilaSelector.classList.add("d-none");
       unionSelector.classList.add("d-none");
 
+      resetChildLayers("country");
+      load_polygon(
+        parentSelector.id,
+        [countrySelector.value],
+        overlays.Country,
+        overlays.Division
+      );
       loadSelectorOptions([countrySelector.value], "divisions");
 
       break;
@@ -270,8 +381,16 @@ async function loadChildSelector(parentSelector) {
       zilaSelector.classList.remove("d-none");
       upazilaSelector.classList.add("d-none");
       unionSelector.classList.add("d-none");
-      console.log(divisionSelector.value)
+      console.log(divisionSelector.value);
 
+      resetChildLayers("Division");
+
+      load_polygon(
+        parentSelector.id,
+        [countrySelector.value, divisionSelector.value],
+        overlays.Division,
+        overlays.Zila
+      );
       loadSelectorOptions(
         [countrySelector.value, divisionSelector.value],
         "zilas"
@@ -283,6 +402,14 @@ async function loadChildSelector(parentSelector) {
       upazilaSelector.classList.remove("d-none");
       unionSelector.classList.add("d-none");
 
+      resetChildLayers("Zila");
+
+      load_polygon(
+        parentSelector.id,
+        [countrySelector.value, divisionSelector.value, zilaSelector.value],
+        overlays.Zila,
+        overlays.Upazila
+      );
       loadSelectorOptions(
         [countrySelector.value, divisionSelector.value, zilaSelector.value],
         "upazilas"
@@ -293,6 +420,18 @@ async function loadChildSelector(parentSelector) {
       resetSelector([unionSelector]);
       unionSelector.classList.remove("d-none");
 
+      resetChildLayers("Upazila");
+      load_polygon(
+        parentSelector.id,
+        [
+          countrySelector.value,
+          divisionSelector.value,
+          zilaSelector.value,
+          upazilaSelector.value,
+        ],
+        overlays.Upazila,
+        overlays.Union
+      );
       loadSelectorOptions(
         [
           countrySelector.value,
@@ -302,6 +441,31 @@ async function loadChildSelector(parentSelector) {
         ],
         "unions"
       );
+
+      break;
+
+      case "unions":
+      resetChildLayers("Unions");
+      load_polygon(
+        parentSelector.id,
+        [
+          countrySelector.value,
+          divisionSelector.value,
+          zilaSelector.value,
+          upazilaSelector.value,
+          unionSelector.value,
+        ],
+        overlays.Union
+      );
+      // loadSelectorOptions(
+      //   [
+      //     countrySelector.value,
+      //     divisionSelector.value,
+      //     zilaSelector.value,
+      //     upazilaSelector.value,
+      //   ],
+      //   "unions"
+      // );
 
       break;
   }
@@ -319,4 +483,4 @@ zilaSelector.addEventListener("change", () => {
 upazilaSelector.addEventListener("change", () => {
   loadChildSelector(upazilaSelector);
 });
-// unionSelector.addEventListener("change",()=>{loadChildSelector(unionSelector)})
+unionSelector.addEventListener("change",()=>{loadChildSelector(unionSelector)})
