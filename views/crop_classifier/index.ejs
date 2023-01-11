@@ -16,224 +16,382 @@
   <body class="p-0">
     <main>
       <div class="row h-100 m-0">
-        <div class="" style="width: 450px">
+        <div class="vh-100 d-flex flex-column" style="width: 450px">
           <p class="h1 text-center">Crop Classifier</p>
-          <p class="h3 text-muted text-center">Bangladesh</p>
+          <p class="h4 text-muted text-center">Bangladesh</p>
           <hr />
-          <div class="row justify-content-between align-items-center my-2">
-            <div class="col">
-              <div class="d-flex flex-column align-items-center">
-                <input
-                  type="number"
-                  class="form-control date"
-                  id="year"
-                  min="1993"
-                  max="<%= currentYear %>"
-                  step="1"
-                  value="<%= currentYear %>"
-                  style="width: 5em"
-                />
-                <label for="trainYear" class="form-label mt-1"
-                  >Train Year</label
-                >
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="d-flex flex-column align-items-start">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="seasonRadios"
-                    id="boroSeason"
-                    value="boro"
-                    checked
-                    disabled
-                  />
-                  <label class="form-check-label" for="boroSeason">
-                    Boro (Jan-Apr)
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="seasonRadios"
-                    id="ausSeason"
-                    value="aus"
-                    disabled
-                  />
-                  <label class="form-check-label" for="ausSeason">
-                    Aus (May-Jul)
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="seasonRadios"
-                    id="amanSeason"
-                    value="aman"
-                    disabled
-                  />
-                  <label class="form-check-label" for="amanSeason">
-                    Aman (Aug-Dec)
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div>
-            <!-- <form action=""> -->
-            <div class="mb-3">
-              <label for="trainFile" class="form-label"
-                >Tablular [Latitude, Longitude, and Crop Class] (.csv)</label
-              >
-              <input class="form-control" type="file" id="trainFile" />
-            </div>
-            <label for="trainSplit" class="form-label">Data split ratio:</label>
-            <input
-              type="range"
-              class="form-range"
-              min="10"
-              max="90"
-              step="10"
-              value="70"
-              id="trainSplit"
-            />
-            <div class="row justify-content-between">
-              <div class="col d-inline-flex justify-content-start">
-                <div class="d-flex flex-column align-items-center">
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="trainPercent"
-                    min="10"
-                    max="90"
-                    step="10"
-                    aria-controls="trainSplit validationPercent"
-                    style="width: 4.5em"
-                  />
-                  <label for="trainPercent" class="form-label mt-1"
-                    >Training</label
-                  >
-                </div>
-              </div>
-
-              <div class="col d-inline-flex justify-content-end">
-                <div class="d-flex flex-column align-items-center">
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="validationPercent"
-                    min="10"
-                    max="90"
-                    step="10"
-                    aria-controls="trainSplit trainPercent"
-                    style="width: 4.5em"
-                  />
-                  <label for="validationPercent" class="form-label mt-1"
-                    >Validation</label
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="d-grid">
-              <button
-                class="btn btn-lg btn-secondary"
-                type="button"
-                id="trainButton"
-                disabled
-              >
-                Train
-              </button>
-            </div>
-            <div
-              class="mt-2 flex-column d-flex justify-content-center align-items-center"
-            >
-              <div class="spinner-border d-none" role="status" id="loadSpinner">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <table class="table caption-top d-none" id="accuracyResultsTable">
-                <caption class="h3 text-center">
-                  Accuracy Results
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Smile Cart</th>
-                    <th scope="col">Random Forest</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Training</th>
-                    <td id="cartTrainingAccuracy"></td>
-                    <td id="rfTrainingAccuracy"></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Validation</th>
-                    <td id="cartValidationAccuracy"></td>
-                    <td id="rfValidationAccuracy"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- </form> -->
-            <hr />
-            <form action="/cropclassifier/classify">
-              <%- include('../partials/aoiScope'); %>
-
-
-
-              <div class="d-flex flex-row justify-content-around mb-2">
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="classifierRadios"
-                    id="cartClassifier"
-                    value="cart"
-                    checked
-                  />
-                  <label class="form-check-label" for="cartClassifier">
-                    CART
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="classifierRadios"
-                    id="rfClassifier"
-                    value="rf"
-                  />
-                  <label class="form-check-label" for="rfClassifier">
-                    Random Forest
-                  </label>
-                </div>
-              </div>
-              <div class="d-grid">
+          <div class="accordion accordion-flush" id="utilitiesAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="btn btn-lg btn-secondary"
-                  id="classifyButton"
-                  type="submit"
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
                 >
-                  Classify
+                  Training
                 </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingOne"
+                data-bs-parent="#utilitiesAccordion"
+              >
+                <div class="accordion-body">
+                  <div
+                    class="row justify-content-between align-items-center my-2"
+                  >
+                    <div class="col">
+                      <div class="d-flex flex-column align-items-center">
+                        <input
+                          type="number"
+                          class="form-control date"
+                          id="trainYear"
+                          min="1993"
+                          max="<%= currentYear %>"
+                          step="1"
+                          value="<%= currentYear %>"
+                          style="width: 5em"
+                        />
+                        <label for="trainYear" class="form-label mt-1"
+                          >Train Year</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="d-flex flex-column align-items-start">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="trainSeasonRadios"
+                            id="trainBoroSeason"
+                            value="boro"
+                            checked
+                            disabled
+                          />
+                          <label class="form-check-label" for="trainBoroSeason">
+                            Boro (Jan-Apr)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="trainSeasonRadios"
+                            id="trainAusSeason"
+                            value="aus"
+                            disabled
+                          />
+                          <label class="form-check-label" for="trainAusSeason">
+                            Aus (May-Jul)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="trainSeasonRadios"
+                            id="trainAmanSeason"
+                            value="aman"
+                            disabled
+                          />
+                          <label class="form-check-label" for="trainAmanSeason">
+                            Aman (Aug-Dec)
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="mb-3">
+                    <label for="trainFile" class="form-label"
+                      >Tablular [Latitude, Longitude, and Crop Class]
+                      (.csv)</label
+                    >
+                    <input class="form-control" type="file" id="trainFile" />
+                  </div>
+                  <label for="trainSplit" class="form-label"
+                    >Data split ratio:</label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="10"
+                    max="90"
+                    step="10"
+                    value="70"
+                    id="trainSplit"
+                  />
+                  <div class="row justify-content-between">
+                    <div class="col d-inline-flex justify-content-start">
+                      <div class="d-flex flex-column align-items-center">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="trainPercent"
+                          min="10"
+                          max="90"
+                          step="10"
+                          aria-controls="trainSplit validationPercent"
+                          style="width: 4.5em"
+                        />
+                        <label for="trainPercent" class="form-label mt-1"
+                          >Training</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col d-inline-flex justify-content-end">
+                      <div class="d-flex flex-column align-items-center">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="validationPercent"
+                          min="10"
+                          max="90"
+                          step="10"
+                          aria-controls="trainSplit trainPercent"
+                          style="width: 4.5em"
+                        />
+                        <label for="validationPercent" class="form-label mt-1"
+                          >Validation</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-grid">
+                    <button
+                      class="btn btn-lg btn-secondary"
+                      type="button"
+                      id="trainButton"
+                      disabled
+                    >
+                      Train
+                    </button>
+                  </div>
+                  <div
+                    class="mt-2 flex-column d-flex justify-content-center align-items-center"
+                  >
+                    <div
+                      class="spinner-border d-none"
+                      role="status"
+                      id="loadSpinner"
+                    >
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </form>
-            <hr />
-            <form action="/logout" method="post">
-              <button type="submit" class="btn btn-secondary">Logout</button>
-            </form>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="collapseTwo"
+                >
+                  Classification
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#utilitiesAccordion"
+              >
+                <div class="accordion-body">
+                  <div
+                    class="row justify-content-between align-items-center my-2"
+                  >
+                    <div class="col">
+                      <div class="d-flex flex-column align-items-center">
+                        <input
+                          type="number"
+                          class="form-control date"
+                          id="classificationYear"
+                          min="1993"
+                          max="<%= currentYear %>"
+                          step="1"
+                          value="<%= currentYear %>"
+                          style="width: 5em"
+                        />
+                        <label for="classificationYear" class="form-label mt-1"
+                          >Classification Year</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="d-flex flex-column align-items-start">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="classificationSeasonRadios"
+                            id="classificationBoroSeason"
+                            value="boro"
+                            checked
+                            disabled
+                          />
+                          <label
+                            class="form-check-label"
+                            for="classificationBoroSeason"
+                          >
+                            Boro (Jan-Apr)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="classificationSeasonRadios"
+                            id="classificationAusSeason"
+                            value="aus"
+                            disabled
+                          />
+                          <label
+                            class="form-check-label"
+                            for="classificationAusSeason"
+                          >
+                            Aus (May-Jul)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="classificationSeasonRadios"
+                            id="classificationAmanSeason"
+                            value="aman"
+                            disabled
+                          />
+                          <label
+                            class="form-check-label"
+                            for="classificationAmanSeason"
+                          >
+                            Aman (Aug-Dec)
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <form action="/cropclassifier/classify">
+                    <%- include('../partials/aoiScope'); %>
+
+                    <div class="d-flex flex-row justify-content-around mb-2">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="classifierRadios"
+                          id="cartClassifier"
+                          value="cart"
+                          checked
+                        />
+                        <label class="form-check-label" for="cartClassifier">
+                          CART
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="classifierRadios"
+                          id="rfClassifier"
+                          value="rf"
+                        />
+                        <label class="form-check-label" for="rfClassifier">
+                          Random Forest
+                        </label>
+                      </div>
+                    </div>
+                    <div class="d-grid">
+                      <button
+                        class="btn btn-lg btn-secondary"
+                        id="classifyButton"
+                        type="submit"
+                      >
+                        Classify
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Results Pane
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#utilitiesAccordion"
+              >
+                <div class="accordion-body">
+                  <div
+                    class="mt-2 flex-column d-flex justify-content-center align-items-center"
+                  >
+                    <table
+                      class="table caption-top d-none"
+                      id="accuracyResultsTable"
+                    >
+                      <caption class="h4 text-center">
+                        Accuracy Results
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">Smile Cart</th>
+                          <th scope="col">Random Forest</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Training</th>
+                          <td id="cartTrainingAccuracy"></td>
+                          <td id="rfTrainingAccuracy"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Validation</th>
+                          <td id="cartValidationAccuracy"></td>
+                          <td id="rfValidationAccuracy"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <footer class="fixed-bottom">
+            <div class="d-flex m-3">
+              <form action="/logout" method="post">
+                <button type="submit" class="btn btn-secondary">Logout</button>
+              </form>
+            </div>
+          </footer>
         </div>
-        <div id="map" class="col h-100"></div>
+        <div id="map" class="col vh-100"></div>
       </div>
     </main>
 
