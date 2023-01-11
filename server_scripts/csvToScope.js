@@ -44,14 +44,20 @@ const csvToScopeJSON = (
           // create divisions nested object
           if (!scopeJSON.countries.includes(scopeData.country)) {
             scopeJSON.countries.push(scopeData.country);
-            scopeJSON[scopeData.country] = { divisions: [] };
+            scopeJSON[scopeData.country] = {
+              pcode: scopeData.country_code,
+              divisions: [],
+            };
           }
 
           if (
             !scopeJSON[scopeData.country].divisions.includes(scopeData.division)
           ) {
             scopeJSON[scopeData.country].divisions.push(scopeData.division);
-            scopeJSON[scopeData.country][scopeData.division] = { zilas: [] };
+            scopeJSON[scopeData.country][scopeData.division] = {
+              pcode: scopeData.division_code,
+              zilas: [],
+            };
           }
 
           //   divisions
@@ -64,6 +70,7 @@ const csvToScopeJSON = (
               scopeData.zila
             );
             scopeJSON[scopeData.country][scopeData.division][scopeData.zila] = {
+              pcode: scopeData.zila_code,
               upazilas: [],
             };
           }
@@ -78,7 +85,10 @@ const csvToScopeJSON = (
             ].upazilas.push(scopeData.upazila);
             scopeJSON[scopeData.country][scopeData.division][scopeData.zila][
               scopeData.upazila
-            ] = { unions: [] };
+            ] = {
+              pcode: scopeData.upazila_code,
+              unions: [],
+            };
           }
 
           if (
@@ -89,6 +99,9 @@ const csvToScopeJSON = (
             scopeJSON[scopeData.country][scopeData.division][scopeData.zila][
               scopeData.upazila
             ].unions.push(scopeData.union);
+            scopeJSON[scopeData.country][scopeData.division][scopeData.zila][
+              scopeData.upazila
+            ][scopeData.union]={pcode: scopeData.union_code,};
           }
         }
         resolve(scopeJSON);
