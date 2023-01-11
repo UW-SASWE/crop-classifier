@@ -80,31 +80,217 @@ const cc = {
     var roiGeojson = await loadGeojson(roiPath);
     assets.roi = ee.FeatureCollection(roiGeojson);
   },
-  loadBangladeshBoundary: async function (req, res, next) {
-    var path = "./cc_assets/bg_boundary.geojson";
-    var geoJSON = loadGeojson(path);
-    res.send(geoJSON);
+  loadPolygon: async function (req, res, next) {
+    if (req.body.parentValues.length) {
+      var rootDir = "./cc_assets";
+      var dir = [rootDir];
+      var parentName = req.body.parentValues.slice(-1);
+      var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+      for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+        scopes = scopes[req.body.parentValues[i]];
+        dir.push(scopes.pcode);
+      }
+
+      var parentCode = scopes.pcode;
+
+      // build full path
+      dir = dir.join("/");
+
+      var childValues;
+      var childSuffix;
+
+      switch (req.body.polygonType) {
+        case "countries":
+          childValues = scopes["divisions"];
+          childSuffix = "_divisions.geojson";
+          break;
+        case "divisions":
+          childValues = scopes["zilas"];
+          childSuffix = "_zilas.geojson";
+          break;
+        case "zilas":
+          childValues = scopes["upazilas"];
+          childSuffix = "_upazilas.geojson";
+          break;
+        case "upazilas":
+          childValues = scopes["unions"];
+          childSuffix = "_unions.geojson";
+          break;
+        case "unions":
+          break;
+      }
+
+      var parentGeoJSON = await loadGeojson(
+        [dir, parentName + ".geojson"].join("/")
+      );
+      if (!(req.body.polygonType == "unions")) {
+        var childrenGeoJSON = await loadGeojson(
+          [dir, parentCode + childSuffix].join("/")
+        );
+      }
+      res.send({ parentGeoJSON, childrenGeoJSON, childValues });
+    } else {
+      var childrenGeoJSON = null;
+      var childValues = null;
+      res.send({ parentGeoJSON, childrenGeoJSON });
+    }
   },
-  loadDivisions: async function (req, res, next) {
-    var path = "./cc_assets/bg_divisions.geojson";
-    var geoJSON = await loadGeojson(path);
-    res.send(geoJSON);
-  },
-  loadZilas: async function (req, res, next) {
-    var path = "./cc_assets/bg_zilas.geojson";
-    var geoJSON = await loadGeojson(path);
-    res.send(geoJSON);
-  },
-  loadUpazilas: async function (req, res, next) {
-    var path = "./cc_assets/bg_upazilas.geojson";
-    var geoJSON = await loadGeojson(path);
-    res.send(geoJSON);
-  },
-  loadUnions: async function (req, res, next) {
-    var path = "./cc_assets/bg_unions.geojson";
-    var geoJSON = await loadGeojson(path);
-    res.send(geoJSON);
-  },
+  // loadCountry: async function (req, res, next) {
+  //   // var parentPath = "./cc_assets/bg_boundary.geojson";
+  //   // var childrenPath = "./cc_assets/bg_divisions.geojson";
+  //   // var parentGeoJSON = await loadGeojson(parentPath);
+  //   // if (req.body.parentValues.length) {
+  //   //   var parentID = req.body.parentValues.slice(-1);
+  //   //   parentGeoJSON.features = parentGeoJSON.features.filter(
+  //   //     (obj) => obj.properties.ADM0_EN == parentID
+  //   //   );
+
+  //   //   var childrenGeoJSON = await loadGeojson(childrenPath);
+  //   //   var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+  //   //   for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+  //   //     scopes = scopes[req.body.parentValues[i]];
+  //   //   }
+  //   //   var childValues = scopes["divisions"];
+
+  //   //   childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
+  //   //     childValues.includes(obj.properties.ADM1_EN)
+  //   //   );
+
+  //   //   res.send({ parentGeoJSON, childrenGeoJSON });
+  //   // } else {
+  //   //   var childrenGeoJSON = null
+  //   //   res.send({parentGeoJSON, childrenGeoJSON});
+  //   // }
+  //   if (req.body.parentValues.length) {
+  //     var rootDir = "./cc_assets";
+  //     var dir = [rootDir];
+  //     var parentName = req.body.parentValues.slice(-1);
+  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+  //       scopes = scopes[req.body.parentValues[i]];
+  //       dir.push(scopes.pcode);
+  //     }
+
+  //     var parentCode = scopes.pcode;
+  //     var childValues = scopes["divisions"];
+
+  //     // build full path
+  //     dir = dir.join("/");
+
+  //     var childSuffix = "_divisions.geojson";
+  //     var parentGeoJSON = await loadGeojson(
+  //       [dir, parentName + ".geojson"].join("/")
+  //     );
+
+  //     var childrenGeoJSON = await loadGeojson(
+  //       [dir, parentCode + childSuffix].join("/")
+  //     );
+  //     res.send({ parentGeoJSON, childrenGeoJSON, childValues });
+  //   } else {
+  //     var childrenGeoJSON = null;
+  //     var childValues = null;
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   }
+  // },
+  // loadDivisions: async function (req, res, next) {
+  //   var parentPath = "./cc_assets/bg_divisions.geojson";
+  //   var childrenPath = "./cc_assets/bg_zilas.geojson";
+  //   var parentGeoJSON = await loadGeojson(parentPath);
+  //   if (req.body.parentValues.length) {
+  //     var parentID = req.body.parentValues.slice(-1);
+  //     parentGeoJSON.features = parentGeoJSON.features.filter(
+  //       (obj) => obj.properties.ADM1_EN == parentID
+  //     );
+
+  //     var childrenGeoJSON = await loadGeojson(childrenPath);
+  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+  //       scopes = scopes[req.body.parentValues[i]];
+  //     }
+  //     var childValues = scopes["zilas"];
+
+  //     childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
+  //       childValues.includes(obj.properties.ADM2_EN)
+  //     );
+
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   } else {
+  //     var childrenGeoJSON = null;
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   }
+  // },
+  // loadZilas: async function (req, res, next) {
+  //   var parentPath = "./cc_assets/bg_zilas.geojson";
+  //   var childrenPath = "./cc_assets/bg_upazilas.geojson";
+  //   var parentGeoJSON = await loadGeojson(parentPath);
+  //   if (req.body.parentValues.length) {
+  //     var parentID = req.body.parentValues.slice(-1);
+  //     parentGeoJSON.features = parentGeoJSON.features.filter(
+  //       (obj) => obj.properties.ADM2_EN == parentID
+  //     );
+
+  //     var childrenGeoJSON = await loadGeojson(childrenPath);
+  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+  //       scopes = scopes[req.body.parentValues[i]];
+  //     }
+  //     var childValues = scopes["upazilas"];
+
+  //     childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
+  //       childValues.includes(obj.properties.ADM3_EN)
+  //     );
+
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   } else {
+  //     var childrenGeoJSON = null;
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   }
+  // },
+  // loadUpazilas: async function (req, res, next) {
+  //   var parentPath = "./cc_assets/bg_upazilas.geojson";
+  //   var childrenPath = "./cc_assets/bg_unions.geojson";
+  //   var parentGeoJSON = await loadGeojson(parentPath);
+  //   if (req.body.parentValues.length) {
+  //     var parentID = req.body.parentValues.slice(-1);
+  //     parentGeoJSON.features = parentGeoJSON.features.filter(
+  //       (obj) => obj.properties.ADM3_EN == parentID
+  //     );
+
+  //     var childrenGeoJSON = await loadGeojson(childrenPath);
+  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
+  //       scopes = scopes[req.body.parentValues[i]];
+  //     }
+  //     var childValues = scopes["unions"];
+
+  //     childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
+  //       childValues.includes(obj.properties.ADM4_EN)
+  //     );
+
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   } else {
+  //     var childrenGeoJSON = null;
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   }
+  // },
+  // loadUnions: async function (req, res, next) {
+  //   var parentPath = "./cc_assets/bg_upazilas.geojson";
+  //   var childrenPath = "./cc_assets/bg_unions.geojson";
+  //   var parentGeoJSON = await loadGeojson(parentPath);
+  //   if (req.body.parentValues.length) {
+  //     var parentID = req.body.parentValues.slice(-1);
+  //     parentGeoJSON.features = parentGeoJSON.features.filter(
+  //       (obj) => obj.properties.ADM4_EN == parentID
+  //     );
+
+  //     var childrenGeoJSON = null;
+
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   } else {
+  //     var childrenGeoJSON = null;
+  //     res.send({ parentGeoJSON, childrenGeoJSON });
+  //   }
+  // },
   loadRoi: async function (req, res, next) {
     var roiPath = "./cc_assets/bg_boundary.geojson";
     // var roiPath = "./cc_assets/Region_of_interest.geojson";
@@ -306,12 +492,12 @@ const cc = {
     // save RF trained models
     try {
       var rfExplanation = await trainedRf.explain().getInfo((info) => {
-        // console.log("pass");
         return info;
       });
       // console.log(explanation.numberOfTrees);
       fs.writeFile(
         "./cc_assets/rfExplanation.json",
+        // "./../rfExplanation.json",
         JSON.stringify(rfExplanation),
         (err) => {
           if (err) {
@@ -333,6 +519,7 @@ const cc = {
       // console.log(explanation.numberOfTrees);
       fs.writeFile(
         "./cc_assets/cartExplanation.json",
+        // "./../cartExplanation.json",
         JSON.stringify(cartExplanation),
         (err) => {
           if (err) {
@@ -394,13 +581,15 @@ const cc = {
       console.log("Error while getting the confusion matrix.");
     }
 
-    // console.log(s2c);
-    res.send({
-      trainAccuracyCart,
-      trainAccuracyRf,
-      validationAccuracyCart,
-      validationAccuracyRf,
-    });
+    var resJSON = {};
+    resJSON.trainAccuracyCart = await trainAccuracyCart;
+    resJSON.trainAccuracyRf = await trainAccuracyRf;
+    resJSON.validationAccuracyCart = await validationAccuracyCart;
+    resJSON.validationAccuracyRf = await validationAccuracyRf;
+
+    // console.log(resJSON)
+
+    res.send(resJSON);
   },
   scope: async function (req, res, next) {
     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
@@ -408,7 +597,7 @@ const cc = {
       scopes = scopes[req.body.parentValues[i]];
     }
     var childValues = scopes[req.body.childKey];
-    res.send({childValues})
+    res.send({ childValues });
   },
   classify: async function (req, res, next) {
     console.log("Running the classification from trained model");
