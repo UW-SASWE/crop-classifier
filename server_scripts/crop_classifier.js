@@ -135,187 +135,20 @@ const cc = {
       res.send({ parentGeoJSON, childrenGeoJSON });
     }
   },
-  // loadCountry: async function (req, res, next) {
-  //   // var parentPath = "./cc_assets/bg_boundary.geojson";
-  //   // var childrenPath = "./cc_assets/bg_divisions.geojson";
-  //   // var parentGeoJSON = await loadGeojson(parentPath);
-  //   // if (req.body.parentValues.length) {
-  //   //   var parentID = req.body.parentValues.slice(-1);
-  //   //   parentGeoJSON.features = parentGeoJSON.features.filter(
-  //   //     (obj) => obj.properties.ADM0_EN == parentID
-  //   //   );
-
-  //   //   var childrenGeoJSON = await loadGeojson(childrenPath);
-  //   //   var scopes = await loadScopes("./cc_assets/bg_scopes.json");
-  //   //   for (i = 0, len = req.body.parentValues.length; i < len; i++) {
-  //   //     scopes = scopes[req.body.parentValues[i]];
-  //   //   }
-  //   //   var childValues = scopes["divisions"];
-
-  //   //   childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
-  //   //     childValues.includes(obj.properties.ADM1_EN)
-  //   //   );
-
-  //   //   res.send({ parentGeoJSON, childrenGeoJSON });
-  //   // } else {
-  //   //   var childrenGeoJSON = null
-  //   //   res.send({parentGeoJSON, childrenGeoJSON});
-  //   // }
-  //   if (req.body.parentValues.length) {
-  //     var rootDir = "./cc_assets";
-  //     var dir = [rootDir];
-  //     var parentName = req.body.parentValues.slice(-1);
-  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
-  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
-  //       scopes = scopes[req.body.parentValues[i]];
-  //       dir.push(scopes.pcode);
-  //     }
-
-  //     var parentCode = scopes.pcode;
-  //     var childValues = scopes["divisions"];
-
-  //     // build full path
-  //     dir = dir.join("/");
-
-  //     var childSuffix = "_divisions.geojson";
-  //     var parentGeoJSON = await loadGeojson(
-  //       [dir, parentName + ".geojson"].join("/")
-  //     );
-
-  //     var childrenGeoJSON = await loadGeojson(
-  //       [dir, parentCode + childSuffix].join("/")
-  //     );
-  //     res.send({ parentGeoJSON, childrenGeoJSON, childValues });
-  //   } else {
-  //     var childrenGeoJSON = null;
-  //     var childValues = null;
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   }
-  // },
-  // loadDivisions: async function (req, res, next) {
-  //   var parentPath = "./cc_assets/bg_divisions.geojson";
-  //   var childrenPath = "./cc_assets/bg_zilas.geojson";
-  //   var parentGeoJSON = await loadGeojson(parentPath);
-  //   if (req.body.parentValues.length) {
-  //     var parentID = req.body.parentValues.slice(-1);
-  //     parentGeoJSON.features = parentGeoJSON.features.filter(
-  //       (obj) => obj.properties.ADM1_EN == parentID
-  //     );
-
-  //     var childrenGeoJSON = await loadGeojson(childrenPath);
-  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
-  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
-  //       scopes = scopes[req.body.parentValues[i]];
-  //     }
-  //     var childValues = scopes["zilas"];
-
-  //     childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
-  //       childValues.includes(obj.properties.ADM2_EN)
-  //     );
-
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   } else {
-  //     var childrenGeoJSON = null;
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   }
-  // },
-  // loadZilas: async function (req, res, next) {
-  //   var parentPath = "./cc_assets/bg_zilas.geojson";
-  //   var childrenPath = "./cc_assets/bg_upazilas.geojson";
-  //   var parentGeoJSON = await loadGeojson(parentPath);
-  //   if (req.body.parentValues.length) {
-  //     var parentID = req.body.parentValues.slice(-1);
-  //     parentGeoJSON.features = parentGeoJSON.features.filter(
-  //       (obj) => obj.properties.ADM2_EN == parentID
-  //     );
-
-  //     var childrenGeoJSON = await loadGeojson(childrenPath);
-  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
-  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
-  //       scopes = scopes[req.body.parentValues[i]];
-  //     }
-  //     var childValues = scopes["upazilas"];
-
-  //     childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
-  //       childValues.includes(obj.properties.ADM3_EN)
-  //     );
-
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   } else {
-  //     var childrenGeoJSON = null;
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   }
-  // },
-  // loadUpazilas: async function (req, res, next) {
-  //   var parentPath = "./cc_assets/bg_upazilas.geojson";
-  //   var childrenPath = "./cc_assets/bg_unions.geojson";
-  //   var parentGeoJSON = await loadGeojson(parentPath);
-  //   if (req.body.parentValues.length) {
-  //     var parentID = req.body.parentValues.slice(-1);
-  //     parentGeoJSON.features = parentGeoJSON.features.filter(
-  //       (obj) => obj.properties.ADM3_EN == parentID
-  //     );
-
-  //     var childrenGeoJSON = await loadGeojson(childrenPath);
-  //     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
-  //     for (i = 0, len = req.body.parentValues.length; i < len; i++) {
-  //       scopes = scopes[req.body.parentValues[i]];
-  //     }
-  //     var childValues = scopes["unions"];
-
-  //     childrenGeoJSON.features = childrenGeoJSON.features.filter((obj) =>
-  //       childValues.includes(obj.properties.ADM4_EN)
-  //     );
-
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   } else {
-  //     var childrenGeoJSON = null;
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   }
-  // },
-  // loadUnions: async function (req, res, next) {
-  //   var parentPath = "./cc_assets/bg_upazilas.geojson";
-  //   var childrenPath = "./cc_assets/bg_unions.geojson";
-  //   var parentGeoJSON = await loadGeojson(parentPath);
-  //   if (req.body.parentValues.length) {
-  //     var parentID = req.body.parentValues.slice(-1);
-  //     parentGeoJSON.features = parentGeoJSON.features.filter(
-  //       (obj) => obj.properties.ADM4_EN == parentID
-  //     );
-
-  //     var childrenGeoJSON = null;
-
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   } else {
-  //     var childrenGeoJSON = null;
-  //     res.send({ parentGeoJSON, childrenGeoJSON });
-  //   }
-  // },
   loadRoi: async function (req, res, next) {
-    var roiPath = "./cc_assets/bg_boundary.geojson";
-    // var roiPath = "./cc_assets/Region_of_interest.geojson";
-    var roiGeojson = await loadGeojson(roiPath);
-    req.roi = ee.FeatureCollection(roiGeojson);
-    req.roi.getMap({}, async ({}) => {
-      next();
-    });
-  },
-  displayTrainingPoints: async function (req, res, next) {
-    var geoJSON = await csvToGeojson(req.body.csvData);
-    geoJSON.features = shuffleArray(geoJSON.features);
-    var split = Math.floor(
-      (req.body.splitRatio * geoJSON.features.length) / 100
-    );
-    var tpGeojson = JSON.parse(JSON.stringify(geoJSON)),
-      vpGeojson = JSON.parse(JSON.stringify(geoJSON));
-    vpGeojson.features = JSON.parse(
-      JSON.stringify(geoJSON.features.slice(split))
-    );
-    tpGeojson.features = JSON.parse(
-      JSON.stringify(geoJSON.features.slice(0, split))
-    );
-
-    res.send({ tpGeojson, vpGeojson });
+    if (req.body.roiSource === "LSIB") {
+      var dataset = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
+      // Apply filter where country name equals Bangladesh.
+      req.roi = dataset.filter(ee.Filter.eq("country_na", "Bangladesh"));
+    } else {
+      var roiPath = "./cc_assets/bg_boundary.geojson";
+      // var roiPath = "./cc_assets/Region_of_interest.geojson";
+      var roiGeojson = await loadGeojson(roiPath);
+      req.roi = ee.FeatureCollection(roiGeojson);
+      req.roi.getMap({}, async ({}) => {
+        next();
+      });
+    }
   },
   loadTrainingPoints: async function (req, res, next) {
     var geoJSON = await csvToGeojson(req.body.csvData);
@@ -340,6 +173,23 @@ const cc = {
         next();
       });
     });
+  },
+  displayTrainingPoints: async function (req, res, next) {
+    var geoJSON = await csvToGeojson(req.body.csvData);
+    geoJSON.features = shuffleArray(geoJSON.features);
+    var split = Math.floor(
+      (req.body.splitRatio * geoJSON.features.length) / 100
+    );
+    var tpGeojson = JSON.parse(JSON.stringify(geoJSON)),
+      vpGeojson = JSON.parse(JSON.stringify(geoJSON));
+    vpGeojson.features = JSON.parse(
+      JSON.stringify(geoJSON.features.slice(split))
+    );
+    tpGeojson.features = JSON.parse(
+      JSON.stringify(geoJSON.features.slice(0, split))
+    );
+
+    res.send({ tpGeojson, vpGeojson });
   },
   train: async function (req, res, next) {
     // var roi = req.roi,
@@ -489,67 +339,6 @@ const cc = {
       inputProperties: bands,
     });
 
-    // save RF trained models
-    try {
-      var rfExplanation = await trainedRf.explain().getInfo((info) => {
-        return info;
-      });
-      // console.log(explanation.numberOfTrees);
-      fs.writeFile(
-        "./cc_assets/rfExplanation.json",
-        // "./../rfExplanation.json",
-        JSON.stringify(rfExplanation),
-        (err) => {
-          if (err) {
-            console.log("The Random Forest Explanation was not saved: ", err);
-          }
-          console.log("The Random Forest Explanation has been saved!");
-        }
-      );
-    } catch {
-      console.log("Unable to get the Random Forest Explanation explanation.");
-    }
-
-    // save Cart trained models
-    try {
-      var cartExplanation = await trainedCart.explain().getInfo((info) => {
-        // console.log("pass");
-        return info;
-      });
-      // console.log(explanation.numberOfTrees);
-      fs.writeFile(
-        "./cc_assets/cartExplanation.json",
-        // "./../cartExplanation.json",
-        JSON.stringify(cartExplanation),
-        (err) => {
-          if (err) {
-            console.log("The CART Explanation was not saved: ", err);
-          }
-          console.log("The CART Explanation has been saved!");
-        }
-      );
-    } catch {
-      console.log("Unable to get CART explanation.");
-    }
-
-    // Training accuracy calculation
-    try {
-      var trainAccuracyCart = await trainedCart
-        .confusionMatrix()
-        .accuracy()
-        .getInfo((info) => {
-          return info;
-        });
-      var trainAccuracyRf = await trainedRf
-        .confusionMatrix()
-        .accuracy()
-        .getInfo((info) => {
-          return info;
-        });
-    } catch {
-      console.log("Error while getting the confusion matrix.");
-    }
-
     // Extract band pixel values for validation points.
     var validation = imageCl
       .sampleRegions({
@@ -563,33 +352,235 @@ const cc = {
     // Classify the validation data.
     var validatedCart = validation.classify(trainedCart);
     var validatedRf = validation.classify(trainedRf);
-    // Training accuracy calculation
-    try {
-      var validationAccuracyCart = await validatedCart
-        .errorMatrix("class", "classification")
-        .accuracy()
-        .getInfo((info) => {
-          return info;
-        });
-      var validationAccuracyRf = await validatedRf
-        .errorMatrix("class", "classification")
-        .accuracy()
-        .getInfo((info) => {
-          return info;
-        });
-    } catch {
-      console.log("Error while getting the confusion matrix.");
+
+    res.sendStatus(200);
+
+    // console.log("starting the accuracy calculations" + startTime.toString());
+
+    // // Training accuracy calculation
+    // try {
+    //   var trainAccuracyCart = await trainedCart
+    //     .confusionMatrix()
+    //     .accuracy()
+    //     .getInfo((info) => {
+    //       console.log("got train accuracy cart");
+    //       return info;
+    //     });
+    //   var trainAccuracyRf = await trainedRf
+    //     .confusionMatrix()
+    //     .accuracy()
+    //     .getInfo((info) => {
+    //       console.log("got train accuracy rf");
+    //       return info;
+    //     });
+    // } catch {
+    //   console.log("Error while getting the confusion matrix.");
+    // }
+
+    // // Validation accuracy calculation
+    // try {
+    //   var validationAccuracyCart = await validatedCart
+    //     .errorMatrix("class", "classification")
+    //     .accuracy()
+    //     .getInfo((info) => {
+    //       console.log("got train val accuracy rf");
+    //       return info;
+    //     });
+    //   var validationAccuracyRf = await validatedRf
+    //     .errorMatrix("class", "classification")
+    //     .accuracy()
+    //     .getInfo((info) => {
+    //       return info;
+    //     });
+    // } catch {
+    //   console.log("Error while getting the confusion matrix.");
+    // }
+
+    // var resJSON = {};
+    // resJSON.trainAccuracyCart = await trainAccuracyCart;
+    // resJSON.trainAccuracyRf = await trainAccuracyRf;
+    // resJSON.validationAccuracyCart = await validationAccuracyCart;
+    // resJSON.validationAccuracyRf = await validationAccuracyRf;
+
+    // // res.send(resJSON);
+    // fs.writeFile(
+    //   "./cc_assets/accuracies.json",
+    //   // "./../rfExplanation.json",
+    //   JSON.stringify(resJSON),
+    //   (err) => {
+    //     if (err) {
+    //       console.log("Accuracy was not saved: ", err);
+    //     }
+    //     console.log("Accuracy has been saved!");
+    //   }
+    // );
+
+    // console.log("saving the model");
+    // // save RF trained models
+    // try {
+    //   var rfExplanation = await trainedRf.explain().getInfo((info) => {
+    //     return info;
+    //   });
+    //   // console.log(explanation.numberOfTrees);
+    //   fs.writeFile(
+    //     "./cc_assets/rfExplanation.json",
+    //     // "./../rfExplanation.json",
+    //     JSON.stringify(rfExplanation),
+    //     (err) => {
+    //       if (err) {
+    //         console.log("The Random Forest Explanation was not saved: ", err);
+    //       }
+    //       console.log("The Random Forest Explanation has been saved!");
+    //     }
+    //   );
+    // } catch {
+    //   console.log("Unable to get the Random Forest Explanation explanation.");
+    // }
+
+    // // save Cart trained models
+    // try {
+    //   var cartExplanation = await trainedCart.explain().getInfo((info) => {
+    //     // console.log("pass");
+    //     return info;
+    //   });
+    //   // console.log(explanation.numberOfTrees);
+    //   fs.writeFile(
+    //     "./cc_assets/cartExplanation.json",
+    //     // "./../cartExplanation.json",
+    //     JSON.stringify(cartExplanation),
+    //     (err) => {
+    //       if (err) {
+    //         console.log("The CART Explanation was not saved: ", err);
+    //       }
+    //       console.log("The CART Explanation has been saved!");
+    //     }
+    //   );
+    // } catch {
+    //   console.log("Unable to get CART explanation.");
+    // }
+
+    // get training accuracy
+    function getTrainingAccuracy(trainedClassifier) {
+      return new Promise((resolve, reject) => {
+        try {
+          trainedClassifier
+            .confusionMatrix()
+            .accuracy()
+            .getInfo((info) => {
+              resolve(info);
+            });
+        } catch {
+          console.log("unable to get trained accuracy");
+        }
+      });
     }
 
-    var resJSON = {};
-    resJSON.trainAccuracyCart = await trainAccuracyCart;
-    resJSON.trainAccuracyRf = await trainAccuracyRf;
-    resJSON.validationAccuracyCart = await validationAccuracyCart;
-    resJSON.validationAccuracyRf = await validationAccuracyRf;
+    // get validation accuracy
+    function getValidationAccuracy(validatedClassifier) {
+      return new Promise((resolve, reject) => {
+        try {
+          validatedClassifier
+            .errorMatrix("class", "classification")
+            .accuracy()
+            .getInfo((info) => {
+              resolve(info);
+            });
+        } catch {
+          console.log("unable to get trained accuracy");
+        }
+      });
+    }
 
-    // console.log(resJSON)
+    // get classifier explanation
+    function getExplanation(trainedClassifier) {
+      return new Promise((resolve, reject) => {
+        try {
+          trainedClassifier.explain().getInfo((info) => {
+            resolve(info);
+          });
+        } catch {
+          console.log("unable to get explanation");
+        }
+      });
+    }
 
-    res.send(resJSON);
+    async function getInfoParallel(arrayOfPromises) {
+      return await Promise.all(arrayOfPromises);
+    }
+
+    var arrayOfResultsPromises = [
+      getTrainingAccuracy(trainedCart), // cart training accuracy
+      getTrainingAccuracy(trainedRf), // random forest training accuracy
+      getValidationAccuracy(validatedCart), // cart validation accuracy
+      getValidationAccuracy(validatedRf), // random forest validation accuracy
+    ];
+
+    // var startTime = new Date().getTime();
+    var fulfilledResults = await getInfoParallel(arrayOfResultsPromises);
+
+    var resJSON = {
+      trainAccuracyCart: fulfilledResults[0],
+      trainAccuracyRf: fulfilledResults[1],
+      validationAccuracyCart: fulfilledResults[2],
+      validationAccuracyRf: fulfilledResults[3],
+    };
+
+    // res.send(resJSON)
+
+    // var endTime = new Date().getTime();
+    // console.log("end time: " + endTime.toString(), fulfilledPromises);
+    // console.log(endTime - startTime);
+    // console.log(resJSON);
+
+    // res.send(resJSON);
+    fs.writeFile(
+      "./cc_assets/trainResults.json",
+      // "./../rfExplanation.json",
+      JSON.stringify(resJSON),
+      (err) => {
+        if (err) {
+          console.log("Results were not saved: ", err);
+        }
+        console.log("Results has been saved!");
+      }
+    );
+
+    var arrayOfExplanationsPromises = [
+      getExplanation(trainedCart), // cart explanation
+      getExplanation(trainedRf), //rf explanation
+    ];
+
+    var fulfilledExplanations = await getInfoParallel(
+      arrayOfExplanationsPromises
+    );
+
+    fs.writeFile(
+      "./cc_assets/cartExplanation.json",
+      // "./../cartExplanation.json",
+      JSON.stringify(fulfilledExplanations[0]),
+      (err) => {
+        if (err) {
+          console.log("The CART Explanation was not saved: ", err);
+        }
+        console.log("The CART Explanation has been saved!");
+      }
+    );
+
+    fs.writeFile(
+      "./cc_assets/cartExplanation.json",
+      // "./../cartExplanation.json",
+      JSON.stringify(fulfilledExplanations[1]),
+      (err) => {
+        if (err) {
+          console.log("The Random Forest Explanation was not saved: ", err);
+        }
+        console.log("The Random Forest Explanation has been saved!");
+      }
+    );
+
+    // var endTime2 = new Date().getTime();
+    // // console.log("end time: " + endTime.toString(), fulfilledPromises);
+    console.log(endTime2 - endTime);
   },
   scope: async function (req, res, next) {
     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
@@ -598,6 +589,12 @@ const cc = {
     }
     var childValues = scopes[req.body.childKey];
     res.send({ childValues });
+  },
+  sendTrainResults: async function (req, res, next) {
+    var resultsData = await readFile("./cc_assets/trainResults.json");
+    var resultsDataJson = JSON.parse(resultsData);
+    console.log(resultsDataJson)
+    res.send(resultsDataJson)
   },
   classify: async function (req, res, next) {
     console.log("Running the classification from trained model");

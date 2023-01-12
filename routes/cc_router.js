@@ -25,6 +25,7 @@ router.post(
   cc.loadTrainingPoints,
   cc.train
 ); // Train
+router.get("/cropclassifier/trainresults", cc.sendTrainResults)
 router.post("/cropclassifier/scope", cc.scope);
 router.get("/cropclassifier/classify", cc.classify); // Classify
 

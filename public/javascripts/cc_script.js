@@ -30,13 +30,19 @@ function getSeason() {
   }
 }
 
-async function postTrain() {
+const trainButtonSpinner = document.getElementById("trainButtonSpinner");
+const trainButtonText = document.getElementById("trainButtonText");
+const trainInputFile = document.getElementById("trainFile");
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+async function postTrain(roiSource = "LSIB") {
   var season = getSeason();
   var trainYear = document.getElementById("trainYear").value;
   var trainYear = document.getElementById("trainYear").value;
-  const loadSpinner = document.getElementById("loadSpinner");
-  loadSpinner.classList.remove("d-none");
-  const file = document.getElementById("trainFile").files[0];
+  trainButtonSpinner.classList.remove("d-none");
+  trainButtonText.innerHTML = "Training...";
+  var file = trainInputFile.files[0];
   var csvData = await readCSV(file);
 
   var splitRatio = document.getElementById("trainSplit").value;
@@ -45,11 +51,32 @@ async function postTrain() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ csvData, splitRatio, season, trainYear }),
+    body: JSON.stringify({ csvData, splitRatio, season, trainYear, roiSource }),
   };
   loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
-  var responseJson = await response.json();
+  if (response.status === 200) {
+    await delay(90000); // give the server some slack time
+    awaitTrain("Saving models");
+    await delay(100000); // allow some time for the server to save the models
+    awaitTrain("Loading results");
+    await delay(30000); // allow time to load saved results
+    // console.log("waited 3 mins");
+    var resultsResponse = await fetch("/cropclassifier/trainresults");
+    var resultsResponseJson = await resultsResponse.json();
+    console.log(resultsResponseJson);
+    afterTrain(resultsResponseJson);
+  }
+}
+
+// what happens when the training is still running but the time exceeds the browser timeout
+function awaitTrain(message) {
+  trainButtonSpinner.classList.replace("spinner-border", "spinner-grow");
+  trainButtonText.innerHTML = `${message}...`;
+}
+
+// what happens after a successful training
+function afterTrain(responseJson) {
   document.getElementById("cartTrainingAccuracy").innerHTML =
     Math.round((responseJson.trainAccuracyCart + Number.EPSILON) * 100) / 100;
   document.getElementById("rfTrainingAccuracy").innerHTML =
@@ -62,13 +89,17 @@ async function postTrain() {
     100;
 
   // console.log(await response.json());
-  loadSpinner.classList.add("d-none");
+  trainButtonSpinner.classList.add("d-none");
+  trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
+  trainButtonText.innerHTML = "Train";
+  trainInputFile.value = null;
+  document.getElementById("trainButton").disabled = true;
+
   var accuracyResultsTable = document.getElementById("accuracyResultsTable");
   accuracyResultsTable.classList.remove("d-none");
 
   document.getElementById("collapseOne").classList.toggle("show");
   document.getElementById("collapseThree").classList.toggle("show");
-  // readFile = await readCSV(file);
 }
 
 // function to load the training points
@@ -444,7 +475,7 @@ async function loadChildSelector(parentSelector) {
 
       break;
 
-      case "unions":
+    case "unions":
       resetChildLayers("Unions");
       load_polygon(
         parentSelector.id,
@@ -483,4 +514,6 @@ zilaSelector.addEventListener("change", () => {
 upazilaSelector.addEventListener("change", () => {
   loadChildSelector(upazilaSelector);
 });
-unionSelector.addEventListener("change",()=>{loadChildSelector(unionSelector)})
+unionSelector.addEventListener("change", () => {
+  loadChildSelector(unionSelector);
+});
