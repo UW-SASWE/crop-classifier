@@ -40,6 +40,7 @@ async function postTrain(roiSource = "LSIB") {
   var season = getSeason();
   var trainYear = document.getElementById("trainYear").value;
   var trainYear = document.getElementById("trainYear").value;
+  document.getElementById("trainButton").disabled = true;
   trainButtonSpinner.classList.remove("d-none");
   trainButtonText.innerHTML = "Training...";
   var file = trainInputFile.files[0];
@@ -57,15 +58,19 @@ async function postTrain(roiSource = "LSIB") {
   var response = await fetch("/cropclassifier/train", options);
   if (response.status === 200) {
     await delay(90000); // give the server some slack time
-    awaitTrain("Saving models");
-    await delay(100000); // allow some time for the server to save the models
     awaitTrain("Loading results");
-    await delay(30000); // allow time to load saved results
-    // console.log("waited 3 mins");
+    await delay(30000); // allow time to for the server to finish saving the results
     var resultsResponse = await fetch("/cropclassifier/trainresults");
     var resultsResponseJson = await resultsResponse.json();
     console.log(resultsResponseJson);
     afterTrain(resultsResponseJson);
+    awaitTrain("Saving models");
+    await delay(100000); // allow some time for the server to save the models
+    // console.log("waited 3 mins");
+    
+  trainButtonSpinner.classList.add("d-none");
+  trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
+  trainButtonText.innerHTML = "Train";
   }
 }
 
@@ -89,9 +94,9 @@ function afterTrain(responseJson) {
     100;
 
   // console.log(await response.json());
-  trainButtonSpinner.classList.add("d-none");
-  trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
-  trainButtonText.innerHTML = "Train";
+  // trainButtonSpinner.classList.add("d-none");
+  // trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
+  // trainButtonText.innerHTML = "Train";
   trainInputFile.value = null;
   document.getElementById("trainButton").disabled = true;
 

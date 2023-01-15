@@ -580,7 +580,7 @@ const cc = {
 
     // var endTime2 = new Date().getTime();
     // // console.log("end time: " + endTime.toString(), fulfilledPromises);
-    console.log(endTime2 - endTime);
+    // console.log(endTime2 - endTime);
   },
   scope: async function (req, res, next) {
     var scopes = await loadScopes("./cc_assets/bg_scopes.json");
