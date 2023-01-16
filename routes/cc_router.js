@@ -16,17 +16,21 @@ router.get("/cropclassifier/startup", cc.startup);
 router.get("/cropclassifier/loadPolygon", cc.loadPolygon); // request for a polygon
 router.post("/cropclassifier/loadPolygon", cc.loadPolygon); // request for a polygon
 
-
 // Training and classification
 router.post("/cropclassifier/displaytrainingpoints", cc.displayTrainingPoints);
 router.post(
   "/cropclassifier/train",
-  cc.loadRoi,
+  cc.loadTrainRoi,
   cc.loadTrainingPoints,
   cc.train
 ); // Train
-router.get("/cropclassifier/trainresults", cc.sendTrainResults)
+router.get("/cropclassifier/trainresults", cc.sendTrainResults);
 router.post("/cropclassifier/scope", cc.scope);
-router.get("/cropclassifier/classify", cc.classify); // Classify
+router.post(
+  "/cropclassifier/classify",
+  cc.laodClassifyRoi,
+  cc.loadClassifiedModel,
+  cc.classify
+); // Classify
 
 module.exports = router;

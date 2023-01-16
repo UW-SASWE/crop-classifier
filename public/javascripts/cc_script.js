@@ -1,3 +1,130 @@
+// element variables
+const classifyButton = document.getElementById("classifyButton");
+const trainButtonSpinner = document.getElementById("trainButtonSpinner");
+const trainButtonText = document.getElementById("trainButtonText");
+const trainInputFile = document.getElementById("trainFile");
+const trainButton = document.getElementById("trainButton");
+const trainSplitRange = document.getElementById("trainSplit"),
+  trainPercentInput = document.getElementById("trainPercent"),
+  validationPercentInput = document.getElementById("validationPercent");
+const selectedTrainYear = document.getElementById("trainYear");
+const trainFileInput = document.getElementById("trainFile");
+const selectedClassificationYear =
+  document.getElementById("classificationYear");
+// scope selection
+const scopeSelector = document.getElementById("scope");
+const countrySelector = document.getElementById("countries");
+const divisionSelector = document.getElementById("divisions");
+const zilaSelector = document.getElementById("zilas");
+const upazilaSelector = document.getElementById("upazilas");
+const unionSelector = document.getElementById("unions");
+
+// event assignments
+classifyButton.addEventListener("click", classify);
+trainButton.addEventListener("click", train);
+trainSplitRange.addEventListener("change", () => {
+  updateTrainSplit(trainSplitRange.value);
+});
+trainPercentInput.addEventListener("change", () => {
+  updateTrainSplit(trainPercentInput.value);
+});
+validationPercentInput.addEventListener("change", () => {
+  updateTrainSplit(validationPercentInput.value);
+});
+trainFileInput.addEventListener("input", () => {
+  document.getElementById("trainButton").disabled = false;
+});
+selectedTrainYear.addEventListener("blur", () => {
+  disableSeasons("train");
+  disableSeasons("train");
+});
+selectedClassificationYear.addEventListener("blur", () => {
+  disableSeasons("classification");
+  disableSeasons("classification");
+});
+scopeSelector.addEventListener("change", () => {
+  switch (scopeSelector.value) {
+    case "heirachyScope":
+      countrySelector.classList.remove("d-none");
+      countrySelector.value = "Bangladesh";
+      loadChildSelector(countrySelector);
+      break;
+    case "drawScope":
+      countrySelector.classList.add("d-none");
+      break;
+  }
+});
+countrySelector.addEventListener("change", () => {
+  loadChildSelector(countrySelector);
+});
+divisionSelector.addEventListener("change", () => {
+  loadChildSelector(divisionSelector);
+});
+zilaSelector.addEventListener("change", () => {
+  loadChildSelector(zilaSelector);
+});
+upazilaSelector.addEventListener("change", () => {
+  loadChildSelector(upazilaSelector);
+});
+unionSelector.addEventListener("change", () => {
+  loadChildSelector(unionSelector);
+});
+
+// functions
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+async function classify() {
+  var classifySeasonRadios = document.getElementsByName(
+    "classificationSeasonRadios"
+  );
+  var season = getSeason(classifySeasonRadios);
+  var year = document.getElementById("classificationYear").value;
+  var classifierRadios = document.getElementsByName("classifierRadios");
+  var classifier = getClassifier(classifierRadios);
+  var scope = {};
+
+  scope.type = scopeSelector.value;
+
+  switch (scope.type) {
+    case "heirachyScope":
+      scope.tree = [
+        countrySelector.value,
+        divisionSelector.value,
+        zilaSelector.value,
+        upazilaSelector.value,
+        unionSelector.value,
+      ];
+      break;
+    case "drawScope":
+      break;
+  }
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ season, year, classifier, scope }),
+  };
+
+  var response = await fetch("/cropclassifier/classify", options);
+  var responseJSON = await response.json();
+
+  L.tileLayer(responseJSON.urlFormat, {
+    attribution:
+    'Map Data &copy; <a href="https://earthengine.google.com">Google Earth Engine</a>',
+  }).addTo(map).bringToFront();
+}
+
+function getClassifier(classifierRadios) {
+  for (i = 0; i < classifierRadios.length; i++) {
+    if (classifierRadios[i].checked) {
+      return classifierRadios[i].value;
+    }
+  }
+}
+
 function updateTrainSplit(val) {
   document.getElementById("trainSplit").value = val;
   document.getElementById("trainPercent").value = val;
@@ -18,28 +145,18 @@ async function readCSV(file) {
   });
 }
 
-function getSeason() {
-  var seasonsRadios = document.getElementsByName("seasonRadios");
-
+function getSeason(seasonsRadios) {
   for (i = 0; i < seasonsRadios.length; i++) {
     if (seasonsRadios[i].checked) {
       return seasonsRadios[i].value;
-    } else {
-      return;
     }
   }
 }
 
-const trainButtonSpinner = document.getElementById("trainButtonSpinner");
-const trainButtonText = document.getElementById("trainButtonText");
-const trainInputFile = document.getElementById("trainFile");
-
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
-async function postTrain(roiSource = "LSIB") {
-  var season = getSeason();
-  var trainYear = document.getElementById("trainYear").value;
-  var trainYear = document.getElementById("trainYear").value;
+async function train(roiSource = "LSIB") {
+  var trainSeasonRadios = document.getElementsByName("trainSeasonRadios");
+  var season = getSeason(trainSeasonRadios);
+  var year = document.getElementById("trainYear").value;
   document.getElementById("trainButton").disabled = true;
   trainButtonSpinner.classList.remove("d-none");
   trainButtonText.innerHTML = "Training...";
@@ -52,7 +169,7 @@ async function postTrain(roiSource = "LSIB") {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ csvData, splitRatio, season, trainYear, roiSource }),
+    body: JSON.stringify({ csvData, splitRatio, season, year, roiSource }),
   };
   loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
@@ -62,15 +179,15 @@ async function postTrain(roiSource = "LSIB") {
     await delay(30000); // allow time to for the server to finish saving the results
     var resultsResponse = await fetch("/cropclassifier/trainresults");
     var resultsResponseJson = await resultsResponse.json();
-    console.log(resultsResponseJson);
+    // console.log(resultsResponseJson);
     afterTrain(resultsResponseJson);
     awaitTrain("Saving models");
     await delay(100000); // allow some time for the server to save the models
     // console.log("waited 3 mins");
-    
-  trainButtonSpinner.classList.add("d-none");
-  trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
-  trainButtonText.innerHTML = "Train";
+
+    trainButtonSpinner.classList.add("d-none");
+    trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
+    trainButtonText.innerHTML = "Train";
   }
 }
 
@@ -136,28 +253,6 @@ async function loadTrainPoints(options) {
     },
   }).addTo(map);
 }
-
-const trainButton = document.getElementById("trainButton");
-trainButton.addEventListener("click", postTrain);
-
-const trainSplitRange = document.getElementById("trainSplit"),
-  trainPercentInput = document.getElementById("trainPercent"),
-  validationPercentInput = document.getElementById("validationPercent");
-
-trainSplitRange.addEventListener("change", () => {
-  updateTrainSplit(trainSplitRange.value);
-});
-trainPercentInput.addEventListener("change", () => {
-  updateTrainSplit(trainPercentInput.value);
-});
-validationPercentInput.addEventListener("change", () => {
-  updateTrainSplit(validationPercentInput.value);
-});
-
-const trainFileInput = document.getElementById("trainFile");
-trainFileInput.addEventListener("input", () => {
-  document.getElementById("trainButton").disabled = false;
-});
 
 // initialize the map
 var map = L.map("map", {
@@ -247,18 +342,6 @@ function resetChildLayers(childLayerKey) {
   }
 }
 
-const selectedTrainYear = document.getElementById("trainYear");
-selectedTrainYear.addEventListener("blur", () => {
-  disableSeasons("train");
-  disableSeasons("train");
-});
-const selectedClassificationYear =
-  document.getElementById("classificationYear");
-selectedClassificationYear.addEventListener("blur", () => {
-  disableSeasons("classification");
-  disableSeasons("classification");
-});
-
 function disableSeasons(mode) {
   const currentDate = new Date();
   const selectedYear = document.getElementById(mode + "Year"),
@@ -316,6 +399,11 @@ window.onload = () => {
   layerControl.addBaseLayer(osm, "OpenStreetMap");
   layerControl.addBaseLayer(USGS_USImageryTopo, "Satellite (USGS)");
 
+  // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  //   attribution:
+  //     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  // }).addTo(map);
+
   // STARTUP: Load the initial polygons of Bangladesh
   // load_polygon("bg_boundary", overlays.Country, "Bangladesh");
   // load_polygon("bg_divisions", "Divisions");
@@ -332,27 +420,6 @@ window.onload = () => {
   disableSeasons("classification");
   disableSeasons("classification");
 };
-
-// scope selection
-const scopeSelector = document.getElementById("scope");
-const countrySelector = document.getElementById("countries");
-const divisionSelector = document.getElementById("divisions");
-const zilaSelector = document.getElementById("zilas");
-const upazilaSelector = document.getElementById("upazilas");
-const unionSelector = document.getElementById("unions");
-
-scopeSelector.addEventListener("change", () => {
-  switch (scopeSelector.value) {
-    case "heirachyScope":
-      countrySelector.classList.remove("d-none");
-      countrySelector.value = "Bangladesh";
-      loadChildSelector(countrySelector);
-      break;
-    case "drawScope":
-      countrySelector.classList.add("d-none");
-      break;
-  }
-});
 
 async function loadChildSelector(parentSelector) {
   function resetSelector(selectorElements) {
@@ -381,7 +448,6 @@ async function loadChildSelector(parentSelector) {
     var response = await fetch("/cropclassifier/scope", options);
     var responseJson = await response.json();
     var childValues = responseJson.childValues;
-    console.log(childValues);
     for (i = 0, len = childValues.length; i < len; i++) {
       document
         .getElementById(childKey)
@@ -506,19 +572,3 @@ async function loadChildSelector(parentSelector) {
       break;
   }
 }
-
-countrySelector.addEventListener("change", () => {
-  loadChildSelector(countrySelector);
-});
-divisionSelector.addEventListener("change", () => {
-  loadChildSelector(divisionSelector);
-});
-zilaSelector.addEventListener("change", () => {
-  loadChildSelector(zilaSelector);
-});
-upazilaSelector.addEventListener("change", () => {
-  loadChildSelector(upazilaSelector);
-});
-unionSelector.addEventListener("change", () => {
-  loadChildSelector(unionSelector);
-});

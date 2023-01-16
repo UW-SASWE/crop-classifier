@@ -135,7 +135,7 @@ const cc = {
       res.send({ parentGeoJSON, childrenGeoJSON });
     }
   },
-  loadRoi: async function (req, res, next) {
+  loadTrainRoi: async function (req, res, next) {
     if (req.body.roiSource === "LSIB") {
       var dataset = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
       // Apply filter where country name equals Bangladesh.
@@ -555,7 +555,7 @@ const cc = {
     );
 
     fs.writeFile(
-      "./cc_assets/cartExplanation.json",
+      `./cc_assets/models/cart_${req.body.season}.json`,
       // "./../cartExplanation.json",
       JSON.stringify(fulfilledExplanations[0]),
       (err) => {
@@ -567,7 +567,7 @@ const cc = {
     );
 
     fs.writeFile(
-      "./cc_assets/cartExplanation.json",
+      `./cc_assets/models/rf_${req.body.season}.json`,
       // "./../cartExplanation.json",
       JSON.stringify(fulfilledExplanations[1]),
       (err) => {
@@ -593,20 +593,208 @@ const cc = {
   sendTrainResults: async function (req, res, next) {
     var resultsData = await readFile("./cc_assets/trainResults.json");
     var resultsDataJson = JSON.parse(resultsData);
-    console.log(resultsDataJson)
-    res.send(resultsDataJson)
+    // console.log(resultsDataJson)
+    res.send(resultsDataJson);
   },
-  classify: async function (req, res, next) {
-    console.log("Running the classification from trained model");
-    var mlExplanationPath = "cc_assets/mlExplanation.json";
+  laodClassifyRoi: async function (req, res, next) {
+    console.log(req.body.scope);
+    switch (req.body.scope.type) {
+      case "heirachyScope":
+        console.log("using the heirachy scope for classification");
+        var rootDir = "./cc_assets";
+        var dir = [rootDir];
+        var scopes = await loadScopes("./cc_assets/bg_scopes.json");
+        var geojsonName;
+        for (i = 0, len = req.body.scope.tree.length; i < len; i++) {
+          if (req.body.scope.tree[i]) {
+            scopes = scopes[req.body.scope.tree[i]];
+            dir.push(scopes.pcode);
+            geojsonName = req.body.scope.tree[i];
+          }
+        }
+        dir.push(`${geojsonName}.geojson`);
+        // build full path
+        dir = dir.join("/");
+        console.log(dir);
+
+        if (geojsonName === "Bangladesh") {
+          var dataset = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
+          // Apply filter where country name equals Bangladesh.
+          req.roi = dataset.filter(ee.Filter.eq("country_na", "Bangladesh"));
+        } else {
+          var roiGeojson = await loadGeojson(dir);
+          req.roi = ee.FeatureCollection(roiGeojson);
+          req.roi.getMap({}, async ({}) => {
+            next();
+          });
+        }
+
+        break;
+      case "drawScope":
+        console.log("using the draw scope for classification");
+
+        next();
+        break;
+    }
+  },
+  loadClassifiedModel: async function (req, res, next) {
+    var explanationPath = `./cc_assets/models/${req.body.classifier}_${req.body.season}.json`;
+    console.log(explanationPath);
     var trainedClassifier;
     try {
-      var mlExplanationData = await readFile(mlExplanationPath);
+      var mlExplanationData = await readFile(explanationPath);
       var mlExplanationDataJson = JSON.parse(mlExplanationData);
-      console.log("Number of trees: ", mlExplanationDataJson.numberOfTrees);
+      console.log("Classes: ", mlExplanationDataJson.classes);
+      switch (req.body.classifier) {
+        case "rf":
+          trainedClassifier = ee.Classifier.decisionTreeEnsemble(
+            mlExplanationDataJson.trees
+          );
+          break;
+        case "cart":
+          trainedClassifier = ee.Classifier.decisionTree(
+            mlExplanationDataJson.tree
+          );
+          break;
+      }
+      req.trainedClassifier = trainedClassifier;
     } catch {
       console.log("Error parsing JSON string");
     }
+    next();
+  },
+  classify: async function (req, res, next) {
+    // console.log("Running the classification from trained model");
+    // var mlExplanationPath = "cc_assets/mlExplanation.json";
+    // var trainedClassifier;
+    // try {
+    //   var mlExplanationData = await readFile(mlExplanationPath);
+    //   var mlExplanationDataJson = JSON.parse(mlExplanationData);
+    //   console.log("Number of trees: ", mlExplanationDataJson.numberOfTrees);
+    // } catch {
+    //   console.log("Error parsing JSON string");
+    // }
+
+    console.log("classify post received");
+
+    var roi = req.roi;
+
+    // Import S2 TOA reflectance and corresponding cloud probability collections.
+    var s2 = ee.ImageCollection("COPERNICUS/S2");
+    var s2c = ee.ImageCollection("COPERNICUS/S2_CLOUD_PROBABILITY");
+
+    // Define dates over which to create a composite.
+    var start = ee.Date("2017-06-15");
+    var end = ee.Date("2017-10-15");
+    // var start = ee.Date(req.body.year+seasons[req.body.season].startDateSuffix);
+    // var end = ee.Date(req.body.year+seasons[req.body.season].startDateSuffix);
+
+    // Define a collection filtering function.
+    function filterBoundsDate(imgCol, roi, start, end) {
+      return imgCol.filterBounds(roi).filterDate(start, end);
+    }
+
+    // Filter the collection by ROI and date.
+    s2 = filterBoundsDate(s2, roi, start, end);
+    s2c = filterBoundsDate(s2c, roi, start, end);
+
+    // Define a function to join the two collections on their 'system:index'
+    // property. The 'propName' parameter is the name of the property that
+    // references the joined image.
+    function indexJoin(colA, colB, propName) {
+      var joined = ee.ImageCollection(
+        ee.Join.saveFirst(propName).apply({
+          primary: colA,
+          secondary: colB,
+          condition: ee.Filter.equals({
+            leftField: "system:index",
+            rightField: "system:index",
+          }),
+        })
+      );
+      // Merge the bands of the joined image.
+      return joined.map(function (image) {
+        return image.addBands(ee.Image(image.get(propName)));
+      });
+    }
+
+    // Define a function to create a cloud masking function.
+    function buildMaskFunction(cloudProb) {
+      return function (img) {
+        // Define clouds as pixels having greater than the given cloud probability.
+        var cloud = img.select("probability").gt(ee.Image(cloudProb));
+
+        // Apply the cloud mask to the image and return it.
+        return img.updateMask(cloud.not());
+      };
+    }
+
+    // Join the cloud probability collection to the TOA reflectance collection.
+    var withCloudProbability = indexJoin(s2, s2c, "cloud_probability");
+
+    // Map the cloud masking function over the joined collection, select only the
+    // reflectance bands.
+    var maskClouds = buildMaskFunction(50);
+    var s2Masked = ee
+      .ImageCollection(withCloudProbability.map(maskClouds))
+      .select(ee.List.sequence(0, 12));
+
+    // Calculate the median of overlapping pixels per band.
+    var median = s2Masked.median();
+
+    // Calculate the difference between each image and the median.
+    var difFromMedian = s2Masked.map(function (img) {
+      var dif = ee.Image(img).subtract(median).pow(ee.Image.constant(2));
+      return dif
+        .reduce(ee.Reducer.sum())
+        .addBands(img)
+        .copyProperties(img, ["system:time_start"]);
+    });
+
+    // Generate a composite image by selecting the pixel that is closest to the
+    // median.
+    var bandNames = difFromMedian.first().bandNames();
+    var bandPositions = ee.List.sequence(1, bandNames.length().subtract(1));
+    var mosaic = difFromMedian
+      .reduce(ee.Reducer.min(bandNames.length()))
+      .select(bandPositions, bandNames.slice(1))
+      .clipToCollection(roi);
+
+    // Specify and select bands that will be used in the classification.
+    var bands = [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B8A",
+      "B9",
+      "B10",
+      "B11",
+      "B12",
+    ];
+    var imageCl = mosaic.select(bands);
+
+    // Classify the image with the same bands used for training.
+    var classified = imageCl.select(bands).classify(req.trainedClassifier);
+
+    // Define visualization parameters for classification display.
+    var classVis = { min: 0, max: 1, palette: ["f2c649", "484848"] };
+
+    classified.clipToCollection(roi).getMap(classVis, async ({ urlFormat }) => {
+      // var tileUrl = await urlFormat;
+      //   // response.send(urlFormat);
+      //   console.log(urlFormat)
+      res.send({ urlFormat });
+    });
+
+    console.log("classify post sent");
+    // console.log(req.trainedClassifier.explain());
+
+    // res.send({});
   },
 };
 
