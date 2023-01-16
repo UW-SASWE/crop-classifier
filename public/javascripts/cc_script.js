@@ -53,7 +53,17 @@ scopeSelector.addEventListener("change", () => {
       loadChildSelector(countrySelector);
       break;
     case "drawScope":
+      resetSelector([
+        divisionSelector,
+        zilaSelector,
+        upazilaSelector,
+        unionSelector,
+      ]);
       countrySelector.classList.add("d-none");
+      divisionSelector.classList.add("d-none");
+      zilaSelector.classList.add("d-none");
+      upazilaSelector.classList.add("d-none");
+      unionSelector.classList.add("d-none");
       break;
   }
 });
@@ -120,8 +130,10 @@ async function classify() {
 
   L.tileLayer(responseJSON.urlFormat, {
     attribution:
-    'Map Data &copy; <a href="https://earthengine.google.com">Google Earth Engine</a>',
-  }).addTo(map).bringToFront();
+      'Map Data &copy; <a href="https://earthengine.google.com">Google Earth Engine</a>',
+  })
+    .addTo(map)
+    .bringToFront();
 
   classifyButton.disabled = false;
   classifyButtonSpinner.classList.add("d-none");
@@ -430,21 +442,26 @@ window.onload = () => {
   disableSeasons("train");
   disableSeasons("classification");
   disableSeasons("classification");
+
+    scopeSelector.value="heirachyScope"
+  countrySelector.classList.remove("d-none");
+  countrySelector.value = "Bangladesh";
+  loadChildSelector(countrySelector);
 };
 
-async function loadChildSelector(parentSelector) {
-  function resetSelector(selectorElements) {
-    for (j = 0, nSelectors = selectorElements.length; j < nSelectors; j++) {
-      var options = selectorElements[j].options;
-      for (i = options.length - 1; i >= 0; i--) {
-        if (options[i].value) {
-          selectorElements[j].remove(i);
-        }
+function resetSelector(selectorElements) {
+  for (j = 0, nSelectors = selectorElements.length; j < nSelectors; j++) {
+    var options = selectorElements[j].options;
+    for (i = options.length - 1; i >= 0; i--) {
+      if (options[i].value) {
+        selectorElements[j].remove(i);
       }
-      selectorElements[j].value = "";
     }
+    selectorElements[j].value = "";
   }
+}
 
+async function loadChildSelector(parentSelector) {
   async function loadSelectorOptions(parentValues, childKey) {
     var options = {
       method: "POST",
