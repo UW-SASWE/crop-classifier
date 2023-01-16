@@ -1,5 +1,4 @@
 // element variables
-const classifyButton = document.getElementById("classifyButton");
 const trainButtonSpinner = document.getElementById("trainButtonSpinner");
 const trainButtonText = document.getElementById("trainButtonText");
 const trainInputFile = document.getElementById("trainFile");
@@ -9,6 +8,10 @@ const trainSplitRange = document.getElementById("trainSplit"),
   validationPercentInput = document.getElementById("validationPercent");
 const selectedTrainYear = document.getElementById("trainYear");
 const trainFileInput = document.getElementById("trainFile");
+
+const classifyButton = document.getElementById("classifyButton");
+const classifyButtonSpinner = document.getElementById("classifyButtonSpinner");
+const classifyButtonText = document.getElementById("classifyButtonText");
 const selectedClassificationYear =
   document.getElementById("classificationYear");
 // scope selection
@@ -78,6 +81,10 @@ async function classify() {
   var classifySeasonRadios = document.getElementsByName(
     "classificationSeasonRadios"
   );
+  classifyButton.disabled = true;
+  classifyButtonSpinner.classList.remove("d-none");
+  classifyButtonText.innerHTML = "Classifying...";
+
   var season = getSeason(classifySeasonRadios);
   var year = document.getElementById("classificationYear").value;
   var classifierRadios = document.getElementsByName("classifierRadios");
@@ -115,6 +122,10 @@ async function classify() {
     attribution:
     'Map Data &copy; <a href="https://earthengine.google.com">Google Earth Engine</a>',
   }).addTo(map).bringToFront();
+
+  classifyButton.disabled = false;
+  classifyButtonSpinner.classList.add("d-none");
+  classifyButtonText.innerHTML = "Classify";
 }
 
 function getClassifier(classifierRadios) {
@@ -157,7 +168,7 @@ async function train(roiSource = "LSIB") {
   var trainSeasonRadios = document.getElementsByName("trainSeasonRadios");
   var season = getSeason(trainSeasonRadios);
   var year = document.getElementById("trainYear").value;
-  document.getElementById("trainButton").disabled = true;
+  trainButton.disabled = true;
   trainButtonSpinner.classList.remove("d-none");
   trainButtonText.innerHTML = "Training...";
   var file = trainInputFile.files[0];
@@ -483,7 +494,6 @@ async function loadChildSelector(parentSelector) {
       zilaSelector.classList.remove("d-none");
       upazilaSelector.classList.add("d-none");
       unionSelector.classList.add("d-none");
-      console.log(divisionSelector.value);
 
       resetChildLayers("Division");
 
