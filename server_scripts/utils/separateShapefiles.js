@@ -34,7 +34,7 @@ const readFile = (path, opts = {}) =>
     //   featureGeoJSON.type = countryGeoJSON.type;
     //   featureGeoJSON.name = country_name + "_boundary";
     //   featureGeoJSON.crs = countryGeoJSON.crs;
-    //   var dir = `./cc_assets/${country_code}`;
+    //   var dir = `./cc_assets/${country_code.slice(-2)}`;
     //   if (!fs.existsSync(dir)) {
     //     fs.mkdirSync(dir, { recursive: true });
     //   }
@@ -44,7 +44,7 @@ const readFile = (path, opts = {}) =>
     //   );
 
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${country_name}.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${country_name}.geojson`,
     //     JSON.stringify(featureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -64,7 +64,7 @@ const readFile = (path, opts = {}) =>
     //     (obj) => obj.properties.ADM0_PCODE == country_code
     //   );
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${country_code}_divisions.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${country_code}_divisions.geojson`,
     //     JSON.stringify(childFeatureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -82,7 +82,7 @@ const readFile = (path, opts = {}) =>
     // var zilaGeoJSON = JSON.parse(
     //   await readFile("./cc_assets/bg_zilas.geojson")
     // );
-    
+
     // for (i = 0, l = divisionGeoJSON.features.length; i < l; i++) {
     //   var country_code = divisionGeoJSON.features[i].properties.ADM0_PCODE;
     //   var division_name = divisionGeoJSON.features[i].properties.ADM1_EN;
@@ -91,7 +91,7 @@ const readFile = (path, opts = {}) =>
     //   featureGeoJSON.type = divisionGeoJSON.type;
     //   featureGeoJSON.name = division_name + "_boundary";
     //   featureGeoJSON.crs = divisionGeoJSON.crs;
-    //   var dir = `./cc_assets/${country_code}/${division_code}`;
+    //   var dir = `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}`;
     //   if (!fs.existsSync(dir)) {
     //     fs.mkdirSync(dir, { recursive: true });
     //   }
@@ -101,7 +101,7 @@ const readFile = (path, opts = {}) =>
     //   );
 
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${division_code}/${division_name}.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${division_name}.geojson`,
     //     JSON.stringify(featureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -121,7 +121,7 @@ const readFile = (path, opts = {}) =>
     //     (obj) => obj.properties.ADM1_PCODE == division_code
     //   );
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${division_code}/${division_code}_zilas.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${division_code}_zilas.geojson`,
     //     JSON.stringify(childFeatureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -139,7 +139,7 @@ const readFile = (path, opts = {}) =>
     // var upazilaGeoJSON = JSON.parse(
     //   await readFile("./cc_assets/bg_upazilas.geojson")
     // );
-    
+
     // for (i = 0, l = zilaGeoJSON.features.length; i < l; i++) {
     //   var country_code = zilaGeoJSON.features[i].properties.ADM0_PCODE;
     //   var division_code = zilaGeoJSON.features[i].properties.ADM1_PCODE;
@@ -150,7 +150,7 @@ const readFile = (path, opts = {}) =>
     //   featureGeoJSON.type = zilaGeoJSON.type;
     //   featureGeoJSON.name = zila_name + "_boundary";
     //   featureGeoJSON.crs = zilaGeoJSON.crs;
-    //   var dir = `./cc_assets/${country_code}/${division_code}/${zila_code}`;
+    //   var dir = `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${zila_code.slice(-2)}`;
     //   if (!fs.existsSync(dir)) {
     //     fs.mkdirSync(dir, { recursive: true });
     //   }
@@ -160,7 +160,7 @@ const readFile = (path, opts = {}) =>
     //   );
 
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${division_code}/${zila_code}/${zila_name}.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${zila_code.slice(-2)}/${zila_name}.geojson`,
     //     JSON.stringify(featureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -180,7 +180,7 @@ const readFile = (path, opts = {}) =>
     //     (obj) => obj.properties.ADM2_PCODE == zila_code
     //   );
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${division_code}/${zila_code}/${zila_code}_upazilas.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${zila_code.slice(-2)}/${zila_code}_upazilas.geojson`,
     //     JSON.stringify(childFeatureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -198,7 +198,7 @@ const readFile = (path, opts = {}) =>
     // var unionGeoJSON = JSON.parse(
     //   await readFile("./cc_assets/bg_unions.geojson")
     // );
-    
+
     // for (i = 0, l = upazilaGeoJSON.features.length; i < l; i++) {
     //   var country_code = upazilaGeoJSON.features[i].properties.ADM0_PCODE;
     //   var division_code = upazilaGeoJSON.features[i].properties.ADM1_PCODE;
@@ -210,7 +210,7 @@ const readFile = (path, opts = {}) =>
     //   featureGeoJSON.type = upazilaGeoJSON.type;
     //   featureGeoJSON.name = upazila_name + "_boundary";
     //   featureGeoJSON.crs = upazilaGeoJSON.crs;
-    //   var dir = `./cc_assets/${country_code}/${division_code}/${zila_code}/${upazila_code}`;
+    //   var dir = `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${zila_code.slice(-2)}/${upazila_code.slice(-2)}`;
     //   if (!fs.existsSync(dir)) {
     //     fs.mkdirSync(dir, { recursive: true });
     //   }
@@ -220,7 +220,7 @@ const readFile = (path, opts = {}) =>
     //   );
 
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${division_code}/${zila_code}/${upazila_code}/${upazila_name}.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${zila_code.slice(-2)}/${upazila_code.slice(-2)}/${upazila_name}.geojson`,
     //     JSON.stringify(featureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -240,7 +240,7 @@ const readFile = (path, opts = {}) =>
     //     (obj) => obj.properties.ADM3_PCODE == upazila_code
     //   );
     //   fs.writeFile(
-    //     `./cc_assets/${country_code}/${division_code}/${zila_code}/${upazila_code}/${upazila_code}_unions.geojson`,
+    //     `./cc_assets/${country_code.slice(-2)}/${division_code.slice(-2)}/${zila_code.slice(-2)}/${upazila_code.slice(-2)}/${upazila_code}_unions.geojson`,
     //     JSON.stringify(childFeatureGeoJSON),
     //     (err) => {
     //       if (err) {
@@ -268,7 +268,11 @@ const readFile = (path, opts = {}) =>
       featureGeoJSON.type = unionGeoJSON.type;
       featureGeoJSON.name = union_name + "_boundary";
       featureGeoJSON.crs = unionGeoJSON.crs;
-      var dir = `./cc_assets/${country_code}/${division_code}/${zila_code}/${upazila_code}/${union_code}`;
+      var dir = `./cc_assets/${country_code.slice(-2)}/${division_code.slice(
+        -2
+      )}/${zila_code.slice(-2)}/${upazila_code.slice(-2)}/${union_code.slice(
+        -2
+      )}`;
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -278,13 +282,17 @@ const readFile = (path, opts = {}) =>
       );
 
       fs.writeFile(
-        `./cc_assets/${country_code}/${division_code}/${zila_code}/${upazila_code}/${union_code}/${union_name}.geojson`,
+        `./cc_assets/${country_code.slice(-2)}/${division_code.slice(
+          -2
+        )}/${zila_code.slice(-2)}/${upazila_code.slice(-2)}/${union_code.slice(
+          -2
+        )}/${union_name}.geojson`,
         JSON.stringify(featureGeoJSON),
         (err) => {
           if (err) {
             console.log("The file was not saved: ", err);
           }
-          counter+=1
+          counter += 1;
           console.log(counter, "The file has been saved!");
         }
       );
