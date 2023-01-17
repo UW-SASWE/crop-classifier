@@ -395,6 +395,15 @@ function disableSeasons(mode) {
       selectedYear.value = (currentDate.getFullYear() - 1).toString();
     }
   }
+
+  // sentinel 2 data starts from june 2015
+  if (Number(selectedYear.value) === 2015) {
+    boroRadio.checked = false;
+    boroRadio.disabled = true;
+    ausRadio.checked = false;
+    ausRadio.disabled = true;
+    amanRadio.checked = true;
+  }
 }
 
 // when window loads
@@ -443,7 +452,7 @@ window.onload = () => {
   disableSeasons("classification");
   disableSeasons("classification");
 
-    scopeSelector.value="heirachyScope"
+  scopeSelector.value = "heirachyScope";
   countrySelector.classList.remove("d-none");
   countrySelector.value = "Bangladesh";
   loadChildSelector(countrySelector);
