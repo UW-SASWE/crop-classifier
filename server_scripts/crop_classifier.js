@@ -88,7 +88,7 @@ const cc = {
       var scopes = await loadScopes("./cc_assets/bg_scopes.json");
       for (i = 0, len = req.body.parentValues.length; i < len; i++) {
         scopes = scopes[req.body.parentValues[i]];
-        dir.push(scopes.pcode);
+        dir.push(scopes.pcode.slice(-2));
       }
 
       var parentCode = scopes.pcode;
@@ -608,7 +608,7 @@ const cc = {
         for (i = 0, len = req.body.scope.tree.length; i < len; i++) {
           if (req.body.scope.tree[i]) {
             scopes = scopes[req.body.scope.tree[i]];
-            dir.push(scopes.pcode);
+            dir.push(scopes.pcode.slice(-2));
             geojsonName = req.body.scope.tree[i];
           }
         }
