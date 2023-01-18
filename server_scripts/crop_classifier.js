@@ -608,10 +608,10 @@ const cc = {
     res.send(req.app.locals.trainResults);
   },
   laodClassifyRoi: async function (req, res, next) {
-    console.log(req.body.scope);
+    // console.log(req.body.scope);
     switch (req.body.scope.type) {
       case "heirachyScope":
-        console.log("using the heirachy scope for classification");
+        // console.log("using the heirachy scope for classification");
         var rootDir = "./cc_assets";
         var dir = [rootDir];
         var scopes = await loadScopes("./cc_assets/bg_scopes.json");
@@ -645,7 +645,7 @@ const cc = {
 
         break;
       case "drawScope":
-        console.log("using the draw scope for classification");
+        // console.log("using the draw scope for classification");
 
         next();
         break;
@@ -653,7 +653,7 @@ const cc = {
   },
   loadClassifiedModel: async function (req, res, next) {
     var explanationPath = `./cc_assets/models/${req.body.classifier}_${req.body.season}.json`;
-    console.log(explanationPath);
+    // console.log(explanationPath);
     var trainedClassifier;
     try {
       var mlExplanationData = await readFile(explanationPath);
@@ -689,7 +689,7 @@ const cc = {
     //   console.log("Error parsing JSON string");
     // }
 
-    console.log("classify post received");
+    // console.log("classify post received");
 
     var roi = req.roi;
 
@@ -809,7 +809,7 @@ const cc = {
       res.send({ urlFormat });
     });
 
-    console.log("classify post sent");
+    // console.log("classify post sent");
     // console.log(req.trainedClassifier.explain());
 
     // res.send({});
