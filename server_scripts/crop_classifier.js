@@ -626,7 +626,7 @@ const cc = {
         dir.push(`${geojsonName}.geojson`);
         // build full path
         dir = dir.join("/");
-        console.log(dir);
+        // console.log(dir);
 
         if (geojsonName === "Bangladesh") {
           var dataset = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
@@ -658,7 +658,7 @@ const cc = {
     try {
       var mlExplanationData = await readFile(explanationPath);
       var mlExplanationDataJson = JSON.parse(mlExplanationData);
-      console.log("Classes: ", mlExplanationDataJson.classes);
+      // console.log("Classes: ", mlExplanationDataJson.classes);
       switch (req.body.classifier) {
         case "rf":
           trainedClassifier = ee.Classifier.decisionTreeEnsemble(
