@@ -141,7 +141,8 @@ const cc = {
       // Apply filter where country name equals Bangladesh.
       req.roi = dataset.filter(ee.Filter.eq("country_na", "Bangladesh"));
     } else {
-      var roiPath = "./cc_assets/bg_boundary.geojson";
+      var roiPath = "./cc_assets/BD/Bangladesh.geojson";
+      // var roiPath = "./cc_assets/bg_boundary.geojson";
       // var roiPath = "./cc_assets/Region_of_interest.geojson";
       var roiGeojson = await loadGeojson(roiPath);
       req.roi = ee.FeatureCollection(roiGeojson);
@@ -532,18 +533,20 @@ const cc = {
     // console.log(endTime - startTime);
     // console.log(resJSON);
 
-    // res.send(resJSON);
-    fs.writeFile(
-      "./cc_assets/trainResults.json",
-      // "./../rfExplanation.json",
-      JSON.stringify(resJSON),
-      (err) => {
-        if (err) {
-          console.log("Results were not saved: ", err);
-        }
-        console.log("Results has been saved!");
-      }
-    );
+    // // res.send(resJSON);
+    // fs.writeFile(
+    //   "./cc_assets/trainResults.json",
+    //   // "./../rfExplanation.json",
+    //   JSON.stringify(resJSON),
+    //   (err) => {
+    //     if (err) {
+    //       console.log("Results were not saved: ", err);
+    //     }
+    //     console.log("Results has been saved!");
+    //   }
+    // );
+
+    req.app.locals.trainResults = JSON.parse(JSON.stringify(resJSON));
 
     var arrayOfExplanationsPromises = [
       getExplanation(trainedCart), // cart explanation
@@ -591,10 +594,13 @@ const cc = {
     res.send({ childValues });
   },
   sendTrainResults: async function (req, res, next) {
-    var resultsData = await readFile("./cc_assets/trainResults.json");
-    var resultsDataJson = JSON.parse(resultsData);
+    // var resultsData = await readFile("./cc_assets/trainResults.json");
+    // var resultsDataJson = JSON.parse(resultsData);
+
     // console.log(resultsDataJson)
-    res.send(resultsDataJson);
+    // res.send(resultsDataJson);
+
+    res.send(req.app.locals.trainResults);
   },
   laodClassifyRoi: async function (req, res, next) {
     console.log(req.body.scope);
@@ -684,13 +690,14 @@ const cc = {
     var s2c = ee.ImageCollection("COPERNICUS/S2_CLOUD_PROBABILITY");
 
     // Define dates over which to create a composite.
-    // var start = ee.Date("2017-06-15");
-    // var end = ee.Date("2017-10-15");
-    var start = ee.Date(
-      req.body.year + seasons[req.body.season].startDateSuffix
-    );
-    var end = ee.Date(req.body.year + seasons[req.body.season].endDateSuffix);
-    console.log(req.body.year + seasons[req.body.season].startDateSuffix);
+    var start = ee.Date("2017-06-15");
+    var end = ee.Date("2017-10-15");
+
+    // this section for effective seasonal classification based on dates
+    // var start = ee.Date(
+    //   req.body.year + seasons[req.body.season].startDateSuffix
+    // );
+    // var end = ee.Date(req.body.year + seasons[req.body.season].endDateSuffix);
 
     // Define a collection filtering function.
     function filterBoundsDate(imgCol, roi, start, end) {
