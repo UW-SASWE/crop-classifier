@@ -801,6 +801,4 @@ const cc = {
   },
 };
 
-// cc.startup1()
-
 module.exports = cc;
