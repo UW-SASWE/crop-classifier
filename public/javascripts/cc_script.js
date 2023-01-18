@@ -199,7 +199,7 @@ async function train() {
   loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
   if (response.status === 200) {
-    await delay(90000); // give the server some slack time
+    await delay(30000); // give the server some slack time
     awaitTrain("Loading results");
     await delay(30000); // allow time to for the server to finish saving the results
     var resultsResponse = await fetch("/cropclassifier/trainresults");
@@ -207,7 +207,7 @@ async function train() {
     // console.log(resultsResponseJson);
     afterTrain(resultsResponseJson);
     awaitTrain("Saving models");
-    await delay(100000); // allow some time for the server to save the models
+    await delay(15000); // allow some time for the server to save the models
     // console.log("waited 3 mins");
 
     trainButtonSpinner.classList.add("d-none");
