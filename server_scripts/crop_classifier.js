@@ -632,6 +632,9 @@ const cc = {
           var dataset = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
           // Apply filter where country name equals Bangladesh.
           req.roi = dataset.filter(ee.Filter.eq("country_na", "Bangladesh"));
+          req.roi.getMap({}, async ({}) => {
+            next();
+          });
         } else {
           var roiGeojson = await loadGeojson(dir);
           req.roi = ee.FeatureCollection(roiGeojson);
