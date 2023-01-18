@@ -26,11 +26,13 @@ router.post(
 ); // Train
 router.get("/cropclassifier/trainresults", cc.sendTrainResults);
 router.post("/cropclassifier/scope", cc.scope);
+// Classify
 router.post(
   "/cropclassifier/classify",
   cc.laodClassifyRoi,
   cc.loadClassifiedModel,
   cc.classify
-); // Classify
+); 
+router.get("/cropclassifier/classifyresults", cc.sendClassifyResults);
 
 module.exports = router;

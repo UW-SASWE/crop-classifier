@@ -8,12 +8,16 @@ const trainSplitRange = document.getElementById("trainSplit"),
   validationPercentInput = document.getElementById("validationPercent");
 const selectedTrainYear = document.getElementById("trainYear");
 const trainFileInput = document.getElementById("trainFile");
+var accuracyResultsTable = document.getElementById("accuracyResultsTable");
 
 const classifyButton = document.getElementById("classifyButton");
 const classifyButtonSpinner = document.getElementById("classifyButtonSpinner");
 const classifyButtonText = document.getElementById("classifyButtonText");
 const selectedClassificationYear =
   document.getElementById("classificationYear");
+var classificationResultsTable = document.getElementById(
+  "classificationResultsTable"
+);
 // scope selection
 const scopeSelector = document.getElementById("scope");
 const countrySelector = document.getElementById("countries");
@@ -94,6 +98,8 @@ async function classify() {
   classifyButton.disabled = true;
   classifyButtonSpinner.classList.remove("d-none");
   classifyButtonText.innerHTML = "Classifying...";
+  classificationResultsTable.classList.add("d-none");
+  accuracyResultsTable.classList.add("d-none");
 
   var season = getSeason(classifySeasonRadios);
   var year = document.getElementById("classificationYear").value;
@@ -135,9 +141,50 @@ async function classify() {
     .addTo(map)
     .bringToFront();
 
+  map.setView(responseJSON.centroid);
+
+  classifyButtonText.innerHTML = "Calculating Areas...";
+  classifyButtonSpinner.classList.replace("spinner-border", "spinner-grow");
+  switch (responseJSON.depth) {
+    case 1:
+    case 2:
+      await delay(45000);
+      break;
+    case 3:
+      await delay(35000);
+      break;
+    case 4:
+      await delay(25000);
+      break;
+    case 5:
+      await delay(15000);
+      break;
+  }
+
+  var areasResponse = await fetch("/cropclassifier/classifyresults");
+  var areasJSON = await areasResponse.json();
+  console.log(areasJSON);
+
+  document.getElementById("riceArea").innerHTML =
+    Math.round((areasJSON.riceArea + Number.EPSILON) / 1000) / 1000;
+  document.getElementById("ricePercentage").innerHTML =
+    Math.round((areasJSON.ricePercentage + Number.EPSILON) * 10000) / 100;
+  document.getElementById("noRiceArea").innerHTML =
+    Math.round((areasJSON.noRiceArea + Number.EPSILON) / 1000) / 1000;
+  document.getElementById("noRicePercentage").innerHTML =
+    Math.round((areasJSON.noRicePercentage + Number.EPSILON) * 10000) / 100;
+
+  classificationResultsTable.classList.remove("d-none");
+
+  document.getElementById("collapseTwo").classList.toggle("show");
+  document.getElementById("collapseThree").classList.toggle("show");
+
   classifyButton.disabled = false;
   classifyButtonSpinner.classList.add("d-none");
+  classifyButtonSpinner.classList.replace("spinner-grow", "spinner-border");
   classifyButtonText.innerHTML = "Classify";
+
+  // console.log(responseJSON);
 }
 
 function getClassifier(classifierRadios) {
@@ -180,13 +227,15 @@ async function train() {
   var trainSeasonRadios = document.getElementsByName("trainSeasonRadios");
   var season = getSeason(trainSeasonRadios);
   var year = document.getElementById("trainYear").value;
+  classificationResultsTable.classList.add("d-none");
+  accuracyResultsTable.classList.add("d-none");
   trainButton.disabled = true;
   trainButtonSpinner.classList.remove("d-none");
   trainButtonText.innerHTML = "Training...";
   var file = trainInputFile.files[0];
   var csvData = await readCSV(file);
 
-  var roiSource = "LSIB" 
+  var roiSource = "LSIB";
 
   var splitRatio = document.getElementById("trainSplit").value;
   const options = {
@@ -242,7 +291,6 @@ function afterTrain(responseJson) {
   trainInputFile.value = null;
   document.getElementById("trainButton").disabled = true;
 
-  var accuracyResultsTable = document.getElementById("accuracyResultsTable");
   accuracyResultsTable.classList.remove("d-none");
 
   document.getElementById("collapseOne").classList.toggle("show");

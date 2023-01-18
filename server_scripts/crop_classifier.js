@@ -616,11 +616,13 @@ const cc = {
         var dir = [rootDir];
         var scopes = await loadScopes("./cc_assets/bg_scopes.json");
         var geojsonName;
+        req.depth = 0;
         for (i = 0, len = req.body.scope.tree.length; i < len; i++) {
           if (req.body.scope.tree[i]) {
             scopes = scopes[req.body.scope.tree[i]];
             dir.push(scopes.pcode.slice(-2));
             geojsonName = req.body.scope.tree[i];
+            req.depth++;
           }
         }
         dir.push(`${geojsonName}.geojson`);
@@ -692,6 +694,15 @@ const cc = {
     // console.log("classify post received");
 
     var roi = req.roi;
+
+    var centroid = await roi
+      .geometry()
+      .centroid()
+      .coordinates()
+      .getInfo((info) => {
+        return info;
+      });
+    centroid = [centroid[1], centroid[0]];
 
     // Import S2 TOA reflectance and corresponding cloud probability collections.
     var s2 = ee.ImageCollection("COPERNICUS/S2");
@@ -799,20 +810,88 @@ const cc = {
     // Classify the image with the same bands used for training.
     var classified = imageCl.select(bands).classify(req.trainedClassifier);
 
+    // calculate areas
+    var scale;
+    switch (req.depth) {
+      case 0:
+      case 1:
+        scale = 1000;
+        break;
+      case 2:
+      case 3:
+        scale = 500;
+        break;
+      case 4:
+        scale = 200;
+        break;
+      case 5:
+        scale = 100;
+        break;
+    }
+
+    // var startTime = new Date();
+    ee.Image.pixelArea()
+      .addBands(classified)
+      .reduceRegion({
+        reducer: ee.Reducer.sum().group({
+          groupField: 1,
+          groupName: "class",
+        }),
+        geometry: roi.geometry(),
+        scale: scale,
+        maxPixels: 1e13,
+        tileScale: 8,
+      })
+      .getInfo((areaInfo) => {
+        var riceArea = Number.EPSILON,
+          ricePercentage,
+          noRiceArea = Number.EPSILON,
+          noRicePercentage;
+
+        for (i = 0, l = areaInfo.groups.length; i < l; i++) {
+          switch (areaInfo.groups[i].class) {
+            case 0:
+              noRiceArea = Math.max(areaInfo.groups[i].sum, noRiceArea);
+              break;
+            case 1:
+              riceArea = Math.max(areaInfo.groups[i].sum, riceArea);
+              break;
+          }
+        }
+        ricePercentage = riceArea / (riceArea + noRiceArea);
+        noRicePercentage = noRiceArea / (riceArea + noRiceArea);
+
+        req.app.locals.classifyResults = {
+          riceArea,
+          ricePercentage,
+          noRiceArea,
+          noRicePercentage,
+        };
+        // console.log(req.app.locals.classifyResults);
+        // var endTime = new Date();
+        // const elapsed = endTime.getTime() - startTime.getTime(); // elapsed time in milliseconds
+        // console.log(elapsed);
+      });
+
     // Define visualization parameters for classification display.
     var classVis = { min: 0, max: 1, palette: ["f2c649", "484848"] };
 
     classified.clipToCollection(roi).getMap(classVis, async ({ urlFormat }) => {
-      // var tileUrl = await urlFormat;
-      //   // response.send(urlFormat);
-      // console.log(urlFormat);
-      res.send({ urlFormat });
+      var depth = req.depth;
+      res.send({
+        urlFormat,
+        centroid,
+        depth,
+      });
     });
 
     // console.log("classify post sent");
     // console.log(req.trainedClassifier.explain());
 
     // res.send({});
+  },
+  sendClassifyResults: async function (req, res, next) {
+    res.send(req.app.locals.classifyResults);
   },
 };
 
