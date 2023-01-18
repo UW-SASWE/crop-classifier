@@ -140,6 +140,9 @@ const cc = {
       var dataset = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
       // Apply filter where country name equals Bangladesh.
       req.roi = dataset.filter(ee.Filter.eq("country_na", "Bangladesh"));
+      req.roi.getMap({}, async ({}) => {
+        next();
+      });
     } else {
       var roiPath = "./cc_assets/BD/Bangladesh.geojson";
       // var roiPath = "./cc_assets/bg_boundary.geojson";
@@ -567,7 +570,7 @@ const cc = {
         if (err) {
           console.log("The CART Explanation was not saved: ", err);
         }
-        console.log("The CART Explanation has been saved!");
+        // console.log("The CART Explanation has been saved!");
       }
     );
 
@@ -579,7 +582,7 @@ const cc = {
         if (err) {
           console.log("The Random Forest Explanation was not saved: ", err);
         }
-        console.log("The Random Forest Explanation has been saved!");
+        // console.log("The Random Forest Explanation has been saved!");
       }
     );
 
