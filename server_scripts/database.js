@@ -13,7 +13,7 @@ const db = mysql.createPool({
   user: DB_USER,
   password: DB_PASSWORD, // use dotenv to load the hidden environmental variable. Look further
   database: DB_DATABASE, // Database name
-  port: DB_PORT, // port name
+  // port: DB_PORT, // port name /*required when running app locally*/
 });
 
 db.getConnection(function (err, connection) {
