@@ -176,7 +176,7 @@ function getSeason(seasonsRadios) {
   }
 }
 
-async function train(roiSource = "LSIB") {
+async function train() {
   var trainSeasonRadios = document.getElementsByName("trainSeasonRadios");
   var season = getSeason(trainSeasonRadios);
   var year = document.getElementById("trainYear").value;
@@ -185,6 +185,8 @@ async function train(roiSource = "LSIB") {
   trainButtonText.innerHTML = "Training...";
   var file = trainInputFile.files[0];
   var csvData = await readCSV(file);
+
+  var roiSource = "LSIB" 
 
   var splitRatio = document.getElementById("trainSplit").value;
   const options = {
