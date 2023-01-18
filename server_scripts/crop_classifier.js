@@ -219,10 +219,12 @@ const cc = {
     var s2c = ee.ImageCollection("COPERNICUS/S2_CLOUD_PROBABILITY");
 
     // Define dates over which to create a composite.
-    var start = ee.Date("2017-06-15");
-    var end = ee.Date("2017-10-15");
-    // var start = ee.Date(req.body.year+seasons[req.body.season].startDateSuffix);
-    // var end = ee.Date(req.body.year+seasons[req.body.season].startDateSuffix);
+    // var start = ee.Date("2017-06-15");
+    // var end = ee.Date("2017-10-15");
+    var start = ee.Date(
+      req.body.year + seasons[req.body.season].startDateSuffix
+    );
+    var end = ee.Date(req.body.year + seasons[req.body.season].endDateSuffix);
 
     // Define a collection filtering function.
     function filterBoundsDate(imgCol, roi, start, end) {
@@ -690,14 +692,14 @@ const cc = {
     var s2c = ee.ImageCollection("COPERNICUS/S2_CLOUD_PROBABILITY");
 
     // Define dates over which to create a composite.
-    var start = ee.Date("2017-06-15");
-    var end = ee.Date("2017-10-15");
+    // var start = ee.Date("2017-06-15");
+    // var end = ee.Date("2017-10-15");
 
     // this section for effective seasonal classification based on dates
-    // var start = ee.Date(
-    //   req.body.year + seasons[req.body.season].startDateSuffix
-    // );
-    // var end = ee.Date(req.body.year + seasons[req.body.season].endDateSuffix);
+    var start = ee.Date(
+      req.body.year + seasons[req.body.season].startDateSuffix
+    );
+    var end = ee.Date(req.body.year + seasons[req.body.season].endDateSuffix);
 
     // Define a collection filtering function.
     function filterBoundsDate(imgCol, roi, start, end) {
