@@ -20,6 +20,17 @@ router.post("/cropclassifier/loadPolygon", cc.loadPolygon); // request for a pol
 router.post("/cropclassifier/displaytrainingpoints", cc.displayTrainingPoints);
 router.post(
   "/cropclassifier/train",
+  function (req, res, next) {
+    switch (req.user.role) {
+      case "user":
+        res.sendStatus(401);
+        break;
+      case "administrator":
+      case "developer":
+        next();
+        break;
+    }
+  },
   cc.loadTrainRoi,
   cc.loadTrainingPoints,
   cc.train
@@ -32,7 +43,7 @@ router.post(
   cc.laodClassifyRoi,
   cc.loadClassifiedModel,
   cc.classify
-); 
+);
 router.get("/cropclassifier/classifyresults", cc.sendClassifyResults);
 
 module.exports = router;

@@ -247,21 +247,31 @@ async function train() {
   };
   loadTrainPoints(options);
   var response = await fetch("/cropclassifier/train", options);
-  if (response.status === 200) {
-    await delay(30000); // give the server some slack time
-    awaitTrain("Loading results");
-    await delay(30000); // allow time to for the server to finish saving the results
-    var resultsResponse = await fetch("/cropclassifier/trainresults");
-    var resultsResponseJson = await resultsResponse.json();
-    // console.log(resultsResponseJson);
-    afterTrain(resultsResponseJson);
-    awaitTrain("Saving models");
-    await delay(15000); // allow some time for the server to save the models
-    // console.log("waited 3 mins");
+  switch (response.status) {
+    case 200: // if user is authorized and train was successful
+      await delay(30000); // give the server some slack time
+      awaitTrain("Loading results");
+      await delay(30000); // allow time to for the server to finish saving the results
+      var resultsResponse = await fetch("/cropclassifier/trainresults");
+      var resultsResponseJson = await resultsResponse.json();
+      // console.log(resultsResponseJson);
+      afterTrain(resultsResponseJson);
+      awaitTrain("Saving models");
+      await delay(15000); // allow some time for the server to save the models
+      // console.log("waited 3 mins");
 
-    trainButtonSpinner.classList.add("d-none");
-    trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
-    trainButtonText.innerHTML = "Train";
+      trainButtonSpinner.classList.add("d-none");
+      trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
+      trainButtonText.innerHTML = "Train";
+      break;
+    case 401: // if the user is not authorized
+      const unauthorizedToast = document.getElementById("unauthorizedToast");
+      const toast = new bootstrap.Toast(unauthorizedToast);
+      toast.show();
+      trainButtonSpinner.classList.add("d-none");
+      trainButtonSpinner.classList.replace("spinner-grow", "spinner-border");
+      trainButtonText.innerHTML = "Train";
+      break;
   }
 }
 

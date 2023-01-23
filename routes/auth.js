@@ -41,7 +41,7 @@ passport.use(
                 message: "Incorrect username or password.",
               });
             }
-            return cb(null, row);
+            return cb(null, row[0]);
           }
         );
       });
@@ -51,7 +51,7 @@ passport.use(
 
 passport.serializeUser(function (user, cb) {
   process.nextTick(function () {
-    cb(null, { id: user.id, username: user.username });
+    cb(null, { id: user.id, username: user.username , role: user.role});
   });
 });
 
