@@ -33,7 +33,7 @@ var runAnalysis = function () {
     null,
     function () {
       // ... run analysis ...
-      console.log("GEE authentication and initialization successful!");
+      // console.log("GEE authentication and initialization successful!");
       // TODO: add a startup process here.
     },
     function (e) {

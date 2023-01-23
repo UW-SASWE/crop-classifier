@@ -20,7 +20,7 @@ db.getConnection(function (err, connection) {
   if (err) {
     return console.error("error: " + err.message);
   }
-  console.log("Connected to the MySQL server: " + connection.threadId);
+  // console.log("Connected to the MySQL server: " + connection.threadId);
 });
 
 module.exports = db;
