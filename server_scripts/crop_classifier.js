@@ -563,7 +563,8 @@ const cc = {
     );
 
     fs.writeFile(
-      `./cc_assets/models/cart_${req.body.season}.json`,
+      // `./cc_assets/models/cart_${req.body.season}.json`,
+      `./cc_assets/${req.user.workgroup}/cart_${req.body.season}.json`,
       // "./../cartExplanation.json",
       JSON.stringify(fulfilledExplanations[0]),
       (err) => {
@@ -575,7 +576,8 @@ const cc = {
     );
 
     fs.writeFile(
-      `./cc_assets/models/rf_${req.body.season}.json`,
+      // `./cc_assets/models/rf_${req.body.season}.json`,
+      `./cc_assets/${req.user.workgroup}/rf_${req.body.season}.json`,
       // "./../cartExplanation.json",
       JSON.stringify(fulfilledExplanations[1]),
       (err) => {
@@ -654,7 +656,8 @@ const cc = {
     }
   },
   loadClassifiedModel: async function (req, res, next) {
-    var explanationPath = `./cc_assets/models/${req.body.classifier}_${req.body.season}.json`;
+    // var explanationPath = `./cc_assets/models/${req.body.classifier}_${req.body.season}.json`;
+    var explanationPath = `./cc_assets/${req.user.workgroup}/${req.body.classifier}_${req.body.season}.json`;
     // console.log(explanationPath);
     var trainedClassifier;
     try {

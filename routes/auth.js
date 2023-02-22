@@ -51,7 +51,7 @@ passport.use(
 
 passport.serializeUser(function (user, cb) {
   process.nextTick(function () {
-    cb(null, { id: user.id, username: user.username , role: user.role});
+    cb(null, { id: user.id, username: user.username, role: user.role, workgroup: user.workgroup});
   });
 });
 
@@ -69,11 +69,18 @@ router.get("/login", function (req, res, next) {
 
 router.post(
   "/login/password",
-  passport.authenticate("local", {
-    successRedirect: "/cropclassifier",
-    failureRedirect: "/",
-    failureMessage: true,
-  })
+  passport.authenticate(
+    "local",
+    {
+      successRedirect: "/cropclassifier",
+      failureRedirect: "/",
+      failureMessage: true,
+    }
+  ),
+  // function (req, res, next) {
+  //   console.log(req.user);
+  //   res.redirect('/cropclassifier');
+  // }
 );
 
 router.post("/logout", function (req, res, next) {
